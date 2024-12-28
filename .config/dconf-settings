@@ -1,22 +1,307 @@
-[desktop/ibus/general]
-preload-engines=['xkb:us::eng']
-version='1.5.31'
+[com/usebottles/bottles]
+show-sandbox-warning=false
+startup-view='page_list'
+window-height=1440
+window-width=2560
 
-[org/gnome/nm-applet/eap/01281a50-1afd-4cc7-a429-26fb6d49022e]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
+[org/gnome/Console]
+last-window-maximised=true
+last-window-size=(652, 480)
 
-[org/gnome/nm-applet/eap/67a78ed9-979d-40c1-8160-3fa802790c7e]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
+[org/gnome/Extensions]
+window-height=378
+window-maximized=false
+window-width=678
 
-[org/gnome/nm-applet/eap/a3ee3f0f-4a50-4825-9283-7a9391d703f9]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
+[org/gnome/baobab/ui]
+active-chart='rings'
+is-maximized=false
+window-size=(960, 600)
 
-[org/gnome/nm-applet/eap/afcb0a02-84ae-4571-b72a-37fb7e1491a1]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
+[org/gnome/calendar]
+active-view='month'
+window-maximized=true
+window-size=(768, 600)
+
+[org/gnome/control-center]
+last-panel='sound'
+window-state=(980, 613, false)
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST', 'Pardus']
+
+[org/gnome/desktop/app-folders/folders/Pardus]
+categories=['X-Pardus-Apps']
+name='X-Pardus-Apps.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['org.freedesktop.GnomeAbrt.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/gnome/amber-l.jxl'
+picture-uri-dark='file:///usr/share/backgrounds/gnome/amber-d.jxl'
+primary-color='#ff7800'
+secondary-color='#000000'
+
+[org/gnome/desktop/input-sources]
+mru-sources=[('ibus', 'mozc-jp'), ('xkb', 'de+us')]
+sources=[('xkb', 'de+us'), ('ibus', 'mozc-jp')]
+xkb-options=['terminate:ctrl_alt_bksp']
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+cursor-theme='Breeze_Hacked'
+enable-hot-corners=false
+gtk-theme='Adwaita-dark'
+icon-theme='breeze-dark'
+
+[org/gnome/desktop/notifications]
+application-children=['org-gnome-baobab', 'org-gnome-console', 'steam', 'vesktop', 'google-chrome', 'com-usebottles-bottles', 'org-keepassxc-keepassxc', 'org-gnome-evolution-alarm-notify']
+
+[org/gnome/desktop/notifications/application/com-usebottles-bottles]
+application-id='com.usebottles.bottles.desktop'
+
+[org/gnome/desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-baobab]
+application-id='org.gnome.baobab.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-console]
+application-id='org.gnome.Console.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify]
+application-id='org.gnome.Evolution-alarm-notify.desktop'
+
+[org/gnome/desktop/notifications/application/org-keepassxc-keepassxc]
+application-id='org.keepassxc.KeePassXC.desktop'
+
+[org/gnome/desktop/notifications/application/steam]
+application-id='steam.desktop'
+
+[org/gnome/desktop/notifications/application/vesktop]
+application-id='vesktop.desktop'
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/gnome/amber-l.jxl'
+primary-color='#ff7800'
+secondary-color='#000000'
+
+[org/gnome/desktop/wm/keybindings]
+close=['<Shift><Alt>q']
+
+[org/gnome/desktop/wm/preferences]
+button-layout='close,minimize,maximize:appmenu'
+resize-with-right-button=false
+
+[org/gnome/evolution-data-server]
+migrated=true
+
+[org/gnome/evolution-data-server/calendar]
+reminders-past=["fa9a147ba18cea42141e274cfa1c9280e48ce41c\n8291e5fc81ff9cac7e07cb088d5b51d0147e0c23\t20241228\n1735376400\n1735344000\n1735430400\nBEGIN:VEVENT\r\nDTSTART;VALUE=DATE:20241228\r\nDTEND;VALUE=DATE:20241229\r\nRRULE:FREQ=YEARLY;BYMONTHDAY=28;BYMONTH=12\r\nDTSTAMP:20241227T142451Z\r\nORGANIZER;CN=Unknown Organizer:mailto:\r\n unknownorganizer@calendar.google.com\r\nUID:\r\n corm4p1n6pij0b9kclj3cb9k6gq6ab9p60om4b9gckqj8opp60p38cpl60@google.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;\r\n CN=uarslancs@gmail.com;X-NUM-GUESTS=0:mailto:uarslancs@gmail.com\r\nCLASS:PRIVATE\r\nCREATED:20241227T142451Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for DESCRIPTION \r\n property. Removing entire property:\r\nLAST-MODIFIED:20241227T142451Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for LOCATION \r\n property. Removing entire property:\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Pia (Alex)'s birthday\r\nTRANSP:TRANSPARENT\r\nX-EVOLUTION-CALDAV-ETAG:63870992691\r\nRECURRENCE-ID;VALUE=DATE:20241228\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:PT9H\r\nX-EVOLUTION-ALARM-UID:8291e5fc81ff9cac7e07cb088d5b51d0147e0c23\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P6DT15H\r\nX-EVOLUTION-ALARM-UID:50fdc7c08bd18fce1251c965d472194e560b49fa\r\nEND:VALARM\r\nEND:VEVENT\r\n"]
+
+[org/gnome/mutter]
+center-new-windows=true
+overlay-key='Super_L'
+workspaces-only-on-primary=true
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+initial-size-file-chooser=(890, 550)
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-schedule-automatic=false
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Shift><Alt>o'
+command='keepassxc'
+name='keepassxc'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Shift><Alt>p'
+command='nautilus'
+name='nautilus'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Shift><Alt>i'
+command='pavucontrol'
+name='pavucontrol'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
+binding='<Alt>Return'
+command='gnome-terminal'
+name='gnome-terminal'
+
+[org/gnome/shell]
+disabled-extensions=@as []
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'status-icons@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'arcmenu@arcmenu.com', 'blur-my-shell@aunetx', 'dash-to-dock@micxgx.gmail.com', 'openbar@neuromorph', 'hidetopbar@mathieu.bidon.ca']
+favorite-apps=['google-chrome.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop']
+welcome-dialog-last-shown-version='47.2'
+
+[org/gnome/shell/extensions/arcmenu]
+arcmenu-hotkey=['<Alt>d']
+distro-icon=6
+menu-button-icon='Distro_Icon'
+menu-layout='Runner'
+prefs-visible-page=0
+recently-installed-apps=['designer.desktop', 'linguist.desktop', 'qdbusviewer.desktop', 'assistant.desktop', 'com.blackmagicdesign.rawplayer.desktop', 'com.blackmagicdesign.resolve-Panels.desktop', 'com.blackmagicdesign.resolve-Installer.desktop', 'com.blackmagicdesign.resolve-CaptureLogs.desktop', 'com.blackmagicdesign.rawspeedtest.desktop']
+runner-position='Centered'
+search-entry-border-radius=(true, 25)
+
+[org/gnome/shell/extensions/blur-my-shell]
+settings-version=2
+
+[org/gnome/shell/extensions/blur-my-shell/appfolder]
+brightness=0.59999999999999998
+sigma=30
+
+[org/gnome/shell/extensions/blur-my-shell/coverflow-alt-tab]
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/dash-to-dock]
+blur=true
+brightness=0.59999999999999998
+pipeline='pipeline_default_rounded'
+sigma=30
+static-blur=true
+style-dash-to-dock=0
+
+[org/gnome/shell/extensions/blur-my-shell/lockscreen]
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/overview]
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/panel]
+blur=true
+brightness=0.59999999999999998
+pipeline='pipeline_default'
+sigma=30
+static-blur=true
+
+[org/gnome/shell/extensions/blur-my-shell/screenshot]
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/window-list]
+brightness=0.59999999999999998
+sigma=30
+
+[org/gnome/shell/extensions/dash-to-dock]
+apply-custom-theme=true
+background-opacity=0.80000000000000004
+custom-background-color=false
+custom-theme-shrink=true
+dash-max-icon-size=38
+dock-position='BOTTOM'
+height-fraction=0.90000000000000002
+multi-monitor=true
+preferred-monitor=-2
+preferred-monitor-by-connector='DVI-D-0'
+
+[org/gnome/shell/extensions/openbar]
+bg-change=true
+bguri='file:///usr/share/backgrounds/gnome/amber-d.jxl'
+count1=432797
+count10=243
+count11=147
+count12=51
+count2=141757
+count3=107506
+count4=80241
+count5=79800
+count6=77470
+count7=57611
+count8=17011
+count9=5366
+dark-bguri='file:///usr/share/backgrounds/gnome/amber-d.jxl'
+dark-palette1=['151', '61', '182']
+dark-palette10=['178', '58', '142']
+dark-palette11=['204', '92', '209']
+dark-palette12=['76', '42', '84']
+dark-palette2=['52', '67', '181']
+dark-palette3=['196', '30', '51']
+dark-palette4=['101', '55', '164']
+dark-palette5=['196', '72', '185']
+dark-palette6=['212', '72', '163']
+dark-palette7=['205', '53', '103']
+dark-palette8=['117', '31', '64']
+dark-palette9=['65', '44', '109']
+import-export=false
+light-bguri='file:///usr/share/backgrounds/gnome/amber-l.jxl'
+light-palette1=['243', '113', '19']
+light-palette10=['188', '84', '76']
+light-palette11=['220', '140', '210']
+light-palette12=['148', '92', '132']
+light-palette2=['201', '87', '104']
+light-palette3=['220', '98', '62']
+light-palette4=['243', '146', '19']
+light-palette5=['223', '69', '48']
+light-palette6=['244', '178', '30']
+light-palette7=['170', '96', '160']
+light-palette8=['225', '45', '55']
+light-palette9=['81', '116', '205']
+monitor-height=1080
+monitor-width=1920
+palette1=['151', '61', '182']
+palette10=['178', '58', '142']
+palette11=['204', '92', '209']
+palette12=['76', '42', '84']
+palette2=['52', '67', '181']
+palette3=['196', '30', '51']
+palette4=['101', '55', '164']
+palette5=['196', '72', '185']
+palette6=['212', '72', '163']
+palette7=['205', '53', '103']
+palette8=['117', '31', '64']
+palette9=['65', '44', '109']
+pause-reload=false
+reloadstyle=false
+
+[org/gnome/shell/extensions/user-theme]
+name='Matcha-dark-aliz'
+
+[org/gnome/shell/world-clocks]
+locations=@av []
+
+[org/gnome/software]
+check-timestamp=int64 1735380009
+first-run=false
+
+[org/gnome/tweaks]
+show-extensions-notice=false
+
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+sidebar-width=140
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+view-type='list'
+window-size=(857, 372)
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
@@ -24,10 +309,10 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=211
+sidebar-width=180
 sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(0, 0)
-window-size=(2560, 1440)
+window-position=(2661, 32)
+window-size=(1203, 902)

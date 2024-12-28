@@ -35,9 +35,8 @@ depends=(
     cabal-install
     calibre
     carla
-    ccls
     copyq
-    csharp-ls
+    ccls
     cups
     cups-pdf
     curl
@@ -68,14 +67,15 @@ depends=(
     git-delta
     git-filter-repo
     github-cli
+    gdm
     git-secret
     gnome-keyring
+    gnome-terminal
     gnome-network-displays
     google-chrome
     gpick
     gradle
     graphql-lsp
-    grive
     gst-plugin-pipewire
     guitarix
     gvfs
@@ -110,7 +110,6 @@ depends=(
     lightdm-gtk-greeter
     linux
     linux-firmware
-    linux-zen
     linux-zen-headers
     localsend-bin
     lua-language-server
@@ -252,7 +251,6 @@ depends=(
     xorg-xwd
     xorg-xwininfo
     xorg-xwud
-    xss-lock-session
     ytmdesktop-git
     zip
     zoom

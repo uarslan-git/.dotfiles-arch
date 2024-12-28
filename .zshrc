@@ -5,7 +5,7 @@ export TERMINAL=alacritty
 
 export LANG=en_US.UTF-8
 export LANG_ALL=en_US.UTF-8
-export LC_ALL=ja_JP.UTF-8
+#export LC_ALL=ja_JP.UTF-8
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
