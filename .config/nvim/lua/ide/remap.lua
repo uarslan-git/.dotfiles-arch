@@ -2,11 +2,11 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Insert mode key mappings
---vim.api.nvim_set_keymap('i', '"', '""<left>', { noremap = true, silent = true })
---vim.api.nvim_set_keymap('i', "'", "''<left>", { noremap = true, silent = true })
---vim.api.nvim_set_keymap('i', '(', '()<left>', { noremap = true, silent = true })
---vim.api.nvim_set_keymap('i', '[', '[]<left>', { noremap = true, silent = true })
---vim.api.nvim_set_keymap('i', '{', '{}<left>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '"', '""<left>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', "'", "''<left>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '(', '()<left>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '[', '[]<left>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '{', '{}<left>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '{<CR>', '{<CR>}<ESC>O', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '(<CR>', '(<CR>)<ESC>O', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', ';<CR>', ';<CR>;<ESC>O', { noremap = true, silent = true })

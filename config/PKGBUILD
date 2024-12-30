@@ -14,7 +14,6 @@ sha512sums=('SKIP')
 
 #startPackages
 depends=(
-    alacritty
     amd-ucode
     ani-cli
     anki-bin
@@ -84,10 +83,6 @@ depends=(
     haskell-language-server
     hoogle
     hplip
-    i3blocks
-    i3lock-color
-    i3status
-    i3-wm
     ibus-daemon
     ibus-mozc
     imhex-bin
@@ -102,7 +97,6 @@ depends=(
     kdeconnect
     kdenlive
     keepassxc
-    kitty
     kotlin-language-server
     krita
     libreoffice-still
@@ -201,7 +195,6 @@ depends=(
     ttf-iosevka-nerd
     typescript-language-server
     ufw
-    unityhub
     unzip
     ventoy-bin
     vesktop-bin

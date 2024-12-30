@@ -1,8 +1,8 @@
 [com/usebottles/bottles]
 show-sandbox-warning=false
 startup-view='page_list'
-window-height=1440
-window-width=2560
+window-height=1080
+window-width=1920
 
 [org/gnome/Console]
 last-window-maximised=true
@@ -68,7 +68,7 @@ gtk-theme='Matcha-dark-azul'
 icon-theme='Papirus'
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-baobab', 'org-gnome-console', 'steam', 'vesktop', 'google-chrome', 'com-usebottles-bottles', 'org-keepassxc-keepassxc', 'org-gnome-evolution-alarm-notify', 'gnome-power-panel', 'org-gnome-extensions']
+application-children=['org-gnome-baobab', 'org-gnome-console', 'steam', 'vesktop', 'google-chrome', 'com-usebottles-bottles', 'org-keepassxc-keepassxc', 'org-gnome-evolution-alarm-notify', 'gnome-power-panel', 'org-gnome-extensions', 'hyper']
 
 [org/gnome/desktop/notifications/application/com-usebottles-bottles]
 application-id='com.usebottles.bottles.desktop'
@@ -78,6 +78,9 @@ application-id='gnome-power-panel.desktop'
 
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
+
+[org/gnome/desktop/notifications/application/hyper]
+application-id='hyper.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-baobab]
 application-id='org.gnome.baobab.desktop'
@@ -172,7 +175,7 @@ distro-icon=6
 menu-button-icon='Distro_Icon'
 menu-layout='Runner'
 prefs-visible-page=0
-recently-installed-apps=['designer.desktop', 'linguist.desktop', 'qdbusviewer.desktop', 'assistant.desktop', 'com.blackmagicdesign.rawplayer.desktop', 'com.blackmagicdesign.resolve-Panels.desktop', 'com.blackmagicdesign.resolve-Installer.desktop', 'com.blackmagicdesign.resolve-CaptureLogs.desktop', 'com.blackmagicdesign.rawspeedtest.desktop']
+recently-installed-apps=['designer.desktop', 'linguist.desktop', 'qdbusviewer.desktop', 'assistant.desktop', 'com.blackmagicdesign.rawplayer.desktop', 'com.blackmagicdesign.resolve-Panels.desktop', 'com.blackmagicdesign.resolve-Installer.desktop', 'com.blackmagicdesign.resolve-CaptureLogs.desktop', 'com.blackmagicdesign.rawspeedtest.desktop', 'hyper.desktop']
 runner-position='Centered'
 search-entry-border-radius=(true, 25)
 
@@ -253,18 +256,43 @@ autohg-bar=true
 balpha=1.0
 bartype='Islands'
 bcolor=['0.506', '0.239', '0.612']
+bg-change=true
 bgalpha=0.0
 bgcolor-wmax=['0.125', '0.125', '0.125']
 bguri='file:///home/user/.config/background'
 bottom-margin=4.4000000000000004
 bradius=22.0
 bwidth=1.1000000000000001
+count1=287202
+count10=2926
+count11=596
+count12=94
+count2=53166
+count3=52497
+count4=47616
+count5=38597
+count6=35684
+count7=18109
+count8=11634
+count9=8911
 dark-bcolor=['0.506', '0.239', '0.612']
 dark-bgcolor-wmax=['0.125', '0.125', '0.125']
 dark-bguri='file:///home/user/.config/background'
 dark-dbgcolor=['0.929', '0.200', '0.231']
 dark-fgcolor=['0.929', '0.200', '0.231']
 dark-iscolor=['0.141', '0.122', '0.192']
+dark-palette1=['27', '8', '30']
+dark-palette10=['182', '25', '64']
+dark-palette11=['117', '160', '196']
+dark-palette12=['54', '78', '84']
+dark-palette2=['49', '22', '76']
+dark-palette3=['76', '22', '63']
+dark-palette4=['116', '37', '107']
+dark-palette5=['196', '74', '173']
+dark-palette6=['74', '35', '112']
+dark-palette7=['120', '59', '177']
+dark-palette8=['214', '148', '226']
+dark-palette9=['220', '204', '241']
 dashdock-style='Bar'
 dbgcolor=['0.929', '0.200', '0.231']
 dborder=true
@@ -279,15 +307,39 @@ import-export=false
 isalpha=1.0
 iscolor=['0.141', '0.122', '0.192']
 light-bguri='file:///home/user/.config/background'
+light-palette1=['27', '8', '30']
+light-palette10=['182', '25', '64']
+light-palette11=['117', '160', '196']
+light-palette12=['54', '78', '84']
+light-palette2=['49', '22', '76']
+light-palette3=['76', '22', '63']
+light-palette4=['116', '37', '107']
+light-palette5=['196', '74', '173']
+light-palette6=['74', '35', '112']
+light-palette7=['120', '59', '177']
+light-palette8=['214', '148', '226']
+light-palette9=['220', '204', '241']
 margin=3.1000000000000001
 monitor-height=1080
 monitor-width=1920
+palette1=['27', '8', '30']
+palette10=['182', '25', '64']
+palette11=['117', '160', '196']
+palette12=['54', '78', '84']
+palette2=['49', '22', '76']
+palette3=['76', '22', '63']
+palette4=['116', '37', '107']
+palette5=['196', '74', '173']
+palette6=['74', '35', '112']
+palette7=['120', '59', '177']
+palette8=['214', '148', '226']
+palette9=['220', '204', '241']
 pause-reload=false
 radius-bottomleft=true
 radius-bottomright=true
 radius-topleft=true
 radius-topright=true
-reloadstyle=true
+reloadstyle=false
 trigger-reload=false
 width-top=true
 wmaxbar=false
