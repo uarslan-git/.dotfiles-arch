@@ -358,6 +358,21 @@ Description="Keyboard - Russian - Russian (plus Tatar letters)"
 Language=ru
 Label="ru (rtu)"
 
+[keyboard-ru-diktor]
+Description="Keyboard - Russian - Russian (Diktor)"
+Language=ru
+Label=diktor
+
+[keyboard-ru-ruintl_ru]
+Description="Keyboard - Russian - Russian (international, RU)"
+Language=ru
+Label="ru (ruintl_ru)"
+
+[keyboard-ru-ruintl_en]
+Description="Keyboard - Russian - Russian (international, EN)"
+Language=en
+Label="en (ruintl_en)"
+
 [keyboard-br]
 Description="Keyboard - Portuguese (Brazil)"
 Language=pt
@@ -2713,6 +2728,16 @@ Description="Keyboard - French - French (Dvorak)"
 Language=fr
 Label="fr (dvorak)"
 
+[keyboard-fr-ergol]
+Description="Keyboard - French - French (Ergo‑L)"
+Language=fr
+Label="fr (ergol)"
+
+[keyboard-fr-ergol_iso]
+Description="Keyboard - French - French (Ergo‑L, ISO variant)"
+Language=fr
+Label="fr (ergol_iso)"
+
 [keyboard-fr-mac]
 Description="Keyboard - French - French (Macintosh)"
 Language=fr
@@ -2852,11 +2877,6 @@ Label=gr
 Description="Keyboard - Greek - Greek (simple)"
 Language=el
 Label="gr (simple)"
-
-[keyboard-gr-extended]
-Description="Keyboard - Greek - Greek (extended)"
-Language=el
-Label="gr (extended)"
 
 [keyboard-gr-nodeadkeys]
 Description="Keyboard - Greek - Greek (no dead keys)"
@@ -3278,15 +3298,20 @@ Description="Keyboard - Hungarian - Hungarian (QWERTY, 102-key, dot, no dead key
 Language=hu
 Label="hu (102_qwerty_dot_nodead)"
 
-[keyboard-hu-oldhun]
-Description="Keyboard - Hungarian - Old Hungarian"
-Language=hu
-Label=oldhun
-
 [keyboard-hu-oldhunlig]
 Description="Keyboard - Hungarian - Old Hungarian (for ligatures)"
 Language=hu
 Label="oldhun(lig) (oldhunlig)"
+
+[keyboard-hu-oldhun_sk_sh]
+Description="Keyboard - Hungarian - Old Hungarian (Carpathian Highlands, S as Sh)"
+Language=hu
+Label="oldhun(SK,Sh) (oldhun_sk_sh)"
+
+[keyboard-hu-oldhun_sk_sz]
+Description="Keyboard - Hungarian - Old Hungarian (Carpathian Highlands, S as Sz)"
+Language=hu
+Label="oldhun(SK,Sz) (oldhun_sk_sz)"
 
 [keyboard-hu-us]
 Description="Keyboard - Hungarian - Hungarian (US)"
@@ -3597,11 +3622,6 @@ Label="it (us)"
 Description="Keyboard - Italian - Italian (IBM 142)"
 Language=it
 Label="it (ibm)"
-
-[keyboard-it-intl]
-Description="Keyboard - Italian - Italian (intl., with dead keys)"
-Language=it
-Label="it (intl)"
 
 [keyboard-it-fur]
 Description="Keyboard - Italian - Friulian (Italy)"

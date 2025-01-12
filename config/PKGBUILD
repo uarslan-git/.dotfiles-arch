@@ -19,19 +19,14 @@ depends=(
     anki-bin
     arandr
     ardour
-    autorandr
-    autotiling
     base
     base-devel
     blender
     bluez
     bluez-utils
     bottles
-    brave-bin
-    breeze-hacked-cursor-theme-git
     brightnessctl
     btop
-    cabal-install
     calibre
     carla
     ccls
@@ -39,29 +34,22 @@ depends=(
     cups
     cups-pdf
     curl
+    cursor-bin
     darktable
     deno
-    dmenu
     docker
     docker-compose
     dockerfile-language-server
     dolphin
-    dracula-gtk-theme-full
-    dracula-icons-git
     dunst
     efibootmgr
     element-desktop
-    espeak-ng
     evince
     fd
-    feh
     firefox
-    flameshot
     fzf
     fzf-tab-git
     gdb
-    gdm
-    ghc-static
     ghidra
     gimp
     git
@@ -69,36 +57,28 @@ depends=(
     git-filter-repo
     github-cli
     git-secret
-    gnome-keyring
-    gnome-network-displays
-    gnome-terminal
     google-chrome
     gpick
-    gradle
     graphql-lsp
     grim
+    grive
     gst-plugin-pipewire
     guitarix
     gvfs
     gxplugins-lv2-git
     gzip
     haskell-language-server
-    hoogle
-    hplip
-    htop
     hyprland
-    ibus-daemon
-    ibus-mozc
+    hyprpaper
     imhex-bin
     inetutils
     inkscape
-    intellij-idea-ultimate-edition
-    intellij-idea-ultimate-edition-jre
+    intel-compute-runtime
     intel-media-driver
     intel-ucode
     iwd
     jdownloader2
-    jupyterlab
+    jetbrains-toolbox
     k9s
     kdeconnect
     kdenlive
@@ -107,27 +87,19 @@ depends=(
     kotlin-language-server
     krita
     libpulse
-    libreoffice-still
-    libva-intel-driver
-    lightdm
-    lightdm-gtk-greeter
     linux
     linux-firmware
-    linux-zen-headers
     localsend-bin
     lua-language-server
-    lxappearance
-    ly
     man-db
     man-pages
     matcha-gtk-theme
     maven
     mov-cli
-    mozc
     nano
     neofetch
     neovim
-    nerd-fonts-complete-mono-glyphs
+    nerd-fonts-noto-sans-regular-complete
     networkmanager
     network-manager-applet
     nmap
@@ -135,17 +107,16 @@ depends=(
     npm
     nvim-packer-git
     nvtop
+    nwg-displays
     obsidian
     obs-studio
     oh-my-zsh-git
     openssh
-    papirus-icon-theme
     paru
     paru-debug
     paruz
     pavucontrol
     pcsx2-latest-bin
-    picom
     pince-git
     pipewire
     pipewire-alsa
@@ -154,7 +125,6 @@ depends=(
     pipewire-pulse
     playerctl
     polkit-kde-agent
-    pycharm-professional
     pyright
     python
     python-virtualenv
@@ -173,7 +143,7 @@ depends=(
     slurp
     smartmontools
     sql-language-server
-    stalonetray
+    stable-diffusion-webui-git
     steam
     systemd
     teamspeak
@@ -201,19 +171,18 @@ depends=(
     texlive-publishers
     texlive-xetex
     texstudio
-    thunar
     thunderbird
     tlp
     tmux
     torbrowser-launcher
     trayer
     tree
-    ttf-iosevka-nerd
     typescript-language-server
     ufw
     unzip
     ventoy-bin
     vesktop-bin
+    vi
     vim
     vlc
     volumeicon
@@ -222,8 +191,7 @@ depends=(
     vue-language-server
     vulkan-intel
     vulkan-radeon
-    webstorm
-    webstorm-jre
+    waybar
     wget
     which
     winetricks
@@ -231,7 +199,6 @@ depends=(
     wireplumber
     wofi
     xclip
-    xdg-desktop-portal-gnome
     xdg-desktop-portal-hyprland
     xdg-utils
     xf86-video-amdgpu

@@ -17,6 +17,29 @@ return require('packer').startup(function(use)
 		end
 	})
 
+    use ({
+    "Bryley/neoai.nvim",
+    require = { "MunifTanjim/nui.nvim" },
+    cmd = {
+        "NeoAI",
+        "NeoAIOpen",
+        "NeoAIClose",
+        "NeoAIToggle",
+        "NeoAIContext",
+        "NeoAIContextOpen",
+        "NeoAIContextClose",
+        "NeoAIInject",
+        "NeoAIInjectCode",
+        "NeoAIInjectContext",
+        "NeoAIInjectContextCode",
+    },
+    config = function()
+        require("neoai").setup({
+            -- Options go here
+        })
+    end,
+})
+
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
 
