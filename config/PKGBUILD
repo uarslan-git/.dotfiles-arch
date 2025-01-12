@@ -34,8 +34,8 @@ depends=(
     cabal-install
     calibre
     carla
-    copyq
     ccls
+    copyq
     cups
     cups-pdf
     curl
@@ -45,6 +45,7 @@ depends=(
     docker
     docker-compose
     dockerfile-language-server
+    dolphin
     dracula-gtk-theme-full
     dracula-icons-git
     dunst
@@ -59,6 +60,7 @@ depends=(
     fzf
     fzf-tab-git
     gdb
+    gdm
     ghc-static
     ghidra
     gimp
@@ -66,15 +68,15 @@ depends=(
     git-delta
     git-filter-repo
     github-cli
-    gdm
     git-secret
     gnome-keyring
-    gnome-terminal
     gnome-network-displays
+    gnome-terminal
     google-chrome
     gpick
     gradle
     graphql-lsp
+    grim
     gst-plugin-pipewire
     guitarix
     gvfs
@@ -83,6 +85,8 @@ depends=(
     haskell-language-server
     hoogle
     hplip
+    htop
+    hyprland
     ibus-daemon
     ibus-mozc
     imhex-bin
@@ -90,16 +94,21 @@ depends=(
     inkscape
     intellij-idea-ultimate-edition
     intellij-idea-ultimate-edition-jre
+    intel-media-driver
     intel-ucode
+    iwd
     jdownloader2
     jupyterlab
     k9s
     kdeconnect
     kdenlive
     keepassxc
+    kitty
     kotlin-language-server
     krita
+    libpulse
     libreoffice-still
+    libva-intel-driver
     lightdm
     lightdm-gtk-greeter
     linux
@@ -115,6 +124,7 @@ depends=(
     maven
     mov-cli
     mozc
+    nano
     neofetch
     neovim
     nerd-fonts-complete-mono-glyphs
@@ -137,12 +147,13 @@ depends=(
     pcsx2-latest-bin
     picom
     pince-git
+    pipewire
+    pipewire-alsa
     pipewire-docs
     pipewire-jack
-    #pipewire-media-session
+    pipewire-pulse
     playerctl
-    #pulseaudio
-    #pulseaudio-jack
+    polkit-kde-agent
     pycharm-professional
     pyright
     python
@@ -150,12 +161,17 @@ depends=(
     qalculate-gtk
     qbittorrent
     qjackctl
+    qt5-wayland
+    qt6-wayland
     ranger
     rar
     rclone
     ripgrep
     rofi
     samba
+    sddm
+    slurp
+    smartmontools
     sql-language-server
     stalonetray
     steam
@@ -204,19 +220,32 @@ depends=(
     vscode-html-languageserver
     vscode-json-languageserver
     vue-language-server
+    vulkan-intel
+    vulkan-radeon
     webstorm
     webstorm-jre
+    wget
     which
     winetricks
+    wireless_tools
+    wireplumber
+    wofi
     xclip
     xdg-desktop-portal-gnome
+    xdg-desktop-portal-hyprland
+    xdg-utils
+    xf86-video-amdgpu
+    xf86-video-ati
+    xf86-video-nouveau
     xf86-video-vesa
+    xf86-video-vmware
     xorg-bdftopcf
     xorg-docs
     xorg-fonts-100dpi
     xorg-fonts-75dpi
     xorg-font-util
     xorg-iceauth
+    xorg-server
     xorg-server-devel
     xorg-server-xephyr
     xorg-server-xnest
@@ -231,6 +260,7 @@ depends=(
     xorg-xev
     xorg-xgamma
     xorg-xhost
+    xorg-xinit
     xorg-xinput
     xorg-xkbevd
     xorg-xkbutils
