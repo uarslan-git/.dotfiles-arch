@@ -139,10 +139,10 @@ depends=(
     pince-git
     pipewire-docs
     pipewire-jack
-    pipewire-media-session
+    #pipewire-media-session
     playerctl
-    pulseaudio
-    pulseaudio-jack
+    #pulseaudio
+    #pulseaudio-jack
     pycharm-professional
     pyright
     python
