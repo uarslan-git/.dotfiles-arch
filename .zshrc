@@ -1,4 +1,7 @@
 export XDG_CONFIG_HOME="$HOME/.config"
+export QT_STYLE_OVERRIDE=dark
+export GDK_BACKEND=wayland
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 export EDITOR=/usr/bin/nvim
 export TERMINAL=alacritty
@@ -283,6 +286,7 @@ alias gc="git commit -m"
 alias gcd="git commit -m '$(date)'"
 alias gco="git checkout"
 alias gl="git log --graph --pretty=oneline --abbrev-commit"
+alias gls="git ls-files | awk -F'/' '{print \$1}' | sort | uniq"
 alias gp="git push"
 alias gs="git status"
 alias ra="ranger"

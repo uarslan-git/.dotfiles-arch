@@ -69,6 +69,7 @@ depends=(
     gzip
     haskell-language-server
     hyprland
+    hyprlock
     hyprpaper
     imhex-bin
     inetutils

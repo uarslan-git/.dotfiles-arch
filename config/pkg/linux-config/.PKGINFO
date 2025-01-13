@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1736702625
+builddate = 1736801200
 packager = Unknown Packager
 size = 1497
 arch = x86_64
@@ -66,6 +66,7 @@ depend = gxplugins-lv2-git
 depend = gzip
 depend = haskell-language-server
 depend = hyprland
+depend = hyprlock
 depend = hyprpaper
 depend = imhex-bin
 depend = inetutils

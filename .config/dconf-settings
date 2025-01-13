@@ -30,14 +30,28 @@ sources=[('xkb', 'us')]
 xkb-options=['terminate:ctrl_alt_bksp']
 
 [org/gnome/desktop/interface]
+color-scheme='prefer-dark'
 cursor-size=24
 cursor-theme='default'
+font-antialiasing='grayscale'
+font-hinting='slight'
+font-name='Cantarell 11'
+font-rgba-order='rgb'
+gtk-theme='Matcha-dark-azul'
+icon-theme='breeze-dark'
+text-scaling-factor=1.0
+toolbar-icons-size='large'
+toolbar-style='both-horiz'
 
 [org/gnome/desktop/notifications]
 application-children=['steam']
 
 [org/gnome/desktop/notifications/application/steam]
 application-id='steam.desktop'
+
+[org/gnome/desktop/sound]
+event-sounds=true
+input-feedback-sounds=false
 
 [org/gnome/nautilus/preferences]
 migrated-gtk-settings=true
@@ -55,7 +69,7 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=157
+sidebar-width=161
 sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
