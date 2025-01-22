@@ -1,3 +1,10 @@
+export OCL_ICD_VENDORS=/tmp/_root/etc/OpenCL/vendors/
+export LD_LIBRARY_PATH=/tmp/_root/lib64
+export NEOReadDebugKeys=1
+export DisableDeepBind=1
+export QT_QPA_PLATFORM=xcb
+
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export QT_STYLE_OVERRIDE=dark
 export GDK_BACKEND=wayland
