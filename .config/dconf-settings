@@ -1,7 +1,7 @@
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
 cursor-size=24
-cursor-theme='Adwaita'
+cursor-theme='default'
 font-antialiasing='grayscale'
 font-hinting='slight'
 font-name='Cantarell 11'

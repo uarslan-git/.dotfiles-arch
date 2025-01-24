@@ -6,9 +6,9 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1737739978
+builddate = 1737741589
 packager = Unknown Packager
-size = 1494
+size = 1469
 arch = x86_64
 license = GPL3
 depend = adobe-source-han-sans-jp-fonts
