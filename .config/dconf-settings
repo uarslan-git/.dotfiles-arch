@@ -1,4 +1,21 @@
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
 cursor-size=24
-cursor-theme='default'
+cursor-theme='Adwaita'
+font-antialiasing='grayscale'
+font-hinting='slight'
+font-name='Cantarell 11'
+font-rgba-order='rgb'
+gtk-theme='Matcha-dark-pueril'
+icon-theme='breeze-dark'
+text-scaling-factor=1.0
+toolbar-icons-size='large'
+toolbar-style='both-horiz'
+
+[org/gnome/desktop/sound]
+event-sounds=true
+input-feedback-sounds=false
+
+[org/gnome/nm-applet/eap/351ef844-2c00-4272-bb3b-2d2d7935495c]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
