@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1737741589
+builddate = 1737757216
 packager = Unknown Packager
 size = 1469
 arch = x86_64
@@ -32,7 +32,6 @@ depend = copyq
 depend = cups
 depend = cups-pdf
 depend = curl
-depend = cursor-bin
 depend = darktable
 depend = deno
 depend = direnv

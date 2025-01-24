@@ -35,7 +35,6 @@ depends=(
     cups
     cups-pdf
     curl
-    cursor-bin
     darktable
     deno
     direnv
