@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1737757216
+builddate = 1737758975
 packager = Unknown Packager
 size = 1469
 arch = x86_64
@@ -106,6 +106,8 @@ depend = networkmanager
 depend = network-manager-applet
 depend = nmap
 depend = nodejs
+depend = notion-app-electron
+depend = notion-calendar-electron
 depend = npm
 depend = nvim-packer-git
 depend = nvtop

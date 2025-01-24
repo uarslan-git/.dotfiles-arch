@@ -3,4 +3,4 @@ Description="Session Target"
 After=graphical-session-pre.target
 WantedBy=graphical-session.target
 Wants=drive.timer
-Wants=youtube-music.service
+Wants=youtube-music-player.service

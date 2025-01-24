@@ -11,6 +11,7 @@ x-scheme-handler/mid=userapp-Thunderbird-5ZY7X2.desktop
 text/calendar=userapp-Thunderbird-EG8ZX2.desktop
 application/x-extension-ics=userapp-Thunderbird-EG8ZX2.desktop
 x-scheme-handler/webcals=userapp-Thunderbird-EG8ZX2.desktop
+x-scheme-handler/notion=notion-app.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Thunderbird-OOQLW2.desktop;userapp-Thunderbird-QPWUX2.desktop;userapp-Thunderbird-5ZY7X2.desktop;
