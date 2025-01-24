@@ -1,0 +1,16 @@
+[Unit]
+Description=Fcitx
+Requires=session.target
+After=session.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/fcitx5
+ExecReload=/usr/bin/kill -s SIGUSR1 $MAINPID
+Restart=always
+
+ProtectSystem=true
+NoNewPrivileges=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictNamespaces=true
