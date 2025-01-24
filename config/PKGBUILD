@@ -14,6 +14,7 @@ sha512sums=('SKIP')
 
 #startPackages
 depends=(
+    adobe-source-han-sans-jp-fonts
     amd-ucode
     ani-cli
     anki-bin
@@ -37,6 +38,7 @@ depends=(
     cursor-bin
     darktable
     deno
+    direnv
     docker
     docker-compose
     dockerfile-language-server
@@ -45,6 +47,9 @@ depends=(
     efibootmgr
     element-desktop
     evince
+    fcitx5
+    fcitx5-configtool
+    fcitx5-mozc
     fd
     firefox
     fzf
@@ -109,6 +114,7 @@ depends=(
     nvim-packer-git
     nvtop
     nwg-displays
+    nwg-look
     obsidian
     obs-studio
     oh-my-zsh-git
@@ -144,8 +150,8 @@ depends=(
     slurp
     smartmontools
     sql-language-server
-    stable-diffusion-webui-git
     steam
+    swaylock-effects
     systemd
     teamspeak
     texlab
