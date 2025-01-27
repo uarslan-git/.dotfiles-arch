@@ -16,6 +16,10 @@ toolbar-style='both-horiz'
 event-sounds=true
 input-feedback-sounds=false
 
+[org/gnome/nm-applet/eap/1bcc12be-d210-4cd5-88a9-fc4cc90c80be]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/nm-applet/eap/351ef844-2c00-4272-bb3b-2d2d7935495c]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
@@ -31,5 +35,5 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(184, -1)
-window-size=(1231, 902)
+window-position=(0, 0)
+window-size=(1203, 902)
