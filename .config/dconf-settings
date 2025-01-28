@@ -24,6 +24,10 @@ ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/nm-applet/eap/dc92f23e-d681-4301-aa22-f0223541df66]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
