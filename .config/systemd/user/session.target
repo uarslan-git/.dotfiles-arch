@@ -4,4 +4,5 @@ After=graphical-session-pre.target
 WantedBy=graphical-session.target
 Wants=drive.timer
 Wants=youtube-music-player.service
+Wants=hypridle.service
 Wants=fcitx5.service
