@@ -61,6 +61,7 @@ depends=(
     git-filter-repo
     github-cli
     git-secret
+    gnome-network-displays
     google-chrome
     gpick
     graphql-lsp
@@ -72,9 +73,11 @@ depends=(
     gxplugins-lv2-git
     gzip
     haskell-language-server
+    hypridle
     hyprland
     hyprlock
     hyprpaper
+    hyprpicker
     imhex-bin
     inetutils
     inkscape
@@ -120,6 +123,7 @@ depends=(
     obs-studio
     oh-my-zsh-git
     openssh
+    otf-font-awesome
     paru
     paru-debug
     paruz
@@ -152,7 +156,9 @@ depends=(
     smartmontools
     sql-language-server
     steam
+    swaybg
     swaylock-effects
+    swww
     systemd
     teamspeak
     texlab
@@ -206,6 +212,7 @@ depends=(
     wireless_tools
     wireplumber
     wofi
+    wpaperd
     xclip
     xdg-desktop-portal-hyprland
     xdg-utils
@@ -249,6 +256,7 @@ depends=(
     xorg-xwd
     xorg-xwininfo
     xorg-xwud
+    xss-lock
     ytmdesktop-git
     zip
     zoom
