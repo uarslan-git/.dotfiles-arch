@@ -59,8 +59,8 @@ depends=(
     git
     git-delta
     git-filter-repo
-    github-cli
     git-secret
+    github-cli
     gnome-network-displays
     google-chrome
     gpick
@@ -108,8 +108,8 @@ depends=(
     neofetch
     neovim
     nerd-fonts-noto-sans-regular-complete
-    networkmanager
     network-manager-applet
+    networkmanager
     nmap
     nodejs
     notion-app-electron
@@ -119,11 +119,23 @@ depends=(
     nvtop
     nwg-displays
     nwg-look
-    obsidian
     obs-studio
+    obsidian
     oh-my-zsh-git
     openssh
+    otf-aurulent-nerd
+    otf-codenewroman-nerd
+    otf-comicshanns-nerd
+    otf-commit-mono-nerd
+    otf-droid-nerd
+    otf-firamono-nerd
     otf-font-awesome
+    otf-geist-mono-nerd
+    otf-hasklig-nerd
+    otf-hermit-nerd
+    otf-monaspace-nerd
+    otf-opendyslexic-nerd
+    otf-overpass-nerd
     paru
     paru-debug
     paruz
@@ -155,7 +167,6 @@ depends=(
     slurp
     smartmontools
     sql-language-server
-    steam
     swaybg
     swaylock-effects
     swww
@@ -191,6 +202,61 @@ depends=(
     torbrowser-launcher
     trayer
     tree
+    ttf-0xproto-nerd
+    ttf-3270-nerd
+    ttf-agave-nerd
+    ttf-anonymouspro-nerd
+    ttf-arimo-nerd
+    ttf-bigblueterminal-nerd
+    ttf-bitstream-vera-mono-nerd
+    ttf-cascadia-code-nerd
+    ttf-cascadia-mono-nerd
+    ttf-cousine-nerd
+    ttf-d2coding-nerd
+    ttf-daddytime-mono-nerd
+    ttf-dejavu-nerd
+    ttf-envycoder-nerd
+    ttf-fantasque-nerd
+    ttf-firacode-nerd
+    ttf-go-nerd
+    ttf-gohu-nerd
+    ttf-hack-nerd
+    ttf-heavydata-nerd
+    ttf-iawriter-nerd
+    ttf-ibmplex-mono-nerd
+    ttf-inconsolata-go-nerd
+    ttf-inconsolata-lgc-nerd
+    ttf-inconsolata-nerd
+    ttf-intone-nerd
+    ttf-iosevka-nerd
+    ttf-iosevkaterm-nerd
+    ttf-iosevkatermslab-nerd
+    ttf-jetbrains-mono-nerd
+    ttf-lekton-nerd
+    ttf-liberation-mono-nerd
+    ttf-lilex-nerd
+    ttf-martian-mono-nerd
+    ttf-meslo-nerd
+    ttf-monofur-nerd
+    ttf-monoid-nerd
+    ttf-mononoki-nerd
+    ttf-mplus-nerd
+    ttf-nerd-fonts-symbols
+    ttf-nerd-fonts-symbols-mono
+    ttf-noto-nerd
+    ttf-profont-nerd
+    ttf-proggyclean-nerd
+    ttf-recursive-nerd
+    ttf-roboto-mono-nerd
+    ttf-sharetech-mono-nerd
+    ttf-sourcecodepro-nerd
+    ttf-space-mono-nerd
+    ttf-terminus-nerd
+    ttf-tinos-nerd
+    ttf-ubuntu-mono-nerd
+    ttf-ubuntu-nerd
+    ttf-victor-mono-nerd
+    ttf-zed-mono-nerd
     typescript-language-server
     ufw
     unzip
@@ -223,9 +289,9 @@ depends=(
     xf86-video-vmware
     xorg-bdftopcf
     xorg-docs
+    xorg-font-util
     xorg-fonts-100dpi
     xorg-fonts-75dpi
-    xorg-font-util
     xorg-iceauth
     xorg-server
     xorg-server-devel
@@ -278,6 +344,7 @@ depends=(
       zerotier-one
       gamescope
       nvidia
+      nvidia-settings
       nvidia-lts
       upscayl-bin
       ); fi
