@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/user/.gtkrc-2.0.mine"
-gtk-theme-name="Matcha-dark-aliz"
-gtk-icon-theme-name="breeze-dark"
+gtk-theme-name="Matcha-dark-sea"
+gtk-icon-theme-name="breeze"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="default"
 gtk-cursor-theme-size=24
