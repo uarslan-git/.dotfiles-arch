@@ -74,6 +74,7 @@ depends=(
     hyprlock
     hyprpaper
     hyprpicker
+    hyprshot
     imhex-bin
     inetutils
     inkscape
