@@ -59,7 +59,6 @@ depends=(
     git-filter-repo
     github-cli
     git-secret
-    #gnome-network-displays
     google-chrome
     gpick
     graphql-lsp
@@ -94,6 +93,7 @@ depends=(
     libpulse
     linux
     linux-firmware
+    linux-lts-headers
     localsend-bin
     lua-language-server
     man-db
@@ -210,7 +210,12 @@ depends=(
     wofi
     wpaperd
     xclip
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-wlr
     xdg-utils
+    xf86-video-amdgpu
+    xf86-video-intel
     xss-lock
     ytmdesktop-git
     zip
@@ -231,6 +236,7 @@ depends=(
       stable-diffusion-webui-git
       zerotier-one
       gamescope
+      nvidia
       nvidia-settings
       upscayl-bin
       ); fi
