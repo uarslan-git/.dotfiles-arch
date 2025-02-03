@@ -1,29 +1,3 @@
-[com/usebottles/bottles]
-dark-theme=true
-show-sandbox-warning=false
-startup-view='page_library'
-window-height=997
-window-width=1876
-
-[org/gnome/desktop/app-folders]
-folder-children=['Utilities', 'YaST', 'Pardus']
-
-[org/gnome/desktop/app-folders/folders/Pardus]
-categories=['X-Pardus-Apps']
-name='X-Pardus-Apps.directory'
-translate=true
-
-[org/gnome/desktop/app-folders/folders/Utilities]
-apps=['org.freedesktop.GnomeAbrt.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Loupe.desktop', 'org.freedesktop.MalcontentControl.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop']
-categories=['X-GNOME-Utilities']
-name='X-GNOME-Utilities.directory'
-translate=true
-
-[org/gnome/desktop/app-folders/folders/YaST]
-categories=['X-SuSE-YaST']
-name='suse-yast.directory'
-translate=true
-
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
 cursor-size=24
@@ -32,8 +6,8 @@ font-antialiasing='grayscale'
 font-hinting='slight'
 font-name='Cantarell 11'
 font-rgba-order='rgb'
-gtk-theme='Matcha-dark-sea'
-icon-theme='breeze'
+gtk-theme='Matcha-dark-pueril'
+icon-theme='breeze-dark'
 text-scaling-factor=1.0
 toolbar-icons-size='large'
 toolbar-style='both-horiz'
@@ -42,22 +16,17 @@ toolbar-style='both-horiz'
 event-sounds=true
 input-feedback-sounds=false
 
-[org/gnome/evolution-data-server]
-migrated=true
+[org/gnome/nm-applet/eap/1bcc12be-d210-4cd5-88a9-fc4cc90c80be]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
-[org/gnome/shell]
-welcome-dialog-last-shown-version='47.3'
+[org/gnome/nm-applet/eap/351ef844-2c00-4272-bb3b-2d2d7935495c]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
-[org/gtk/gtk4/settings/file-chooser]
-date-format='regular'
-location-mode='path-bar'
-show-hidden=true
-sidebar-width=140
-sort-column='name'
-sort-directories-first=true
-sort-order='ascending'
-type-format='category'
-view-type='list'
+[org/gnome/nm-applet/eap/dc92f23e-d681-4301-aa22-f0223541df66]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
@@ -70,5 +39,5 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(2586, 23)
-window-size=(930, 448)
+window-position=(184, -1)
+window-size=(1231, 902)
