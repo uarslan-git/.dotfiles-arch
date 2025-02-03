@@ -222,6 +222,7 @@ depends=(
     ytmdesktop-git
     zip
     zoom
+    zotero-bin
     zsh
     zsh-autosuggestions
     zsh-completions

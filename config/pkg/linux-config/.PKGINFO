@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1738591995
+builddate = 1738593144
 packager = Unknown Packager
 size = 1469
 arch = x86_64
@@ -219,6 +219,7 @@ depend = xss-lock
 depend = ytmdesktop-git
 depend = zip
 depend = zoom
+depend = zotero-bin
 depend = zsh
 depend = zsh-autosuggestions
 depend = zsh-completions
