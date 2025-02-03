@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1738577183
+builddate = 1738579457
 packager = Unknown Packager
 size = 1469
 arch = x86_64
@@ -185,6 +185,7 @@ depend = tmux
 depend = torbrowser-launcher
 depend = trayer
 depend = tree
+depend = tuxguitar-bin
 depend = typescript-language-server
 depend = ufw
 depend = unzip

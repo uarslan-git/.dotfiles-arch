@@ -188,6 +188,7 @@ depends=(
     torbrowser-launcher
     trayer
     tree
+    tuxguitar-bin
     typescript-language-server
     ufw
     unzip
