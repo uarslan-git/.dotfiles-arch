@@ -5,16 +5,16 @@ x-scheme-handler/https=google-chrome.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 x-scheme-handler/webcal=google-chrome.desktop
-x-scheme-handler/mailto=userapp-Thunderbird-NDZR02.desktop
-message/rfc822=userapp-Thunderbird-NDZR02.desktop
-x-scheme-handler/mid=userapp-Thunderbird-NDZR02.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-ZI7W12.desktop
+message/rfc822=userapp-Thunderbird-ZI7W12.desktop
+x-scheme-handler/mid=userapp-Thunderbird-ZI7W12.desktop
 text/calendar=userapp-Thunderbird-EG8ZX2.desktop
 application/x-extension-ics=userapp-Thunderbird-EG8ZX2.desktop
 x-scheme-handler/webcals=userapp-Thunderbird-EG8ZX2.desktop
 x-scheme-handler/notion=notion-app.desktop
 
 [Added Associations]
-x-scheme-handler/mailto=userapp-Thunderbird-OOQLW2.desktop;userapp-Thunderbird-QPWUX2.desktop;userapp-Thunderbird-5ZY7X2.desktop;userapp-Thunderbird-0QHZ02.desktop;userapp-Thunderbird-NDZR02.desktop;
-x-scheme-handler/mid=userapp-Thunderbird-OOQLW2.desktop;userapp-Thunderbird-QPWUX2.desktop;userapp-Thunderbird-5ZY7X2.desktop;userapp-Thunderbird-0QHZ02.desktop;userapp-Thunderbird-NDZR02.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-OOQLW2.desktop;userapp-Thunderbird-QPWUX2.desktop;userapp-Thunderbird-5ZY7X2.desktop;userapp-Thunderbird-0QHZ02.desktop;userapp-Thunderbird-NDZR02.desktop;userapp-Thunderbird-ZI7W12.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-OOQLW2.desktop;userapp-Thunderbird-QPWUX2.desktop;userapp-Thunderbird-5ZY7X2.desktop;userapp-Thunderbird-0QHZ02.desktop;userapp-Thunderbird-NDZR02.desktop;userapp-Thunderbird-ZI7W12.desktop;
 x-scheme-handler/webcal=userapp-Thunderbird-MTCKW2.desktop;userapp-Thunderbird-LLITX2.desktop;userapp-Thunderbird-EG8ZX2.desktop;
 x-scheme-handler/webcals=userapp-Thunderbird-MTCKW2.desktop;userapp-Thunderbird-LLITX2.desktop;userapp-Thunderbird-EG8ZX2.desktop;
