@@ -1,21 +1,21 @@
 {
     "InternalPDFViewer": {
         "Embedded": true,
-        "File": ""
+        "File": "../../Drive/Drive1/Uni/SRM/Report/template_Report.pdf"
     },
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "../../../../run/user/1000/gvfs/google-drive:host=gmail.com,user=uarslancs/0ACjgjT-7QqIDUk9PVA/1B6ai9VHsn8_pXzliIBneXFJ9_SwaN15l/14kaBxLOb_e9k_PLsRcLxHCw-yTGGl9MK/15Wt_lGJhGoquuzZ5kme0FWr4vHA0clCu/1M5d7Q550FskL8Cv5dPeFOFiVLCmGoiOd",
+        "CurrentFile": "../../Drive/Drive1/Uni/SRM/Report/template_Report.tex",
         "FileVersion": 1,
         "Files": [
             {
-                "Col": 0,
+                "Col": 35,
                 "EditorGroup": 0,
-                "FileName": "../../../../run/user/1000/gvfs/google-drive:host=gmail.com,user=uarslancs/0ACjgjT-7QqIDUk9PVA/1B6ai9VHsn8_pXzliIBneXFJ9_SwaN15l/14kaBxLOb_e9k_PLsRcLxHCw-yTGGl9MK/15Wt_lGJhGoquuzZ5kme0FWr4vHA0clCu/1M5d7Q550FskL8Cv5dPeFOFiVLCmGoiOd",
+                "FileName": "../../Drive/Drive1/Uni/SRM/Report/template_Report.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 0
+                "Line": 10
             }
         ],
         "MasterFile": "",
