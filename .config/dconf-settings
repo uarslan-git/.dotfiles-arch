@@ -1,3 +1,10 @@
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+
+[org/gnome/nm-applet/eap/a5d0634e-30d7-40b9-87b6-078d6a680afd]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/nm-applet/eap/b88d01ad-9a95-4e49-8a66-bc3bd5645a34]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false

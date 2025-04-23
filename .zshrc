@@ -7,7 +7,6 @@ export QT_QPA_PLATFORM=xcb
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export QT_STYLE_OVERRIDE=dark
-export GDK_BACKEND=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 export EDITOR=/usr/bin/nvim
