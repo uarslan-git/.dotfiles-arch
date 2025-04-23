@@ -24,8 +24,8 @@ client.background       #ffffff
 default_border pixel 1
 default_floating_border pixel 1
 smart_gaps on
-gaps inner 10
-gaps outer 10
+gaps inner 0
+gaps outer 0
 
 # Window Rule
 #default_border pixel 1
@@ -47,8 +47,8 @@ bindsym $mod+p exec --no-startup-id ranger
 # Auto start
 exec_always --no-startup-id cd ~/ && git pull
 exec_always --no-startup-id autotiling
-exec_always --no-startup-id systemctl --user restart feh.service
-exec_always --no-startup-id systemctl --user restart i3-session.target
+exec_always --no-startup-id systemctl --user restart session.target
+exec_always --no-startup-id feh --bg-scale ~/.config/bg.jpg
 exec --no-startup-id fcitx5
 exec --no-startup-id nm-applet
 exec --no-startup-id flameshot
@@ -114,7 +114,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill

@@ -14,6 +14,7 @@ sha512sums=('SKIP')
 
 #startPackages
 depends=(
+    7zip
     adobe-source-han-sans-jp-fonts
     amd-ucode
     ani-cli
@@ -35,8 +36,8 @@ depends=(
     cups-pdf
     curl
     darktable
-    deno
     direnv
+    dmenu
     docker
     docker-compose
     dockerfile-language-server
@@ -65,17 +66,15 @@ depends=(
     graphql-lsp
     grim
     grive
+    grive-debug
     gst-plugin-pipewire
     guitarix
     gxplugins-lv2-git
     gzip
     haskell-language-server
-    hypridle
-    hyprland
-    hyprlock
-    hyprpaper
-    hyprpicker
-    hyprshot
+    i3blocks
+    i3status
+    i3-wm
     imhex-bin
     inetutils
     inkscape
@@ -90,14 +89,17 @@ depends=(
     kdenlive
     keepassxc
     kitty
-    kotlin-language-server
     krita
     libpulse
+    lightdm
+    lightdm-gtk-greeter
     linux
     linux-firmware
     linux-lts-headers
+    linux-zen
     localsend-bin
     lua-language-server
+    lxappearance
     man-db
     man-pages
     matcha-gtk-theme
@@ -116,8 +118,6 @@ depends=(
     npm
     nvim-packer-git
     nvtop
-    nwg-displays
-    nwg-look
     obsidian
     obs-studio
     oh-my-zsh-git
@@ -134,22 +134,19 @@ depends=(
     pipewire-jack
     pipewire-pulse
     playerctl
-    polkit-kde-agent
+    proton-ge-custom-bin
     pyright
     python
     python-virtualenv
     qalculate-gtk
     qbittorrent
     qjackctl
-    qt5-wayland
-    qt6-wayland
     ranger
     rar
     rclone
     ripgrep
     rofi
     samba
-    sddm
     slurp
     smartmontools
     sql-language-server
@@ -183,13 +180,13 @@ depends=(
     texlive-publishers
     texlive-xetex
     texstudio
+    thunar
     thunderbird
     tlp
     tmux
     torbrowser-launcher
     trayer
     tree
-    tuxguitar-bin
     typescript-language-server
     ufw
     unzip
@@ -214,8 +211,6 @@ depends=(
     wpaperd
     xclip
     xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
-    xdg-desktop-portal-wlr
     xdg-utils
     xf86-video-amdgpu
     xf86-video-intel
@@ -233,39 +228,39 @@ depends=(
   )
   #endPackages
 
-  if [[ "$(hostname)" == "pc" ]]; then depends+=(
-      unityhub
-      gamemode
-      mangohud
-      stable-diffusion-webui-git
-      zerotier-one
-      gamescope
-      nvidia
-      nvidia-settings
-      upscayl-bin
-      ); fi
+if [[ "$(hostname)" == "pc" ]]; then depends+=(
+    gamemode
+    gamescope
+    mangohud
+    nvidia
+    nvidia-settings
+    stable-diffusion-webui-git
+    unityhub
+    upscayl-bin
+    zerotier-one
+    ); fi
 
   # Functions
   paru() {
-  	if ! pacman -Qq | grep -i paru &>/dev/null; then
-		git clone https://aur.archlinux.org/paru.git
-		pushd paru
-		makepkg -sif
-		popd
-		rm -rf paru
-	fi
+      if ! pacman -Qq | grep -i paru &>/dev/null; then
+          git clone https://aur.archlinux.org/paru.git
+          pushd paru
+          makepkg -sif
+          popd
+          rm -rf paru
+      fi
   }
 
-  zsh() {
-	  if [ $(basename $SHELL) != "zsh" ]; then
-	  	chsh -s /usr/bin/zsh
-	  fi
-  }
+zsh() {
+    if [ $(basename $SHELL) != "zsh" ]; then
+        chsh -s /usr/bin/zsh
+    fi
+}
 
-  paru
-  zsh
+paru
+zsh
 
 package() {
-   tar -xf rootfs.tar -C "$pkgdir" --overwrite
-   echo "finished"
+    tar -xf rootfs.tar -C "$pkgdir" --overwrite
+    echo "finished"
 }
