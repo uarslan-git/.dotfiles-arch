@@ -21,6 +21,7 @@ depends=(
     anki-bin
     arandr
     ardour
+    assaultcube-reloaded
     base
     base-devel
     blender
@@ -104,6 +105,7 @@ depends=(
     man-pages
     matcha-gtk-theme
     maven
+    miniforge
     mov-cli
     nano
     neofetch
