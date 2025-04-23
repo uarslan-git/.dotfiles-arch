@@ -126,6 +126,7 @@ depends=(
     paru-debug
     paruz
     pavucontrol
+    pcmanfm
     pcsx2-latest-bin
     pince-git
     pipewire
