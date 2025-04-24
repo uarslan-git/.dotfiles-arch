@@ -15,15 +15,14 @@ sha512sums=('SKIP')
 #startPackages
 depends=(
     7zip
-    i3lock-color
     adobe-source-han-sans-jp-fonts
     amd-ucode
     ani-cli
     anki-bin
     arandr
     ardour
+    autorandr
     base
-    cargo
     base-devel
     blender
     bluez
@@ -31,6 +30,7 @@ depends=(
     brightnessctl
     btop
     calibre
+    cargo
     carla
     ccls
     copyq
@@ -75,6 +75,7 @@ depends=(
     gzip
     haskell-language-server
     i3blocks
+    i3lock-color
     i3status
     i3-wm
     imhex-bin
@@ -92,6 +93,7 @@ depends=(
     keepassxc
     kitty
     krita
+    lib32-sdl_image
     libpulse
     lightdm
     lightdm-gtk-greeter
@@ -150,6 +152,7 @@ depends=(
     rclone
     ripgrep
     rofi
+    rust
     samba
     slurp
     smartmontools
@@ -192,6 +195,7 @@ depends=(
     tree
     typescript-language-server
     ufw
+    unityhub
     unzip
     ventoy-bin
     vesktop-bin
@@ -217,7 +221,6 @@ depends=(
     xdg-utils
     xf86-video-amdgpu
     xf86-video-intel
-    unityhub
     xss-lock
     ytmdesktop-git
     zip
