@@ -44,6 +44,7 @@ depends=(
     docker-compose
     dockerfile-language-server
     dolphin
+    dracula-icons-git
     dunst
     efibootmgr
     element-desktop
@@ -53,6 +54,7 @@ depends=(
     fd
     feh
     firefox
+    flameshot
     fzf
     fzf-tab-git
     gdb
@@ -78,6 +80,7 @@ depends=(
     i3lock-color
     i3status
     i3-wm
+    ida-free
     imhex-bin
     inetutils
     inkscape
@@ -150,10 +153,12 @@ depends=(
     ranger
     rar
     rclone
+    reclass.net-bin
     ripgrep
     rofi
     rust
     samba
+    scanmem
     slurp
     smartmontools
     sql-language-server
@@ -163,6 +168,7 @@ depends=(
     swww
     systemd
     teamspeak
+    tela-circle-icon-theme-dracula
     texlab
     texlive-basic
     texlive-bibtexextra
@@ -243,6 +249,7 @@ if [[ "$(hostname)" == "pc" ]]; then depends+=(
     nvidia-settings
     stable-diffusion-webui-git
     upscayl-bin
+    opencl-nvidia
     zerotier-one
     ); fi
 

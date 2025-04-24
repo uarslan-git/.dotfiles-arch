@@ -1,4 +1,0 @@
-#!/bin/bash
-
-pushd $HOME/Drive/Drive1; grive; popd
-pushd $HOME/Drive/Drive2; grive; popd

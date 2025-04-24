@@ -1,7 +1,0 @@
-enable docker.service
-enable NetworkManager.service
-enable sddm.service
-enable tlp.service
-enable bluetooth.service
-enable cups.service
-enable systemd-resolve.service
