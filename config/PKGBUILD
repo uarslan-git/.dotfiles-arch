@@ -22,8 +22,8 @@ depends=(
     anki-bin
     arandr
     ardour
-    assaultcube-reloaded
     base
+    cargo
     base-devel
     blender
     bluez
