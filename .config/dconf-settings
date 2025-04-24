@@ -1,6 +1,10 @@
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
 
+[org/gnome/nm-applet/eap/9b7569c8-f2e4-42c8-baa6-96fa8d2e9852]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/nm-applet/eap/a5d0634e-30d7-40b9-87b6-078d6a680afd]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
@@ -12,7 +16,7 @@ ignore-phase2-ca-cert=false
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 show-size-column=true
 show-type-column=true
 sidebar-width=207
@@ -20,5 +24,5 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(0, 0)
+window-position=(1920, 0)
 window-size=(1920, 1200)

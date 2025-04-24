@@ -16,4 +16,3 @@ lockscreenPicture=("-i" "$XDG_CONFIG_HOME/lock.png")
       --verif-text= --wrong-text= --noinput-text= \
       --redraw-thread
 
-}

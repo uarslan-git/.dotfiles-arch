@@ -15,6 +15,7 @@ sha512sums=('SKIP')
 #startPackages
 depends=(
     7zip
+    i3lock-color
     adobe-source-han-sans-jp-fonts
     amd-ucode
     ani-cli
@@ -216,6 +217,7 @@ depends=(
     xdg-utils
     xf86-video-amdgpu
     xf86-video-intel
+    unityhub
     xss-lock
     ytmdesktop-git
     zip
@@ -237,7 +239,6 @@ if [[ "$(hostname)" == "pc" ]]; then depends+=(
     nvidia
     nvidia-settings
     stable-diffusion-webui-git
-    unityhub
     upscayl-bin
     zerotier-one
     ); fi
