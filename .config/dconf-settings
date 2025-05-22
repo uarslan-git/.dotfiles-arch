@@ -1,2 +1,25 @@
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
+gtk-theme='Adwaita-dark'
+
+[org/gnome/nm-applet/eap/08d84187-adc5-4a34-94bd-c676f4c61106]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/6e8caba3-744f-4321-bda5-9b729f44bad6]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=218
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(679, 283)
+window-size=(1203, 902)

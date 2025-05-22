@@ -69,8 +69,8 @@ depends=(
     gpick
     graphql-lsp
     grim
-    grive
-    grive-debug
+    #grive
+    #grive-debug
     gst-plugin-pipewire
     guitarix
     gxplugins-lv2-git
