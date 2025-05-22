@@ -289,6 +289,14 @@ alias dconf-reset="dconf reset -f /"
 alias dconf-save="pushd ~/.config; dconf dump / > dconf-settings; popd"
 alias edit="vim ~/config/PKGBUILD"
 alias ga="git add"
+alias groot='cd "$(git rev-parse --show-toplevel)"'
+alias wip='
+  if [[ "$(git rev-parse --show-toplevel)" != "$HOME" && "$(git rev-parse --show-toplevel)" != "$HOME/." ]]; then
+    groot && git add . && git commit -m "wip" && git push && cd -;
+  else
+    echo "Repo is in the home directory root (~/). Skipping operations to prevent dotfile commits.";
+    cd -;
+  fi'
 alias gb="git branch -a"
 alias gc="git commit -m"
 alias gcd="git commit -m '$(date)'"
