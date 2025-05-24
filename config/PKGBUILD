@@ -16,6 +16,7 @@ sha512sums=('SKIP')
 depends=(
     7zip
     adobe-source-han-sans-jp-fonts
+    adwaita-dark
     amd-ucode
     ani-cli
     anki-bin
@@ -44,6 +45,7 @@ depends=(
     docker-compose
     dockerfile-language-server
     dolphin
+    dracula-gtk-theme
     dracula-icons-git
     dunst
     efibootmgr
@@ -69,8 +71,7 @@ depends=(
     gpick
     graphql-lsp
     grim
-    #grive
-    #grive-debug
+    grive
     gst-plugin-pipewire
     guitarix
     gxplugins-lv2-git
@@ -111,6 +112,7 @@ depends=(
     man-pages
     matcha-gtk-theme
     maven
+    miniconda3
     miniforge
     mov-cli
     nano
