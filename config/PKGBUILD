@@ -121,10 +121,8 @@ depends=(
     networkmanager
     network-manager-applet
     nmap
-    nodejs
     notion-app-electron
     notion-calendar-electron
-    npm
     nvim-packer-git
     nvtop
     obsidian
