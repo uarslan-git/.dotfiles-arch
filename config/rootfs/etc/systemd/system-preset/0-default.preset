@@ -1,6 +1,7 @@
 enable docker.service
+enable mongodb.service
 enable NetworkManager.service
-enable sddm.service
+enable lightdm.service
 enable tlp.service
 enable bluetooth.service
 enable cups.service

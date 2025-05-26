@@ -59,6 +59,7 @@ depends=(
     flameshot
     fzf
     fzf-tab-git
+    gameconqueror
     gdb
     ghidra
     gimp
@@ -112,8 +113,10 @@ depends=(
     man-pages
     matcha-gtk-theme
     maven
-    miniconda3
     miniforge
+    mongodb-bin
+    mongodb-compass-bin
+    mongosh-bin
     mov-cli
     nano
     neofetch
@@ -121,8 +124,10 @@ depends=(
     networkmanager
     network-manager-applet
     nmap
+    nodejs-lts-jod
     notion-app-electron
     notion-calendar-electron
+    npm
     nvim-packer-git
     nvtop
     obsidian
@@ -136,7 +141,7 @@ depends=(
     pavucontrol
     pcmanfm
     pcsx2-latest-bin
-    pince-git
+    pince
     pipewire
     pipewire-alsa
     pipewire-docs
@@ -228,6 +233,7 @@ depends=(
     xf86-video-amdgpu
     xf86-video-intel
     xss-lock
+    yarn
     ytmdesktop-git
     zip
     zoom
