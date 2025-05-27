@@ -25,6 +25,7 @@ depends=(
     autorandr
     base
     base-devel
+    bash-language-server
     blender
     bluez
     bluez-utils

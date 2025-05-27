@@ -45,6 +45,7 @@ require('lspconfig').sqlls.setup({})
 require('lspconfig').texlab.setup({})
 require('lspconfig').ts_ls.setup({})
 require('lspconfig').volar.setup({})
+require('lspconfig').bashls.setup({})
 
 
 ---
