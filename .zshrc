@@ -14,6 +14,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR=/usr/bin/nvim
 export TERMINAL=alacritty
 
+export PATH="$PATH:$HOME/.dotnet/tools"
+
 export LANG=en_US.UTF-8
 export LANG_ALL=en_US.UTF-8
 #export LC_ALL=ja_JP.UTF-8
