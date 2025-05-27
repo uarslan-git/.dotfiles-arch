@@ -60,6 +60,8 @@ depends=(
     fzf
     fzf-tab-git
     gameconqueror
+    gamemode
+    gamescope
     gdb
     ghidra
     gimp
@@ -218,6 +220,7 @@ depends=(
     vue-language-server
     vulkan-intel
     vulkan-radeon
+    vulkan-tools
     waybar
     wget
     which
@@ -228,8 +231,6 @@ depends=(
     wpaperd
     xclip
     xdg-desktop-portal-gtk
-    gamescope
-    gamemode
     xdg-utils
     xf86-video-amdgpu
     xf86-video-intel
