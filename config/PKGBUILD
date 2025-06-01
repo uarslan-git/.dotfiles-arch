@@ -36,6 +36,7 @@ depends=(
     carla
     ccls
     copyq
+    csharp-ls
     cups
     cups-pdf
     curl
@@ -46,6 +47,7 @@ depends=(
     docker-compose
     dockerfile-language-server
     dolphin-emu
+    dotnet-sdk
     dracula-gtk-theme
     dracula-icons-git
     dunst
