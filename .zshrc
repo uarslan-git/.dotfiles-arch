@@ -335,3 +335,4 @@ alias n="nvim"
 alias t="tmux"
 alias zsh="vim ~/.zshrc"
 alias a="ani-cli"
+
