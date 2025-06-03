@@ -1,15 +1,10 @@
-#export OCL_ICD_VENDORS=/tmp/_root/etc/OpenCL/vendors/
-#export LD_LIBRARY_PATH=/tmp/_root/lib64
-#export NEOReadDebugKeys=1
-#export DisableDeepBind=1
-#export QT_QPA_PLATFORM=xcb
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 
 export XDG_CONFIG_HOME="$HOME/.config"
-#export QT_STYLE_OVERRIDE=dark
-#export QT_QPA_PLATFORMTHEME=qt5ct
-##export QT_AUTO_SCREEN_SCALE_FACTOR=0
-#export QT_SCALE_FACTOR=1
+export QT_STYLE_OVERRIDE=dark
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_SCALE_FACTOR=1
 
 export EDITOR=/usr/bin/nvim
 export TERMINAL=alacritty
@@ -335,4 +330,3 @@ alias n="nvim"
 alias t="tmux"
 alias zsh="vim ~/.zshrc"
 alias a="ani-cli"
-
