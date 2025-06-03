@@ -24,8 +24,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#if [[ -r "/opt/miniforge/bin/activate" ]]; then
-#fi
+if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+    . "/opt/miniconda3/etc/profile.d/conda.sh"
+    . "/opt/miniconda3/etc/profile.d/mamba.sh"
+else
+    export PATH="/opt/miniconda3/bin:$PATH"
+fi
 
 ZSH=/usr/share/oh-my-zsh/
 ZSH_CUSTOM=/usr/share/zsh
@@ -332,5 +336,9 @@ alias t="tmux"
 alias zsh="vim ~/.zshrc"
 alias a="ani-cli"
 
-
-#source "/opt/miniforge/bin/activate"
+if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+    . "/opt/miniconda3/etc/profile.d/conda.sh"
+    . "/opt/miniconda3/etc/profile.d/mamba.sh"
+else
+    export PATH="/opt/miniconda3/bin:$PATH"
+fi
