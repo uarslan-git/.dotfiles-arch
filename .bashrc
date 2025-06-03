@@ -22,5 +22,9 @@ else
     fi
 fi
 unset __conda_setup
+
+if [ -f "/opt/miniforge/etc/profile.d/mamba.sh" ]; then
+    . "/opt/miniforge/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
 

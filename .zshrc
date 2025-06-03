@@ -23,6 +23,10 @@ export LANG_ALL=en_US.UTF-8
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+if [[ -r "/opt/miniforge/bin/activate" ]]; then
+    source "/opt/miniforge/bin/activate"
+fi
 ZSH=/usr/share/oh-my-zsh/
 ZSH_CUSTOM=/usr/share/zsh
 
@@ -328,23 +332,3 @@ alias n="nvim"
 alias t="tmux"
 alias zsh="vim ~/.zshrc"
 alias a="ani-cli"
-
-## >>> conda initialize >>>
-## !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/opt/miniforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/opt/miniforge/etc/profile.d/conda.sh" ]; then
-#        . "/opt/miniforge/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/opt/miniforge/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-#
-#if [ -f "/opt/miniforge/etc/profile.d/mamba.sh" ]; then
-#    . "/opt/miniforge/etc/profile.d/mamba.sh"
-#fi
-## <<< conda initialize <<<
-#
