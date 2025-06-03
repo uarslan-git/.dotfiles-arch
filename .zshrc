@@ -3,7 +3,7 @@
 #export NEOReadDebugKeys=1
 #export DisableDeepBind=1
 #export QT_QPA_PLATFORM=xcb
-#
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 
 export XDG_CONFIG_HOME="$HOME/.config"
 #export QT_STYLE_OVERRIDE=dark
@@ -24,9 +24,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-if [[ -r "/opt/miniforge/bin/activate" ]]; then
-    source "/opt/miniforge/bin/activate"
-fi
+#if [[ -r "/opt/miniforge/bin/activate" ]]; then
+#fi
+
 ZSH=/usr/share/oh-my-zsh/
 ZSH_CUSTOM=/usr/share/zsh
 
@@ -41,7 +41,6 @@ plugins=(
 	zsh-autosuggestions
 
 )
-
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -332,3 +331,6 @@ alias n="nvim"
 alias t="tmux"
 alias zsh="vim ~/.zshrc"
 alias a="ani-cli"
+
+
+#source "/opt/miniforge/bin/activate"
