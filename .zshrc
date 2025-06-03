@@ -21,14 +21,14 @@ export LANG_ALL=en_US.UTF-8
 #export LC_ALL=ja_JP.UTF-8
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  . "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-    . "/opt/miniconda3/etc/profile.d/conda.sh"
-    . "/opt/miniconda3/etc/profile.d/mamba.sh"
+if [ -f "/opt/miniforge/etc/profile.d/conda.sh" ]; then
+    . "/opt/miniforge/etc/profile.d/conda.sh"
+    . "/opt/miniforge/etc/profile.d/mamba.sh"
 else
-    export PATH="/opt/miniconda3/bin:$PATH"
+    export PATH="/opt/miniforge/bin:$PATH"
 fi
 
 ZSH=/usr/share/oh-my-zsh/
@@ -51,9 +51,9 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-source $ZSH/oh-my-zsh.sh
+. $ZSH/oh-my-zsh.sh
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || . ~/.p10k.zsh
 
 # Functions
 function scale(){
@@ -335,10 +335,3 @@ alias n="nvim"
 alias t="tmux"
 alias zsh="vim ~/.zshrc"
 alias a="ani-cli"
-
-if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-    . "/opt/miniconda3/etc/profile.d/conda.sh"
-    . "/opt/miniconda3/etc/profile.d/mamba.sh"
-else
-    export PATH="/opt/miniconda3/bin:$PATH"
-fi
