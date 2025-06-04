@@ -43,6 +43,8 @@ bindsym $mod+shift+semicolon exec --no-startup-id copyq show
 bindsym $mod+shift+s exec --no-startup-id flameshot gui
 bindsym $mod+shift+w exec --no-startup-id loginctl lock-session
 bindsym $mod+p exec --no-startup-id ranger
+bindsym $mod+e focus output left
+bindsym $mod+w focus output left
 
 # Auto start
 exec_always --no-startup-id git pull
@@ -74,10 +76,11 @@ for_window [class="kitty"] move to workspace $ws1
 for_window [class="googel-chrome"] move to workspace $ws2
 for_window [class="thunderbird"] move to workspace $ws3
 for_window [class="element"] move to workspace $ws3
-for_window [class="discord"] move to workspace $ws3
+for_window [class="vesktop"] move to workspace $ws3
 for_window [class="zoom"] move to workspace $ws3
-for_window [class="gimp"] move to workspace $ws4
-for_window [class="notion"] move to workspace $ws5
+for_window [class="Gimp"] move to workspace $ws4
+for_window [class="Davinci-Resolve-Studio"] move to workspace $ws4
+for_window [class="Notion"] move to workspace $ws5
 for_window [class="notion-calendar"] move to workspace $ws5
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -174,8 +177,8 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
