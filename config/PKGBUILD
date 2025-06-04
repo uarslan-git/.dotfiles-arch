@@ -118,6 +118,7 @@ depends=(
     man-pages
     matcha-gtk-theme
     maven
+    miniforge
     mongodb-bin
     mongodb-compass-bin
     mongosh-bin
@@ -125,6 +126,7 @@ depends=(
     nano
     neofetch
     neovim
+    net-tools
     networkmanager
     network-manager-applet
     nmap
