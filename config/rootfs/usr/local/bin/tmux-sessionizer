@@ -13,13 +13,19 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c "$selected" "cd / && $SHELL"
-    exit 0
+# Session setup
+if ! tmux has-session -t="$selected_name" 2>/dev/null; then
+    tmux new-session -ds "$selected_name" -c "$selected"
+    tmux set-option -t "$selected_name" default-path "$selected"
+    
+    # Send a command to automatically cd to root every time a shell starts in the session
+    tmux send-keys -t "$selected_name" "cd \"$selected\"" C-m
 fi
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c "$selected" "cd / && $SHELL"
+# Start tmux or switch to the session
+if [[ -z $TMUX ]]; then
+    tmux attach-session -t "$selected_name"
+else
+    tmux switch-client -t "$selected_name"
 fi
 
-tmux switch-client -t $selected_name
