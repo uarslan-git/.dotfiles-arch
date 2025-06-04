@@ -45,7 +45,7 @@ bindsym $mod+shift+w exec --no-startup-id loginctl lock-session
 bindsym $mod+p exec --no-startup-id ranger
 
 # Auto start
-exec_always --no-startup-id cd ~/ && git pull
+exec_always --no-startup-id git pull
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id systemctl --user restart session.target
 exec_always --no-startup-id feh --bg-scale ~/.config/bg.jpg
