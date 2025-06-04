@@ -6,6 +6,10 @@ gtk-theme='Adwaita-dark'
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/nm-applet/eap/370e14ab-2fc5-4ca4-8500-0de9ea5d95a6]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/nm-applet/eap/66d3579e-5ecd-40db-94b7-b20f46277634]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
