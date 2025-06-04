@@ -70,6 +70,7 @@ for_window [class="steam_app.*"] floating enable
 for_window [class="jetbrains-.*" title="Welcome to IntelliJ IDEA"] floating enable
 for_window [class="jetbrains-.*" title="splash"] floating enable
 
+for_window [class="kitty"] move to workspace $ws1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -267,3 +268,4 @@ bar {
                 urgent_workspace #eb709b #eb709b #ffffff
         }
 }
+
