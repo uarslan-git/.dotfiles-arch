@@ -307,9 +307,9 @@ alias gc="git commit -m"
 alias gcd="git commit -m '$(date)'"
 alias gco="git checkout"
 alias gl="git log --graph --pretty=oneline --abbrev-commit"
-alias gls="git ls-files"
-alias glu="git ls-files --others --exclude-standard"
-alias glsf="git ls-files | awk -F'/' '{print \$1}' | sort | uniq"
+alias gls="git ls-files" # git list files
+alias glu="git ls-files --others --exclude-standard" git lists untracked files
+alias glsf="git ls-files | awk -F'/' '{print \$1}' | sort | uniq" 
 alias gluf="git ls-files --others --exclude-standard | awk -F'/' '{print \$1}' | sort | uniq"
 alias gp="git push"
 alias gpl="git pull"

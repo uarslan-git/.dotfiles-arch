@@ -1,38 +1,5 @@
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
-gtk-theme='Adwaita-dark'
-
-[org/gnome/nm-applet/eap/08d84187-adc5-4a34-94bd-c676f4c61106]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[org/gnome/nm-applet/eap/370e14ab-2fc5-4ca4-8500-0de9ea5d95a6]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[org/gnome/nm-applet/eap/66d3579e-5ecd-40db-94b7-b20f46277634]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[org/gnome/nm-applet/eap/6e8caba3-744f-4321-bda5-9b729f44bad6]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[org/gnome/nm-applet/eap/9a930c0a-6f65-4497-b242-388a1aae6744]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[org/gnome/nm-applet/eap/a5ac4cb3-f7be-4c91-9b1d-98732f557747]
-ignore-ca-cert=true
-ignore-phase2-ca-cert=false
-
-[org/gnome/nm-applet/eap/aecca0cf-4744-45e1-bb61-870bf28c2ec3]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[org/gnome/nm-applet/eap/ee4a7199-92f8-4a98-ad21-0902c08cd242]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
@@ -40,10 +7,10 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=230
+sidebar-width=181
 sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(677, 280)
+window-position=(678, 276)
 window-size=(1203, 902)

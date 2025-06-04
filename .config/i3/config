@@ -73,7 +73,7 @@ for_window [class="jetbrains-.*" title="Welcome to IntelliJ IDEA"] floating enab
 for_window [class="jetbrains-.*" title="splash"] floating enable
 
 for_window [class="kitty"] move to workspace $ws1
-for_window [class="googel-chrome"] move to workspace $ws2
+for_window [class="Googel-chrome"] move to workspace $ws2
 for_window [class="thunderbird"] move to workspace $ws3
 for_window [class="element"] move to workspace $ws3
 for_window [class="vesktop"] move to workspace $ws3
