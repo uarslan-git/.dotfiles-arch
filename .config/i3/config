@@ -48,6 +48,8 @@ bindsym $mod+w focus output left
 
 # Auto start
 exec_always --no-startup-id git pull
+exec_always --no-startup-id workspace.py
+exec_always --no-startup-id autotiling.py
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id systemctl --user restart session.target
 exec_always --no-startup-id feh --bg-scale ~/.config/bg.jpg
@@ -61,7 +63,7 @@ exec --no-startup-id volumeicon &
 # Window Rules
 for_window [title="Qalculate!"] floating enable, move position center
 for_window [class="steamwebhelper!"] floating enable, move position center
-for_window [class="steam"] floating enable, move position center
+#for_window [class="steam"] floating enable, move position center
 for_window [class=".*"] border pixel 1
 for_window [class="^Google-chrome" instance="^notion"] floating enable, move scratchpad, scratchpad show
 for_window [title="Fusion Reactor"] floating enable, move position center
@@ -72,16 +74,17 @@ for_window [class="steam_app.*"] floating enable
 for_window [class="jetbrains-.*" title="Welcome to IntelliJ IDEA"] floating enable
 for_window [class="jetbrains-.*" title="splash"] floating enable
 
-for_window [class="kitty"] move to workspace $ws1
-for_window [class="Googel-chrome"] move to workspace $ws2
-for_window [class="thunderbird"] move to workspace $ws3
-for_window [class="element"] move to workspace $ws3
-for_window [class="vesktop"] move to workspace $ws3
-for_window [class="zoom"] move to workspace $ws3
-for_window [class="Gimp"] move to workspace $ws4
-for_window [class="Davinci-Resolve-Studio"] move to workspace $ws4
-for_window [class="Notion"] move to workspace $ws5
-for_window [class="notion-calendar"] move to workspace $ws5
+#for_window [class="kitty"] move to workspace $ws1
+#for_window [class="Googel-chrome"] move to workspace $ws2
+#for_window [class="thunderbird"] move to workspace $ws3
+#for_window [class="element"] move to workspace $ws3
+#for_window [class="vesktop"] move to workspace $ws3
+#for_window [class="zoom"] move to workspace $ws3
+#for_window [class="Gimp"] move to workspace $ws4
+#for_window [class="Davinci-Resolve-Studio"] move to workspace $ws4
+#for_window [class="Notion"] move to workspace $ws5
+#for_window [class="notion-calendar"] move to workspace $ws5
+#for_window [class="steam"] move to workspace $ws10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
