@@ -1,4 +1,5 @@
 enable docker.service
+enable autorandr.service
 enable mongodb.service
 enable NetworkManager.service
 enable lightdm.service
