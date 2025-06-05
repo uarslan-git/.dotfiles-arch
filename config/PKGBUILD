@@ -80,6 +80,7 @@ depends=(
     grive
     gst-plugin-pipewire
     guitarix
+    gvfs
     gxplugins-lv2-git
     gzip
     haskell-language-server
@@ -156,6 +157,7 @@ depends=(
     proton-ge-custom-bin
     pyright
     python
+    python-i3ipc
     python-virtualenv
     qalculate-gtk
     qbittorrent
