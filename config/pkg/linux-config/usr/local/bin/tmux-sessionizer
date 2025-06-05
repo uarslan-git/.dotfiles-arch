@@ -11,28 +11,25 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 
 if ! tmux has-session -t="$selected_name" 2>/dev/null; then
-    # Start the session in project root
     tmux new-session -ds "$selected_name" -c "$selected" \
-        "export PROJECT_ROOT=\"$selected\"; cd \"\$PROJECT_ROOT\"; exec \$SHELL"
+        "export PROJECT_ROOT=\"$selected\"; exec \$SHELL"
 
-    # Set the default path for new windows
     tmux set-option -t "$selected_name" default-path "$selected"
 
-    # Inject the function override
-
-    tmux send-keys -t "$selected_name" "
+    # Define cd() without touching HOME
+    tmux send-keys -t "$selected_name" '
 cd() {
-  local dest=\"\${1:-\$PROJECT_ROOT}\"
-  if [[ \"\$1\" == \"~\" || -z \"\$1\" ]]; then
-    builtin cd \"\$PROJECT_ROOT\"
+  local input="${1:-}"
+  if [[ -z "$input" || "$input" == "~" || "$input" == "$HOME" ]]; then
+    builtin cd "$PROJECT_ROOT"
   else
-    builtin cd \"\$dest\"
+    builtin cd "$input"
   fi
 }
 clear
-" C-m
-
+' C-m
 fi
+
 if [[ -z "$TMUX" ]]; then
     tmux attach -t "$selected_name"
 else
