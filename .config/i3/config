@@ -73,6 +73,7 @@ for_window [class="pcmanfm"] floating enable, move position center
 for_window [class="steam_app.*"] floating enable
 for_window [class="jetbrains-.*" title="Welcome to IntelliJ IDEA"] floating enable
 for_window [class="jetbrains-.*" title="splash"] floating enable
+for_window [class="Msgcompose" title="splash"] floating enable
 
 #for_window [class="kitty"] move to workspace $ws1
 #for_window [class="Googel-chrome"] move to workspace $ws2

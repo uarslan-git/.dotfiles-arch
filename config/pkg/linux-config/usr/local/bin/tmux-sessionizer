@@ -1,31 +1,66 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
+import i3ipc
+import math
 
-if [[ $# -eq 1 ]]; then
-    selected=$1
-else
-    selected=$(find ~/config/rootfs/etc ~/config/rootfs/usr ~/Drive/Drive2/Obsidian ~/Repos ~/Gitlab ~/Github ~/.config -mindepth 1 -maxdepth 1 -type d | fzf)
-fi
-
-if [[ -z $selected ]]; then
-    exit 0
-fi
-
-selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
-
-# Session setup
-if ! tmux has-session -t="$selected_name" 2>/dev/null; then
-    tmux new-session -ds "$selected_name" -c "$selected"
-    tmux set-option -t "$selected_name" default-path "$selected"
+class AutoTiler:
+    def __init__(self, i3):
+        self.i3 = i3
+        self.last_layout = {}
+        
+    def get_output_geometry(self, output_name):
+        outputs = self.i3.get_outputs()
+        output = next((o for o in outputs if o.name == output_name), None)
+        if output:
+            return (output.rect.width, output.rect.height)
+        return (1920, 1080)  # Default resolution
     
-    # Send a command to automatically cd to root every time a shell starts in the session
-    tmux send-keys -t "$selected_name" "cd \"$selected\"" C-m
-fi
+    def calculate_best_layout(self, workspace):
+        # Get the output name by finding the parent output of the workspace
+        tree = self.i3.get_tree()
+        output = next((o for o in tree.nodes if workspace.id in [ws.id for ws in o.nodes]), None)
+        if not output:
+            return "splith"  # Default layout if no output found
+            
+        width, height = self.get_output_geometry(output.name)
+        aspect_ratio = width / height
+        
+        # Wide screen (ultrawide)
+        if aspect_ratio > 2.0:
+            return "splitv"  # Vertical split for ultrawide
+        # Tall screen
+        elif aspect_ratio < 0.8:
+            return "splith"  # Horizontal split for tall screens
+        # Regular screen
+        else:
+            # Alternate between horizontal and vertical based on window count
+            windows = len(workspace.leaves())
+            if windows % 2 == 0:
+                return "splith"
+            else:
+                return "splitv"
+    
+    def on_window_focus(self, i3, e):
+        focused = i3.get_tree().find_focused()
+        if not focused or not focused.workspace():
+            return
+        
+        workspace = focused.workspace()
+        layout = self.calculate_best_layout(workspace)
+        
+        # Only change layout if it's different from last time
+        if workspace.name not in self.last_layout or self.last_layout[workspace.name] != layout:
+            i3.command(f'workspace "{workspace.name}"')
+            i3.command(f'layout {layout}')
+            self.last_layout[workspace.name] = layout
 
-# Start tmux or switch to the session
-if [[ -z $TMUX ]]; then
-    tmux attach-session -t "$selected_name"
-else
-    tmux switch-client -t "$selected_name"
-fi
+def main():
+    i3 = i3ipc.Connection()
+    tiler = AutoTiler(i3)
+    
+    i3.on("window::focus", tiler.on_window_focus)
+    
+    print("Auto-tiling script running...")
+    i3.main()
 
+if __name__ == "__main__":
+    main()
