@@ -87,3 +87,5 @@ local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('v', '<leader>{', 'c{<C-r>"}', opts)
 vim.api.nvim_set_keymap('v', '<leader>(', 'c(<C-r>")', opts)
 vim.api.nvim_set_keymap('v', '<leader>[', 'c[<C-r>"]', opts)
+vim.api.nvim_set_keymap('v', '<leader>"', 'c"<C-r>""<Esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', [[<leader>']], [[c'<C-r>"'<Esc>]], { noremap = true, silent = true })
