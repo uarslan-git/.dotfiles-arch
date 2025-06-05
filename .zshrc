@@ -31,15 +31,17 @@ ZSH_CUSTOM=/usr/share/zsh
 
 ZSH_THEME="../../zsh-theme-powerlevel10k/powerlevel10k"
 
-# If inside tmux, get the PROJECT_INIT_FILE variable set by tmux server
 if [[ -n "$TMUX" ]]; then
-  PROJECT_INIT_FILE=$(tmux show-environment PROJECT_INIT_FILE 2>/dev/null | cut -d= -f2-)
+  export PROJECT_ROOT=$(tmux show-environment -t "$TMUX_PANE" PROJECT_ROOT 2>/dev/null | sed 's/^PROJECT_ROOT=//')
 fi
 
-# Source project init file if it exists
-if [[ -n "$PROJECT_INIT_FILE" && -f "$PROJECT_INIT_FILE" ]]; then
-  source "$PROJECT_INIT_FILE"
+if [[ -n "$PROJECT_ROOT" ]]; then
+  init_file="/tmp/.tmux_project_init_$(echo "$PROJECT_ROOT" | md5sum | cut -d' ' -f1)"
+  if [[ -f "$init_file" ]]; then
+    source "$init_file"
+  fi
 fi
+
 
 plugins=(
 	git direnv git-auto-fetch
