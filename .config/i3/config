@@ -45,6 +45,9 @@ bindsym $mod+shift+w exec --no-startup-id loginctl lock-session
 bindsym $mod+p exec --no-startup-id ranger
 bindsym $mod+e focus output left
 bindsym $mod+w focus output left
+bindsym Control+Shift+h exec --no-startup-id move_workspace.py left
+bindsym Control+Shift+colon exec --no-startup-id move_workspace.py right
+
 
 # Auto start
 exec_always --no-startup-id git pull
