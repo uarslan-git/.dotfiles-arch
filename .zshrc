@@ -31,22 +31,15 @@ ZSH_CUSTOM=/usr/share/zsh
 
 ZSH_THEME="../../zsh-theme-powerlevel10k/powerlevel10k"
 
-if [[ -n "$TMUX" && -z "$PROJECT_ROOT" ]]; then
-  if [[ -n "$TMUX_PANE" ]]; then
-    session_name=$(tmux display-message -p '#S' 2>/dev/null)
-    if [[ -n "$session_name" ]]; then
-      for path in ~/config/rootfs/etc ~/config/rootfs/usr ~/Drive/Drive2/Obsidian ~/Repos ~/Gitlab ~/Github ~/.config; do
-        if [[ -f "$path/.tmux_project_init" ]]; then
-          if [[ "$(basename "$path" | tr . _)" == "$session_name" ]]; then
-            source "$path/.tmux_project_init"
-            break
-          fi
-        fi
-      done
-    fi
-  fi
+# If inside tmux, get the PROJECT_INIT_FILE variable set by tmux server
+if [[ -n "$TMUX" ]]; then
+  PROJECT_INIT_FILE=$(tmux show-environment PROJECT_INIT_FILE 2>/dev/null | cut -d= -f2-)
 fi
 
+# Source project init file if it exists
+if [[ -n "$PROJECT_INIT_FILE" && -f "$PROJECT_INIT_FILE" ]]; then
+  source "$PROJECT_INIT_FILE"
+fi
 
 plugins=(
 	git direnv git-auto-fetch

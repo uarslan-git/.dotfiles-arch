@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Select directory
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
@@ -8,10 +9,13 @@ fi
 
 [[ -z "$selected" ]] && exit 0
 
+# Clean name for tmux session
 selected_name=$(basename "$selected" | tr . _)
-init_file="$selected/.tmux_project_init"
 
-# Write project-specific init script
+# Init file path in /tmp
+init_file="/tmp/tmux_project_init_${selected_name}"
+
+# Create init file with PROJECT_ROOT and custom cd
 cat > "$init_file" <<EOF
 export PROJECT_ROOT="$selected"
 cd() {
@@ -24,11 +28,13 @@ cd() {
 }
 EOF
 
-# Only create session if it doesn't exist
+# Only create tmux session if it doesn't already exist
 if ! tmux has-session -t="$selected_name" 2>/dev/null; then
     tmux new-session -ds "$selected_name" -c "$selected" \
       "zsh --rcs -c 'source \"$init_file\"; cd \$PROJECT_ROOT; exec zsh'"
     tmux set-option -t "$selected_name" default-path "$selected"
+    tmux set-environment -t "$selected_name" PROJECT_ROOT "$selected"
+    tmux set-environment -t "$selected_name" PROJECT_INIT_FILE "$init_file"
 fi
 
 # Attach or switch to session
