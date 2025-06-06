@@ -295,6 +295,7 @@ function extractAudio(){
 
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^b "books\n"
+bindkey -s ^t "tmux\n"
 
 systemctl --user import-environment 2> /dev/null
 
