@@ -118,30 +118,15 @@ class MonitorManager:
 
         print(f"Bouncing non-game window from workspace 10 to {target_workspace}")
         window.command(f'move container to workspace "{target_workspace}"')
-        self.ensure_workspace_on_correct_monitor(target_workspace)
+        self.ensure_workspace_exists(target_workspace)
         return True
 
-    def ensure_workspace_on_correct_monitor(self, workspace_name):
-        if not self.secondary_monitor:
-            return False
-
-        target_monitor = self.primary_monitor if workspace_name == workspace_vars['ws10'] else (
-            self.secondary_monitor if self.gaming_mode else self.primary_monitor
-        )
-
+    def ensure_workspace_exists(self, workspace_name):
         workspaces = self.i3.get_workspaces()
-        ws = next((ws for ws in workspaces if ws.name == workspace_name), None)
-
-        if ws and ws.output != target_monitor:
-            print(f"Moving {workspace_name} to {target_monitor}")
+        ws_exists = any(ws.name == workspace_name for ws in workspaces)
+        if not ws_exists:
+            print(f"Creating workspace '{workspace_name}'")
             self.i3.command(f'workspace "{workspace_name}"')
-            self.i3.command(f'move workspace to output {target_monitor}')
-            return True
-        elif not ws:
-            print(f"Creating {workspace_name} on {target_monitor}")
-            self.i3.command(f'workspace "{workspace_name}"')
-            self.i3.command(f'move workspace to output {target_monitor}')
-            return True
         return False
 
 def on_window_new(i3, e, manager):
@@ -157,11 +142,8 @@ def on_window_new(i3, e, manager):
         return
 
     print(f"Detected '{window_class}' -> '{target_workspace}'")
-    manager.ensure_workspace_on_correct_monitor(target_workspace)
+    manager.ensure_workspace_exists(target_workspace)
     window.command(f'move container to workspace "{target_workspace}"')
-
-    if target_workspace != workspace_vars['ws10']:
-        i3.command(f'workspace "{target_workspace}"')
 
 def on_window_move(i3, e, manager):
     if e.change == "move":

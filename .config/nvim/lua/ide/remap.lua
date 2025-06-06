@@ -12,7 +12,6 @@ vim.api.nvim_set_keymap('i', '[', '[]<left>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '{', '{}<left>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '{<CR>', '{<CR>}<ESC>O', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '(<CR>', '(<CR>)<ESC>O', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', ';<CR>', ';<CR>;<ESC>O', { noremap = true, silent = true })
 
 -- Move visual selected lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -89,3 +88,71 @@ vim.api.nvim_set_keymap('v', '<leader>(', 'c(<C-r>")', opts)
 vim.api.nvim_set_keymap('v', '<leader>[', 'c[<C-r>"]', opts)
 vim.api.nvim_set_keymap('v', '<leader>"', 'c"<C-r>""<Esc>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', [[<leader>']], [[c'<C-r>"'<Esc>]], { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>dp", "da(", {
+  noremap = true,
+  silent = true,
+  desc = "Delete surrounding parentheses ()"
+})
+
+vim.keymap.set("n", "<leader>db", "da[", {
+  noremap = true,
+  silent = true,
+  desc = "Delete surrounding square brackets []"
+})
+
+vim.keymap.set("n", "<leader>dc", "da{", {
+  noremap = true,
+  silent = true,
+  desc = "Delete surrounding curly braces {}"
+})
+
+vim.keymap.set("n", "<leader>dq", "da\"", {
+  noremap = true,
+  silent = true,
+  desc = "Delete surrounding double quotes \""
+})
+
+vim.keymap.set("n", "<leader>dsq", "da'", {
+  noremap = true,
+  silent = true,
+  desc = "Delete surrounding single quotes ''"
+})
+
+vim.keymap.set("x", "<leader>d", "S", {
+  expr = true,
+  noremap = true,
+  silent = true,
+  desc = "Delete surrounding (Visual Mode)"
+})
+
+vim.keymap.set("n", "<leader>p(", "di(va(p", {
+  noremap = true,
+  silent = true,
+  desc = "Perform di(va(p on parentheses"
+})
+
+vim.keymap.set("n", "<leader>p{", "di{va{p", {
+  noremap = true,
+  silent = true,
+  desc = "Perform di{va{p on curly braces"
+})
+
+vim.keymap.set("n", "<leader>p[", "di[va[p", {
+  noremap = true,
+  silent = true,
+  desc = "Perform di[va[p on square brackets"
+})
+
+vim.keymap.set("n", "<leader>p\"", "di\"va\"p", {
+  noremap = true,
+  silent = true,
+  desc = "Perform di\"va\"p on double quotes"
+})
+
+vim.keymap.set("n", "<leader>p'", "di'va'p", {
+  noremap = true,
+  silent = true,
+  desc = "Perform di'va'p on single quotes"
+})
+
