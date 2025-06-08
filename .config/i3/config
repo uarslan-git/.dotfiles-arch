@@ -64,6 +64,7 @@ exec --no-startup-id volumeicon &
 
 # Window Rules
 for_window [title="Qalculate!"] floating enable, move position center
+for_window [title="GameConqueror.py"] floating enable, move position center
 for_window [class="steamwebhelper!"] floating enable, move position center
 #for_window [class="steam"] floating enable, move position center
 for_window [class=".*"] border pixel 1
