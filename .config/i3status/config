@@ -1,9 +1,12 @@
 general {
     colors = true
         interval = 5
-        color_good = '#88b090'  
-        color_degraded = '#ccdc90'  
-        color_bad = '#e89393'   
+        output_format = "i3bar"
+        colors = true
+        color_good = "#50FA7B"
+        color_degraded = "#F1FA8C"
+        color_bad = "#FF5555"
+
 }
 
 order += "ethernet lo"
@@ -21,12 +24,12 @@ order += "load"
 order += "tztime local"
 
 wireless wlp58s0 {
-     format_up = "󰖩 (%quality at %essid, %bitrate) %ip"
-     format_down = "󰖪"
+    format_up = "󰖩 (%quality at %essid, %bitrate) %ip"
+        format_down = "󰖪"
 }
 
 ethernet lo {
-        format_up = "󰈁 %ip (%speed)"
+    format_up = "󰈁 %ip (%speed)"
         format_down = "󰈂"
 }
 
@@ -58,7 +61,7 @@ path_exists VPN {
 
 tztime local {
     format = "%H:%M:%S - %Y年%m月%d日 (%A)"
-    locale = "ja_JP.UTF-8"
+        locale = "ja_JP.UTF-8"
 }
 
 load {
