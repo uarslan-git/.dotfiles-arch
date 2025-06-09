@@ -63,6 +63,7 @@ depends=(
     flameshot
     fzf
     fzf-tab-git
+    gambas3-gb-sdl2
     gameconqueror
     gamemode
     gamescope
@@ -149,7 +150,7 @@ depends=(
     pavucontrol
     pcmanfm
     pcsx2-latest-bin
-    #picom-simpleanims-next-git
+    picom
     pipewire
     pipewire-alsa
     pipewire-docs
