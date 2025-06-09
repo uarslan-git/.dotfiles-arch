@@ -149,7 +149,7 @@ depends=(
     pavucontrol
     pcmanfm
     pcsx2-latest-bin
-    picom-simpleanims-next-git
+    #picom-simpleanims-next-git
     pipewire
     pipewire-alsa
     pipewire-docs

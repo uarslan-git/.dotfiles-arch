@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1749475323
+builddate = 1749504297
 packager = Unknown Packager
 size = 22436
 arch = x86_64
@@ -146,7 +146,6 @@ depend = paruz
 depend = pavucontrol
 depend = pcmanfm
 depend = pcsx2-latest-bin
-depend = picom-simpleanims-next-git
 depend = pipewire
 depend = pipewire-alsa
 depend = pipewire-docs
