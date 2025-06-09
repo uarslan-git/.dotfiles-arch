@@ -24,7 +24,7 @@ client.background       #ffffff
 default_border pixel 1
 default_floating_border pixel 1
 smart_gaps on
-gaps inner 0
+gaps inner 5
 gaps outer 0
 
 # Window Rule
@@ -53,6 +53,7 @@ bindsym Control+Shift+colon exec --no-startup-id move_workspace.py right
 exec_always --no-startup-id git pull
 exec_always --no-startup-id workspace.py
 exec_always --no-startup-id autotiling.py
+exec_always --no-startup-id picom
 exec_always --no-startup-id systemctl --user restart session.target
 exec_always --no-startup-id feh --bg-scale ~/.config/bg.jpg
 exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme prefer-dark
