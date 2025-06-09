@@ -35,8 +35,8 @@ depends=(
     cargo
     carla
     ccls
+    cheat-engine-zh
     copyq
-    #csharp-ls
     cups
     cups-pdf
     curl
@@ -48,7 +48,7 @@ depends=(
     docker-compose
     dockerfile-language-server
     dolphin-emu
-    #dotnet-sdk
+    dotnet-sdk-bin
     dracula-gtk-theme
     dracula-icons-git
     dunst
@@ -149,6 +149,7 @@ depends=(
     pavucontrol
     pcmanfm
     pcsx2-latest-bin
+    picom-simpleanims-next-git
     pipewire
     pipewire-alsa
     pipewire-docs
@@ -172,6 +173,7 @@ depends=(
     rust
     samba
     scanmem
+    sdl2-compat
     slurp
     smartmontools
     sql-language-server
@@ -220,6 +222,7 @@ depends=(
     vesktop-bin
     vi
     vim
+    visual-studio-code-bin
     vlc
     volumeicon
     vscode-html-languageserver
@@ -239,6 +242,7 @@ depends=(
     xclip
     xdg-desktop-portal-gtk
     xdg-utils
+    xdotool
     xf86-video-amdgpu
     xf86-video-intel
     xss-lock
