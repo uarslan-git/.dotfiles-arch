@@ -19,13 +19,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   . "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-if [ -f "/opt/miniforge/etc/profile.d/conda.sh" ]; then
-    . "/opt/miniforge/etc/profile.d/conda.sh"
-    . "/opt/miniforge/etc/profile.d/mamba.sh"
-else
-    export PATH="/opt/miniforge/bin:$PATH"
-fi
-
 ZSH=/usr/share/oh-my-zsh/
 ZSH_CUSTOM=/usr/share/zsh
 
@@ -345,3 +338,22 @@ alias t="tmux"
 alias zsh="vim ~/.zshrc"
 alias a="ani-cli"
 
+
+if [ -f "/opt/miniforge/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniforge/etc/profile.d/conda.sh"
+else
+        export PATH="/opt/miniforge/bin:$PATH"
+fi
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba shell init' !!
+export MAMBA_EXE='/opt/miniforge/bin/mamba';
+export MAMBA_ROOT_PREFIX='/opt/miniforge';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
