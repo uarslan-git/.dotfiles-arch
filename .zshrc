@@ -1,5 +1,8 @@
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export QT_STYLE_OVERRIDE=dark
 export QT_QPA_PLATFORMTHEME=qt5ct
@@ -357,3 +360,5 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+#
+pokemon-colorscripts -r
