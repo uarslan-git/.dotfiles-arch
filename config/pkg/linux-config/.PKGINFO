@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1749504805
+builddate = 1749506051
 packager = Unknown Packager
 size = 22436
 arch = x86_64
@@ -154,6 +154,7 @@ depend = pipewire-docs
 depend = pipewire-jack
 depend = pipewire-pulse
 depend = playerctl
+depend = pokemon-colorscripts-git
 depend = proton-ge-custom-bin
 depend = pyright
 depend = python

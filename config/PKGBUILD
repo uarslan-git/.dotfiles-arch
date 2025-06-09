@@ -157,6 +157,7 @@ depends=(
     pipewire-jack
     pipewire-pulse
     playerctl
+    pokemon-colorscripts-git
     proton-ge-custom-bin
     pyright
     python
