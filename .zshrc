@@ -346,15 +346,14 @@ alias zsh="vim ~/.zshrc"
 alias a="ani-cli"
 
 
+pokemon-colorscripts -r
+
 if [ -f "/opt/miniforge/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniforge/etc/profile.d/conda.sh"
+    . "/opt/miniforge/etc/profile.d/conda.sh"
 else
-        export PATH="/opt/miniforge/bin:$PATH"
+    export PATH="/opt/miniforge/bin:$PATH"
 fi
 
 export MAMBA_EXE='/opt/miniforge/bin/mamba';
 export MAMBA_ROOT_PREFIX='/opt/miniforge';
 alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
-unset __mamba_setup
-
-pokemon-colorscripts -r

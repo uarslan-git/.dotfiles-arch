@@ -122,7 +122,7 @@ depends=(
     man-pages
     matcha-gtk-theme
     maven
-    miniforge
+    #miniforge
     mongodb-bin
     mongodb-compass-bin
     mongosh-bin
