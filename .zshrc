@@ -9,6 +9,10 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export QT_SCALE_FACTOR=1
 
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+
+
 export EDITOR=/usr/bin/nvim
 export TERMINAL=alacritty
 
