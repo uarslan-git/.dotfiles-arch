@@ -25,7 +25,7 @@ order += "tztime local"
 
 wireless wlp58s0 {
     format_up = "󰖩 (%quality at %essid, %bitrate) %ip"
-        format_down = "󰖪"
+    format_down = "󰖪"
 }
 
 ethernet lo {
