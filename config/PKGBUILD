@@ -76,6 +76,7 @@ depends=(
     git-filter-repo
     github-cli
     git-secret
+    gnome-keyring
     google-chrome
     gpick
     graphql-lsp
@@ -122,7 +123,7 @@ depends=(
     man-pages
     matcha-gtk-theme
     maven
-    #miniforge
+    miniforge
     mongodb-bin
     mongodb-compass-bin
     mongosh-bin
