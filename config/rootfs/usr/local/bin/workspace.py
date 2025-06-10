@@ -32,6 +32,7 @@ workspace_vars = {
 WINDOW_WORKSPACE_MAP = {
     'kitty': workspace_vars['ws1'],
     'Google-chrome': workspace_vars['ws2'],
+    'firefox': workspace_vars['ws2'],
     'thunderbird': workspace_vars['ws3'],
     'element': workspace_vars['ws3'],
     'vesktop': workspace_vars['ws3'],
@@ -72,7 +73,7 @@ class MonitorManager:
         game_ws = next((ws for ws in workspaces if ws.name == workspace_vars['ws10'] and ws.visible), None)
         self.gaming_mode = game_ws is not None
 
-        if self.gaming_mode:
+        if self.gaming_mode and game_ws is not None:
             self.primary_monitor = game_ws.output
             self.secondary_monitor = next(
                 (o.name for o in active_outputs if o.name != self.primary_monitor),
