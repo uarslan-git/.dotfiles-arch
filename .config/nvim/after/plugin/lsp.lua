@@ -29,31 +29,31 @@ lsp_zero.extend_lspconfig({
 
 -- These are just examples. Replace them with the language
 -- servers you have installed in your system
---require('lspconfig').ccls.setup({})
---require('lspconfig').clangd.setup({})
+require('lspconfig').ccls.setup({})
+require('lspconfig').clangd.setup({})
 require('lspconfig').csharp_ls.setup({})
 --lsp_zero.configure('csharp_ls', {
 --  cmd = { vim.fn.expand("~/.dotnet/tools/csharp-ls") },
 --  filetypes = { "cs", "csharp" },
 --  root_dir = require('lspconfig.util').root_pattern("*.sln", "*.csproj", ".git"),
 --})
---require('lspconfig').cssls.setup({})
---require('lspconfig').denols.setup({})
---require('lspconfig').dockerls.setup({})
---require('lspconfig').graphql.setup({})
---require('lspconfig').hls.setup({})
---require('lspconfig').html.setup({})
---require('lspconfig').java_language_server.setup({})
---require('lspconfig').jsonls.setup({})
---require('lspconfig').kotlin_language_server.setup({})
---require('lspconfig').lua_ls.setup({})
---require('lspconfig').marksman.setup({})
---require('lspconfig').pyright.setup({})
---require('lspconfig').sqlls.setup({})
---require('lspconfig').texlab.setup({})
---require('lspconfig').ts_ls.setup({})
---require('lspconfig').volar.setup({})
---require('lspconfig').bashls.setup({})
+require('lspconfig').cssls.setup({})
+require('lspconfig').denols.setup({})
+require('lspconfig').dockerls.setup({})
+require('lspconfig').graphql.setup({})
+require('lspconfig').hls.setup({})
+require('lspconfig').html.setup({})
+require('lspconfig').java_language_server.setup({})
+require('lspconfig').jsonls.setup({})
+require('lspconfig').kotlin_language_server.setup({})
+require('lspconfig').lua_ls.setup({})
+require('lspconfig').marksman.setup({})
+require('lspconfig').pyright.setup({})
+require('lspconfig').sqlls.setup({})
+require('lspconfig').texlab.setup({})
+require('lspconfig').ts_ls.setup({})
+require('lspconfig').volar.setup({})
+require('lspconfig').bashls.setup({})
 
 
 ---

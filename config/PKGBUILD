@@ -49,7 +49,7 @@ depends=(
     docker-compose
     dockerfile-language-server
     dolphin-emu
-    dotnet-sdk-bin
+    dotnet-sdk
     dracula-gtk-theme
     dracula-icons-git
     dunst
