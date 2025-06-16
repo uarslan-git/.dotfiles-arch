@@ -28,6 +28,32 @@ return require('packer').startup(function(use)
 	use({'hrsh7th/nvim-cmp'})
 	use({'prettier/vim-prettier'})
 	use({'hrsh7th/cmp-nvim-lsp'})
-	use({'mbbill/undotree'})
-	use({'tpope/vim-fugitive'})
+    use({'mbbill/undotree'})
+    use({'tpope/vim-fugitive'})
+    use {
+        'CopilotC-Nvim/CopilotChat.nvim',
+        config = function()
+            local copilot_chat = require("CopilotChat")
+            copilot_chat.setup({
+                debug = true,
+                show_help = "yes",
+                prompts = {
+                    Explain = "Explain how it works by English language.",
+                    Review = "Review the following code and provide concise suggestions.",
+                    Tests = "Briefly explain how the selected code works, then generate unit tests.",
+                    Refactor = "Refactor the code to improve clarity and readability.",
+                },
+                proxy = "******",
+                build = function()
+                    vim.notify(
+                        "Please update the remote plugins by running ':UpdateRemotePlugins', then restart Neovim.")
+                end,
+                event = "VeryLazy",
+                dependencies = {
+                    { "nvim-telescope/telescope.nvim" }, -- Use telescope for help actions
+                    { "nvim-lua/plenary.nvim" }
+                }
+            })
+        end
+    }
 end)
