@@ -17,35 +17,14 @@ return require('packer').startup(function(use)
 		end
 	})
 
-    use ({
-    "Bryley/neoai.nvim",
-    require = { "MunifTanjim/nui.nvim" },
-    cmd = {
-        "NeoAI",
-        "NeoAIOpen",
-        "NeoAIClose",
-        "NeoAIToggle",
-        "NeoAIContext",
-        "NeoAIContextOpen",
-        "NeoAIContextClose",
-        "NeoAIInject",
-        "NeoAIInjectCode",
-        "NeoAIInjectContext",
-        "NeoAIInjectContextCode",
-    },
-    config = function()
-        require("neoai").setup({
-            -- Options go here
-        })
-    end,
-})
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
 
 	use({'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'})
 	use({'neovim/nvim-lspconfig'})
-    use({'nvim-tree/nvim-tree.lua'})
+	use({'github/copilot.vim'})
+    --use({'nvim-tree/nvim-tree.lua'})
 	use({'hrsh7th/nvim-cmp'})
 	use({'prettier/vim-prettier'})
 	use({'hrsh7th/cmp-nvim-lsp'})
