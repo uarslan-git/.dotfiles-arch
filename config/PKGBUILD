@@ -6,11 +6,307 @@ pkgrel=1
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
+arch=('x86_64')tar -h --exclude=.idea -cf rootfs.tar -C rootfs .
+
+pkgname=linux-config
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='linux config'
+url="https://github.com/uarslan-git/linux-config"
+license=('GPL3')
 arch=('x86_64')
 source=('rootfs.tar')
 noextract=('rootfs.tar')
 sha512sums=('SKIP')
 
+#startPackages
+depends=(
+    7zip
+    adobe-source-han-sans-jp-fonts
+    adwaita-dark
+    amd-ucode
+    ani-cli
+    anki-bin
+    arandr
+    ardour
+    autorandr
+    base
+    base-devel
+    bash-language-server
+    blender
+    bluez
+    bluez-utils
+    bottles
+    brightnessctl
+    btop
+    calibre
+    cargo
+    carla
+    ccls
+    cheat-engine-zh
+    copyq
+    cups
+    cups-pdf
+    curl
+    darktable
+    deno
+    direnv
+    dmenu
+    docker
+    docker-compose
+    dockerfile-language-server
+    dolphin-emu
+    dotnet-sdk
+    dracula-gtk-theme
+    dracula-icons-git
+    dunst
+    efibootmgr
+    element-desktop
+    fcitx5
+    fcitx5-configtool
+    fcitx5-mozc
+    fd
+    feh
+    firefox
+    flameshot
+    fzf
+    fzf-tab-git
+    gambas3-gb-sdl2
+    gameconqueror
+    gamemode
+    gamescope
+    gdb
+    ghidra
+    gimp
+    git
+    git-delta
+    git-filter-repo
+    github-cli
+    git-secret
+    gnome-keyring
+    google-chrome
+    gpick
+    graphql-lsp
+    grim
+    grive
+    gst-plugin-pipewire
+    guitarix
+    gvfs
+    gxplugins-lv2-git
+    gzip
+    haskell-language-server
+    i3blocks
+    i3lock-color
+    i3status
+    i3-wm
+    ida-free
+    imhex-bin
+    inetutils
+    inkscape
+    intel-compute-runtime
+    intel-media-driver
+    intel-ucode
+    iwd
+    jdownloader2
+    jetbrains-toolbox
+    k9s
+    kdeconnect
+    kdenlive
+    keepassxc
+    kitty
+    krita
+    lib32-sdl_image
+    libpulse
+    lightdm
+    lightdm-gtk-greeter
+    linux
+    linux-firmware
+    linux-lts-headers
+    linux-zen
+    localsend-bin
+    lua-language-server
+    lxappearance
+    man-db
+    man-pages
+    matcha-gtk-theme
+    maven
+    miniforge
+    mongodb-bin
+    mongodb-compass-bin
+    mongosh-bin
+    mov-cli
+    nano
+    neofetch
+    neovim
+    net-tools
+    networkmanager
+    network-manager-applet
+    nmap
+    nodejs-lts-jod
+    notion-app-electron
+    notion-calendar-electron
+    npm
+    nvtop
+    obsidian
+    obs-studio
+    oh-my-zsh-git
+    openssh
+    otf-aurulent-nerd
+    paru
+    paru-debug
+    paruz
+    pavucontrol
+    pcmanfm
+    pcsx2-latest-bin
+    picom
+    pipewire
+    pipewire-alsa
+    pipewire-docs
+    pipewire-jack
+    pipewire-pulse
+    playerctl
+    pokemon-colorscripts-git
+    proton-ge-custom-bin
+    pyright
+    python
+    python-i3ipc
+    python-virtualenv
+    qalculate-gtk
+    qbittorrent
+    qjackctl
+    ranger
+    rar
+    rclone
+    reclass.net-bin
+    ripgrep
+    rofi
+    rust
+    samba
+    scanmem
+    sdl2-compat
+    slurp
+    smartmontools
+    sql-language-server
+    steam
+    swaybg
+    swaylock-effects
+    swww
+    systemd
+    teamspeak
+    tela-circle-icon-theme-dracula
+    texlab
+    texlive-basic
+    texlive-bibtexextra
+    texlive-binextra
+    texlive-context
+    texlive-fontsextra
+    texlive-fontsrecommended
+    texlive-fontutils
+    texlive-formatsextra
+    texlive-games
+    texlive-humanities
+    texlive-latex
+    texlive-latexextra
+    texlive-latexrecommended
+    texlive-luatex
+    texlive-mathscience
+    texlive-metapost
+    texlive-music
+    texlive-pictures
+    texlive-plaingeneric
+    texlive-pstricks
+    texlive-publishers
+    texlive-xetex
+    texstudio
+    thunderbird
+    tlp
+    tmux
+    torbrowser-launcher
+    trayer
+    tree
+    typescript-language-server
+    ufw
+    unityhub
+    unzip
+    ventoy-bin
+    vesktop-bin
+    vi
+    vim
+    visual-studio-code-bin
+    vlc
+    volumeicon
+    vscode-html-languageserver
+    vscode-json-languageserver
+    vue-language-server
+    vulkan-intel
+    vulkan-radeon
+    vulkan-tools
+    waybar
+    wget
+    which
+    winetricks
+    wireless_tools
+    wireplumber
+    wofi
+    wpaperd
+    xclip
+    xdg-desktop-portal-gtk
+    xdg-utils
+    xdotool
+    xf86-video-amdgpu
+    xf86-video-intel
+    xss-lock
+    yarn
+    ytmdesktop-git
+    zip
+    zoom
+    zotero-bin
+    zsh
+    zsh-autosuggestions
+    zsh-completions
+    zsh-syntax-highlighting
+    zsh-theme-powerlevel10k-git
+    zsh-you-should-use
+  )
+  #endPackages
+
+if [[ "$(hostname)" == "pc" ]]; then depends+=(
+    mangohud
+    nvidia
+    nvidia-settings
+    stable-diffusion-webui-git
+    upscayl-bin
+    opencl-nvidia
+    zerotier-one
+    ); fi
+
+  # Functions
+  paru() {
+      if ! pacman -Qq | grep -i paru &>/dev/null; then
+          git clone https://aur.archlinux.org/paru.git
+          pushd paru
+          makepkg -sif
+          popd
+          rm -rf paru
+      fi
+  }
+
+zsh() {
+    if [ $(basename $SHELL) != "zsh" ]; then
+        chsh -s /usr/bin/zsh
+    fi
+}
+
+paru
+zsh
+
+package() {
+    tar -xf rootfs.tar -C "$pkgdir" --overwrite
+    echo "finished"
+}
+source=('rootfs.tar')
+noextract=('rootfs.tar')
+sha512sums=('SKIP')
 
 #startPackages
 depends=(
