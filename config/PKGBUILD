@@ -139,7 +139,6 @@ depends=(
     notion-app-electron
     notion-calendar-electron
     npm
-    nvim-packer-git
     nvtop
     obsidian
     obs-studio
