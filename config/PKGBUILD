@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
-arch=('x86_64')tar -h --exclude=.idea -cf rootfs.tar -C rootfs .
+arch=('x86_64')
 
 pkgname=linux-config
 pkgver=0.1.0
