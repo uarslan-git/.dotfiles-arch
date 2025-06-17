@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1750116946
+builddate = 1750154592
 packager = Unknown Packager
 size = 23296
 arch = x86_64
@@ -120,6 +120,7 @@ depend = man-db
 depend = man-pages
 depend = matcha-gtk-theme
 depend = maven
+depend = mesa-utils
 depend = miniforge
 depend = mongodb-bin
 depend = mongodb-compass-bin

@@ -130,6 +130,7 @@ depends=(
     man-pages
     matcha-gtk-theme
     maven
+    mesa-utils
     miniforge
     mongodb-bin
     mongodb-compass-bin
@@ -419,6 +420,7 @@ depends=(
     man-pages
     matcha-gtk-theme
     maven
+    mesa-utils
     miniforge
     mongodb-bin
     mongodb-compass-bin
