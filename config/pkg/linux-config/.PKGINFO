@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1750168325
+builddate = 1750181762
 packager = Unknown Packager
 size = 23296
 arch = x86_64
@@ -141,6 +141,7 @@ depend = nvtop
 depend = obsidian
 depend = obs-studio
 depend = oh-my-zsh-git
+depend = ollama
 depend = openssh
 depend = otf-aurulent-nerd
 depend = paru
