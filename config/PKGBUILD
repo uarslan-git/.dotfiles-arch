@@ -274,6 +274,7 @@ depends=(
 if [[ "$(hostname)" == "pc" ]]; then depends+=(
     mangohud
     nvidia
+    ollama
     nvidia-settings
     stable-diffusion-webui-git
     upscayl-bin

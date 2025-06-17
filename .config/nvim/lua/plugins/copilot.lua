@@ -8,206 +8,206 @@ return {
         build = "make tiktoken", -- Only on MacOS or Linux
         opts = {
             -- Custom options for Copilot Chat plugin
-            -- Example:
-            -- debug = true,
-        },
-        config = function(_, opts)
-            -- Custom keymap for Copilot in insert mode
-            -- This maps Ctrl-J to accept Copilot suggestion (like pressing Enter)
-            vim.g.copilot_no_tab_map = true
-            vim.api.nvim_set_keymap('i', '<C-J>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
+            debug = false, -- Set to true for debugging if needed
+            log_level = 'info',
 
-            -- If you need to add more custom configurations, you can do so here
-            -- For example, enabling debug mode, if the plugin supports it:
-            -- opts.debug = true
-        end,
-        -- You can define lazy-load triggers for commands or events
-        -- Example:
-        -- event = "BufRead",
-        -- commands = { "CopilotChat" },
-        system_prompt = 'COPILOT_INSTRUCTIONS', -- System prompt to use (can be specified manually in prompt via /).
+            system_prompt = 'COPILOT_INSTRUCTIONS',
+            model = 'ollama/llama3', -- Set your default model to llama3
+            agent = 'copilot',
+            context = nil,
+            sticky = nil,
+            temperature = 0.1,
+            headless = false,
+            stream = nil,
+            callback = nil,
+            remember_as_sticky = true,
+            -- REMOVE THIS LINE:
+            -- selection = "visual", -- <--- REMOVE OR COMMENT OUT THIS LINE
 
-        model = 'gpt-4.1', -- Default model to use, see ':CopilotChatModels' for available models (can be specified manually in prompt via $).
-        agent = 'copilot', -- Default agent to use, see ':CopilotChatAgents' for available agents (can be specified manually in prompt via @).
-        context = nil, -- Default context or array of contexts to use (can be specified manually in prompt via #).
-        sticky = nil, -- Default sticky prompt or array of sticky prompts to use at start of every new chat.
+            window = {
+                layout = 'vertical',
+                width = 0.5,
+                height = 0.5,
+                relative = 'editor',
+                border = 'single',
+                row = nil,
+                col = nil,
+                title = 'Copilot Chat',
+                footer = nil,
+                zindex = 1,
+            },
+            show_help = true,
+            highlight_selection = true,
+            highlight_headers = true,
+            references_display = 'virtual',
+            auto_follow_cursor = true,
+            auto_insert_mode = false,
+            insert_at_end = false,
+            clear_chat_on_new_prompt = false,
 
-        temperature = 0.1, -- GPT result temperature
-        headless = false, -- Do not write to chat buffer and use history (useful for using custom processing)
-        stream = nil, -- Function called when receiving stream updates (returned string is appended to the chat buffer)
-        callback = nil, -- Function called when full response is received (retuned string is stored to history)
-        remember_as_sticky = true, -- Remember model/agent/context as sticky prompts when asking questions
+            chat_autocomplete = true,
+            log_path = vim.fn.stdpath('state') .. '/CopilotChat.log',
+            history_path = vim.fn.stdpath('data') .. '/copilotchat_history',
+            question_header = '# User ',
+            answer_header = '# Copilot ',
+            error_header = '# Error ',
+            separator = '───',
 
-        -- default selection
-        selection = "visual", -- Changed from select.visual to just "visual"
+            providers = {
+                copilot = {},
+                github_models = {},
+                copilot_embeddings = {},
+                ollama = {},
+            },
 
-        -- default window options
-        window = {
-            layout = 'vertical', -- 'vertical', 'horizontal', 'float', 'replace', or a function that returns the layout
-            width = 0.5, -- fractional width of parent, or absolute width in columns when > 1
-            height = 0.5, -- fractional height of parent, or absolute height in rows when > 1
-            -- Options below only apply to floating windows
-            relative = 'editor', -- 'editor', 'win', 'cursor', 'mouse'
-            border = 'single', -- 'none', single', 'double', 'rounded', 'solid', 'shadow'
-            row = nil, -- row position of the window, default is centered
-            col = nil, -- column position of the window, default is centered
-            title = 'Copilot Chat', -- title of chat window
-            footer = nil, -- footer of chat window
-            zindex = 1, -- determines if window is on top or below other floating windows
-        },
+            contexts = {
+                buffer = {},
+                buffers = {},
+                file = {},
+                files = {},
+                git = {},
+                url = {},
+                register = {},
+                quickfix = {},
+                system = {}
+            },
 
-        show_help = true, -- Shows help message as virtual lines when waiting for user input
-        highlight_selection = true, -- Highlight selection
-        highlight_headers = true, -- Highlight headers in chat, disable if using markdown renderers (like render-markdown.nvim)
-        references_display = 'virtual', -- 'virtual', 'write', Display references in chat as virtual text or write to buffer
-        auto_follow_cursor = true, -- Auto-follow cursor in chat
-        auto_insert_mode = false, -- Automatically enter insert mode when opening window and on new prompt
-        insert_at_end = false, -- Move cursor to end of buffer when inserting text
-        clear_chat_on_new_prompt = false, -- Clears chat on every new prompt
+            prompts = {
+                Explain = {
+                    prompt = 'Write an explanation for the selected code as paragraphs of text.',
+                    system_prompt = 'COPILOT_EXPLAIN',
+                },
+                Review = {
+                    prompt = 'Review the selected code.',
+                    system_prompt = 'COPILOT_REVIEW',
+                },
+                Fix = {
+                    prompt = 'There is a problem in this code. Identify the issues and rewrite the code with fixes. Explain what was wrong and how your changes address the problems.',
+                },
+                Optimize = {
+                    prompt = 'Optimize the selected code to improve performance and readability. Explain your optimization strategy and the benefits of your changes.',
+                },
+                Docs = {
+                    prompt = 'Please add documentation comments to the selected code.',
+                },
+                Tests = {
+                    prompt = 'Please generate tests for my code.',
+                },
+                Commit = {
+                    prompt = 'Write commit message for the change with commitizen convention. Keep the title under 50 characters and wrap message at 72 characters. Format as a gitcommit code block.',
+                    context = 'git:staged',
+                },
+            },
 
-        -- Static config starts here (can be configured only via setup function)
-
-        debug = false, -- Enable debug logging (same as 'log_level = 'debug')
-        log_level = 'info', -- Log level to use, 'trace', 'debug', 'info', 'warn', 'error', 'fatal'
-        proxy = nil, -- [protocol://]host[:port] Use this proxy
-        allow_insecure = false, -- Allow insecure server connections
-
-        chat_autocomplete = true, -- Enable chat autocompletion (when disabled, requires manual `mappings.complete` trigger)
-
-        log_path = vim.fn.stdpath('state') .. '/CopilotChat.log', -- Default path to log file
-        history_path = vim.fn.stdpath('data') .. '/copilotchat_history', -- Default path to stored history
-
-        question_header = '# User ', -- Header to use for user questions
-        answer_header = '# Copilot ', -- Header to use for AI answers
-        error_header = '# Error ', -- Header to use for errors
-        separator = '───', -- Separator to use in chat
-
-        -- default providers
-        -- see config/providers.lua for implementation
-        providers = {
-            copilot = {
-            },
-            github_models = {
-            },
-            copilot_embeddings = {
-            },
-        },
-
-        -- default contexts
-        -- see config/contexts.lua for implementation
-        contexts = {
-            buffer = {
-            },
-            buffers = {
-            },
-            file = {
-            },
-            files = {
-            },
-            git = {
-            },
-            url = {
-            },
-            register = {
-            },
-            quickfix = {
-            },
-            system = {
-            }
-        },
-
-        -- default prompts
-        -- see config/prompts.lua for implementation
-        prompts = {
-            Explain = {
-                prompt = 'Write an explanation for the selected code as paragraphs of text.',
-                system_prompt = 'COPILOT_EXPLAIN',
-            },
-            Review = {
-                prompt = 'Review the selected code.',
-                system_prompt = 'COPILOT_REVIEW',
-            },
-            Fix = {
-                prompt = 'There is a problem in this code. Identify the issues and rewrite the code with fixes. Explain what was wrong and how your changes address the problems.',
-            },
-            Optimize = {
-                prompt = 'Optimize the selected code to improve performance and readability. Explain your optimization strategy and the benefits of your changes.',
-            },
-            Docs = {
-                prompt = 'Please add documentation comments to the selected code.',
-            },
-            Tests = {
-                prompt = 'Please generate tests for my code.',
-            },
-            Commit = {
-                prompt = 'Write commit message for the change with commitizen convention. Keep the title under 50 characters and wrap message at 72 characters. Format as a gitcommit code block.',
-                context = 'git:staged',
-            },
-        },
-
-        -- default mappings
-        -- see config/mappings.lua for implementation
-        mappings = {
-            complete = {
-                insert = '<Tab>',
-            },
-            close = {
-                normal = 'q',
-                insert = '<C-c>',
-            },
-            reset = {
-                normal = '<C-l>',
-                insert = '<C-l>',
-            },
-            submit_prompt = {
-                normal = '<CR>',
-                insert = '<C-s>',
-            },
-            toggle_sticky = {
-                normal = 'grr',
-            },
-            clear_stickies = {
-                normal = 'grx',
-            },
-            accept_diff = {
-                normal = '<C-y>',
-                insert = '<C-y>',
-            },
-            jump_to_diff = {
-                normal = 'gj',
-            },
-            quickfix_answers = {
-                normal = 'gqa',
-            },
-            quickfix_diffs = {
-                normal = 'gqd',
-            },
-            yank_diff = {
-                normal = 'gy',
-                register = '"', -- Default register to use for yanking
-            },
-            show_diff = {
-                normal = 'gd',
-                full_diff = false, -- Show full diff instead of unified diff when showing diff window
-            },
-            show_info = {
-                normal = 'gi',
-            },
-            show_context = {
-                normal = 'gc',
-            },
-            show_help = {
-                normal = 'gh',
+            -- Default mappings
+            mappings = {
+                complete = {
+                    insert = '<Tab>',
+                },
+                close = {
+                    normal = 'q',
+                    insert = '<C-c>',
+                },
+                reset = {
+                    normal = '<C-l>',
+                    insert = '<C-l>',
+                },
+                submit_prompt = {
+                    normal = '<CR>',
+                    insert = '<C-s>',
+                },
+                toggle_sticky = {
+                    normal = 'grr',
+                },
+                clear_stickies = {
+                    normal = 'grx',
+                },
+                accept_diff = {
+                    normal = '<C-y>',
+                    insert = '<C-y>',
+                },
+                jump_to_diff = {
+                    normal = 'gj',
+                },
+                quickfix_answers = {
+                    normal = 'gqa',
+                },
+                quickfix_diffs = {
+                    normal = 'gqd',
+                },
+                yank_diff = {
+                    normal = 'gy',
+                    register = '"',
+                },
+                show_diff = {
+                    normal = 'gd',
+                    full_diff = false,
+                },
+                show_info = {
+                    normal = 'gi',
+                },
+                show_context = {
+                    normal = 'gc',
+                },
+                show_help = {
+                    normal = 'gh',
+                },
             },
         },
         config = function(_, opts)
-            -- Setup CopilotChat first
             local chat = require("CopilotChat")
             chat.setup(opts)
 
+            opts.providers.ollama = {
+                prepare_input = require('CopilotChat.config.providers').copilot.prepare_input,
+                prepare_output = require('CopilotChat.config.providers').copilot.prepare_output,
+
+                get_models = function(headers)
+                    local response, err = require('CopilotChat.utils').curl_get('http://localhost:11434/v1/models', {
+                        headers = headers,
+                        json_response = true,
+                    })
+
+                    if err then
+                        error(err)
+                    end
+
+                    return vim.tbl_map(function(model)
+                        return {
+                            id = model.id,
+                            name = model.id,
+                        }
+                    end, response.body.data)
+                end,
+
+                embed = function(inputs, headers)
+                    local response, err = require('CopilotChat.utils').curl_post('http://localhost:11434/v1/embeddings', {
+                        headers = headers,
+                        json_request = true,
+                        json_response = true,
+                        body = {
+                            input = inputs,
+                            model = 'all-minilm',
+                        },
+                    })
+
+                    if err then
+                        error(err)
+                    end
+
+                    return response.body.data
+                end,
+
+                get_url = function()
+                    return 'http://localhost:11434/v1/chat/completions'
+                end,
+            }
+
+            chat.config.providers.ollama = opts.providers.ollama
+
             -- Copilot.vim accept suggestion mapping
             vim.g.copilot_no_tab_map = true
-            vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+            vim.api.nvim_set_keymap('i', '<C-J>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
             -- Key mappings
             vim.keymap.set({ "n" }, "<leader>aa", chat.toggle, { desc = "AI Toggle" })
