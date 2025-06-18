@@ -1,8 +1,8 @@
 -- lua/plugins/rose-pine.lua
 return {
-	"rose-pine/neovim",
-	name = "rose-pine",
+	"rebelot/kanagawa.nvim",
+	name = "kanagawa.nvim",
 	config = function()
-		vim.cmd("colorscheme rose-pine")
+		vim.cmd("colorscheme kanagawa")
 	end
 }
