@@ -5,9 +5,9 @@ x-scheme-handler/https=google-chrome.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 x-scheme-handler/webcal=google-chrome.desktop
-x-scheme-handler/mailto=userapp-Thunderbird-52A472.desktop
-message/rfc822=userapp-Thunderbird-52A472.desktop
-x-scheme-handler/mid=userapp-Thunderbird-52A472.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-UL5N82.desktop
+message/rfc822=userapp-Thunderbird-UL5N82.desktop
+x-scheme-handler/mid=userapp-Thunderbird-UL5N82.desktop
 text/calendar=userapp-Thunderbird-EG8ZX2.desktop
 application/x-extension-ics=userapp-Thunderbird-EG8ZX2.desktop
 x-scheme-handler/webcals=userapp-Thunderbird-EG8ZX2.desktop
@@ -16,7 +16,7 @@ x-scheme-handler/discord=vesktop.desktop
 x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop
 
 [Added Associations]
-x-scheme-handler/mailto=userapp-Thunderbird-52A472.desktop;userapp-Thunderbird-4T0162.desktop;userapp-Thunderbird-1MLB72.desktop;userapp-Thunderbird-FO6L52.desktop;userapp-Thunderbird-OOQLW2.desktop;userapp-Thunderbird-QPWUX2.desktop;userapp-Thunderbird-5ZY7X2.desktop;userapp-Thunderbird-0QHZ02.desktop;userapp-Thunderbird-NDZR02.desktop;userapp-Thunderbird-ZI7W12.desktop;
-x-scheme-handler/mid=userapp-Thunderbird-52A472.desktop;userapp-Thunderbird-4T0162.desktop;userapp-Thunderbird-1MLB72.desktop;userapp-Thunderbird-FO6L52.desktop;userapp-Thunderbird-OOQLW2.desktop;userapp-Thunderbird-QPWUX2.desktop;userapp-Thunderbird-5ZY7X2.desktop;userapp-Thunderbird-0QHZ02.desktop;userapp-Thunderbird-NDZR02.desktop;userapp-Thunderbird-ZI7W12.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-UL5N82.desktop;userapp-Thunderbird-52A472.desktop;userapp-Thunderbird-4T0162.desktop;userapp-Thunderbird-1MLB72.desktop;userapp-Thunderbird-FO6L52.desktop;userapp-Thunderbird-OOQLW2.desktop;userapp-Thunderbird-QPWUX2.desktop;userapp-Thunderbird-5ZY7X2.desktop;userapp-Thunderbird-0QHZ02.desktop;userapp-Thunderbird-NDZR02.desktop;userapp-Thunderbird-ZI7W12.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-UL5N82.desktop;userapp-Thunderbird-52A472.desktop;userapp-Thunderbird-4T0162.desktop;userapp-Thunderbird-1MLB72.desktop;userapp-Thunderbird-FO6L52.desktop;userapp-Thunderbird-OOQLW2.desktop;userapp-Thunderbird-QPWUX2.desktop;userapp-Thunderbird-5ZY7X2.desktop;userapp-Thunderbird-0QHZ02.desktop;userapp-Thunderbird-NDZR02.desktop;userapp-Thunderbird-ZI7W12.desktop;
 x-scheme-handler/webcal=userapp-Thunderbird-MTCKW2.desktop;userapp-Thunderbird-LLITX2.desktop;userapp-Thunderbird-EG8ZX2.desktop;
 x-scheme-handler/webcals=userapp-Thunderbird-MTCKW2.desktop;userapp-Thunderbird-LLITX2.desktop;userapp-Thunderbird-EG8ZX2.desktop;
