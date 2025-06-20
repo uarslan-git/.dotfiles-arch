@@ -45,6 +45,7 @@ WINDOW_WORKSPACE_MAP = {
     'Davinci-Resolve': workspace_vars['ws4'],
     'Notion': workspace_vars['ws5'],
     'notion-calendar': workspace_vars['ws5'],
+    'steamwebhelper': workspace_vars['ws10'],
     'steam': workspace_vars['ws10'],
 }
 

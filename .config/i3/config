@@ -52,11 +52,11 @@ bindsym Control+Shift+colon exec --no-startup-id move_workspace.py right
 
 # Auto start
 exec_always --no-startup-id git pull
-exec_always --no-startup-id workspace.py
 exec_always --no-startup-id autotiling.py
 exec_always --no-startup-id picom
 exec_always --no-startup-id systemctl --user restart session.target
 exec_always --no-startup-id feh --bg-fill ~/.config/bg.jpg
+exec_always --no-startup-id workspace.py
 exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 exec --no-startup-id fcitx5
 exec --no-startup-id nm-applet
