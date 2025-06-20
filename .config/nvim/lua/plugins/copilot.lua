@@ -215,6 +215,19 @@ return {
                 chat.open({ selection = require("CopilotChat.select").visual })
             end, { desc = "AI Open" })
 
+            vim.keymap.set({ "n" }, "<leader>af", function()
+                require("fzf-lua").files({
+                    actions = {
+                        ["default"] = function(selected)
+                            -- Open CopilotChat with the selected file as context
+                            chat.ask("Please analyze this file:", {
+                                context = "file:" .. selected[1]
+                            })
+                        end,
+                    }
+                })
+            end, { desc = "AI File" })
+
             vim.keymap.set({ "n" }, "<leader>ax", chat.reset, { desc = "AI Reset" })
             vim.keymap.set({ "n" }, "<leader>as", chat.stop, { desc = "AI Stop" })
             vim.keymap.set({ "n" }, "<leader>am", chat.select_model, { desc = "AI Models" })

@@ -1,11 +1,11 @@
 # DO NOT EDIT! This file will be overwritten by LXAppearance.
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-include "/home/user/.gtkrc-2.0.mine"
-gtk-theme-name="Dracula"
-gtk-icon-theme-name="Tela-circle-dracula-dark"
+include "/home/umut/.gtkrc-2.0.mine"
+gtk-theme-name="Kanagawa-Red-Dark"
+gtk-icon-theme-name="Kanagawa"
 gtk-font-name="Cantarell 11"
-gtk-cursor-theme-name="Adwaita"
+gtk-cursor-theme-name="vimix-kanagawa-cursors-lotus"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR

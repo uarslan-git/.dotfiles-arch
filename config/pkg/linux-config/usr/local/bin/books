@@ -20,4 +20,4 @@ if [[ -z $selected_name ]]; then
     exit 0
 fi
 
-google-chrome-stable "$selected"
+firefox "$selected" & disown
