@@ -1,10 +1,10 @@
 [Default Applications]
-text/html=google-chrome.desktop
-x-scheme-handler/http=google-chrome.desktop
-x-scheme-handler/https=google-chrome.desktop
-x-scheme-handler/about=google-chrome.desktop
-x-scheme-handler/unknown=google-chrome.desktop
-x-scheme-handler/webcal=google-chrome.desktop
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+x-scheme-handler/webcal=firefox.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-UL5N82.desktop
 message/rfc822=userapp-Thunderbird-UL5N82.desktop
 x-scheme-handler/mid=userapp-Thunderbird-UL5N82.desktop
