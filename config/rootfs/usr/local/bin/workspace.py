@@ -91,6 +91,7 @@ class MonitorManager:
                 return True
         
         # If not in gaming mode or only one monitor
+        # In normal mode, the primary monitor is the one with the focused workspace.
         focused_ws = next((ws for ws in self.i3.get_workspaces() if ws.focused), None)
         if focused_ws:
             self.primary_monitor = focused_ws.output
@@ -101,7 +102,7 @@ class MonitorManager:
         else:
             self.primary_monitor = active_outputs[0].name if active_outputs else None
             self.secondary_monitor = active_outputs[1].name if len(active_outputs) > 1 else None
-        
+            
         print(f"Normal mode - Primary: {self.primary_monitor}, Secondary: {self.secondary_monitor}")
         return True
 
@@ -140,7 +141,7 @@ class MonitorManager:
         target_workspace = self.get_workspace_for_window(window_class) or workspace_vars['ws1']
         
         # Ensure target workspace is on the non-gaming monitor
-        if not self.ensure_workspace_on_correct_monitor(target_workspace, self.primary_monitor):
+        if not self.ensure_workspace_on_correct_monitor(target_workspace, self.primary_monitor, force_move=True): # Force move if it's currently on gaming monitor
             print(f"Failed to ensure workspace {target_workspace} on {self.primary_monitor}.")
             return False
 
@@ -162,85 +163,130 @@ class MonitorManager:
                     target_workspace = self.get_workspace_for_window(window.window_class) or workspace_vars['ws1']
                     
                     # Ensure the target workspace for this evacuated window is on the non-gaming monitor
-                    if self.ensure_workspace_on_correct_monitor(target_workspace, self.primary_monitor):
+                    if self.ensure_workspace_on_correct_monitor(target_workspace, self.primary_monitor, force_move=True):
                         print(f"Evacuating '{window.window_class}' to workspace '{target_workspace}' on {self.primary_monitor}")
                         window.command(f'move container to workspace "{target_workspace}"')
                     else:
                         print(f"Could not evacuate '{window.window_class}': Failed to set workspace {target_workspace} on {self.primary_monitor}")
 
 
-    def ensure_workspace_on_correct_monitor(self, workspace_name, target_monitor):
-        if not target_monitor:
-            print(f"No target monitor specified for workspace '{workspace_name}'.")
-            return False
-
+    def ensure_workspace_on_correct_monitor(self, workspace_name, target_monitor=None, force_move=False):
+        """
+        Ensures a workspace is on a specific monitor or remains on its current monitor.
+        
+        - If target_monitor is provided and force_move is True, it will move the workspace.
+        - If target_monitor is provided and force_move is False, it will only move if the workspace is not already on a monitor, or if it's the gaming workspace and needs to be on the gaming monitor.
+        - If target_monitor is None, it will ensure the workspace exists, but won't force a move.
+        """
         workspaces = self.i3.get_workspaces()
         existing_ws = next((ws for ws in workspaces if ws.name == workspace_name), None)
 
         if existing_ws:
-            if existing_ws.output != target_monitor:
-                print(f"Moving existing workspace '{workspace_name}' to monitor '{target_monitor}'.")
-                # Focus the workspace, then move it to the target monitor
+            if force_move and target_monitor and existing_ws.output != target_monitor:
+                print(f"Force moving existing workspace '{workspace_name}' from {existing_ws.output} to monitor '{target_monitor}'.")
                 self.i3.command(f'workspace "{workspace_name}"')
                 self.i3.command(f'move workspace to output "{target_monitor}"')
-                # After moving, it's good practice to re-focus the original workspace if applicable
-                # (though for spawning new windows, the next command will handle it)
+                return True
+            elif existing_ws.output == target_monitor or target_monitor is None:
+                return True # Workspace already on correct monitor or no specific target
+            elif self.gaming_mode and workspace_name == workspace_vars['ws10'] and existing_ws.output != self.gaming_monitor:
+                 # If in gaming mode and it's the gaming workspace, ensure it's on the gaming monitor
+                print(f"Moving gaming workspace '{workspace_name}' to gaming monitor '{self.gaming_monitor}'.")
+                self.i3.command(f'workspace "{workspace_name}"')
+                self.i3.command(f'move workspace to output "{self.gaming_monitor}"')
+                return True
+            elif self.gaming_mode and target_monitor == self.primary_monitor and existing_ws.output != self.primary_monitor:
+                # If in gaming mode and it's a non-gaming workspace, ensure it's on the primary (non-gaming) monitor
+                print(f"Moving non-gaming workspace '{workspace_name}' to primary monitor '{self.primary_monitor}'.")
+                self.i3.command(f'workspace "{workspace_name}"')
+                self.i3.command(f'move workspace to output "{self.primary_monitor}"')
                 return True
             else:
-                return True # Workspace already on the correct monitor
+                return True # Don't move if not forced and already exists on a monitor
         else:
-            # Workspace doesn't exist, create it on the target monitor
-            print(f"Creating workspace '{workspace_name}' on monitor '{target_monitor}'.")
-            self.i3.command(f'workspace "{workspace_name}"')
-            self.i3.command(f'move workspace to output "{target_monitor}"')
-            return True
+            # Workspace doesn't exist, create it on the target monitor if specified
+            if target_monitor:
+                print(f"Creating workspace '{workspace_name}' on monitor '{target_monitor}'.")
+                self.i3.command(f'workspace "{workspace_name}"')
+                self.i3.command(f'move workspace to output "{target_monitor}"')
+                return True
+            else:
+                # If no target monitor, just create it on the current focused output
+                print(f"Creating workspace '{workspace_name}' on current focused output.")
+                self.i3.command(f'workspace "{workspace_name}"')
+                return True
 
 def on_window_new(i3, e, manager):
     window = e.container
     manager.update_monitor_info() # Re-evaluate monitor states on new window
 
-    # If the window is a game window, let it spawn on ws10 if mapped
-    if manager.is_game_window(window.window_class) and manager.get_workspace_for_window(window.window_class) == workspace_vars['ws10']:
-        print(f"Detected game window '{window.window_class}'. Allowing it to go to {workspace_vars['ws10']}.")
-        manager.ensure_workspace_on_correct_monitor(workspace_vars['ws10'], manager.gaming_monitor if manager.gaming_mode else manager.primary_monitor)
-        window.command(f'move container to workspace "{workspace_vars["ws10"]}"')
+    window_class = window.window_class
+    target_workspace = manager.get_workspace_for_window(window_class)
+
+    if not target_workspace:
+        print(f"No specific workspace mapping for '{window_class}'. Letting i3 handle it.")
         return
+
+    # Special handling for game windows
+    if manager.is_game_window(window_class) and target_workspace == workspace_vars['ws10']:
+        print(f"Detected game window '{window_class}'. Attempting to move to {workspace_vars['ws10']}.")
+        if manager.gaming_mode and manager.gaming_monitor:
+            # If in gaming mode, ensure game workspace is on the gaming monitor
+            if manager.ensure_workspace_on_correct_monitor(workspace_vars['ws10'], manager.gaming_monitor, force_move=True):
+                window.command(f'move container to workspace "{workspace_vars["ws10"]}"')
+                return
+        else:
+            # If not in gaming mode, just ensure it goes to ws10 on the current monitor
+            # or wherever ws10 already exists
+            print(f"Not in gaming mode, moving game window to {workspace_vars['ws10']} on current monitor.")
+            window.command(f'move container to workspace "{workspace_vars["ws10"]}"')
+            return
+
 
     # For non-game windows
-    target_workspace = manager.get_workspace_for_window(window.window_class)
-    if not target_workspace:
-        print(f"No specific workspace mapping for '{window.window_class}'.")
-        return
-
-    # If in gaming mode, and it's not the gaming workspace
-    if manager.gaming_mode and target_workspace != workspace_vars['ws10']:
-        # Ensure the target non-gaming workspace is on the primary (non-gaming) monitor
+    if manager.gaming_mode:
+        # If in gaming mode, non-game windows should go to the primary (non-gaming) monitor
         if not manager.primary_monitor:
             print(f"Error: No primary monitor available for non-gaming apps in gaming mode.")
             return
 
-        if manager.ensure_workspace_on_correct_monitor(target_workspace, manager.primary_monitor):
-            print(f"Detected '{window.window_class}' -> '{target_workspace}' on {manager.primary_monitor}")
+        # Ensure the target non-gaming workspace is on the primary (non-gaming) monitor
+        if manager.ensure_workspace_on_correct_monitor(target_workspace, manager.primary_monitor, force_move=True):
+            print(f"Detected '{window_class}' -> '{target_workspace}' on {manager.primary_monitor} (gaming mode).")
             window.command(f'move container to workspace "{target_workspace}"')
         else:
-            print(f"Failed to ensure workspace '{target_workspace}' on {manager.primary_monitor} for window '{window.window_class}'.")
+            print(f"Failed to ensure workspace '{target_workspace}' on {manager.primary_monitor} for window '{window_class}'.")
     else:
-        # If not in gaming mode, or if it's the gaming workspace
-        # Ensure the target workspace is on the current primary monitor
-        if not manager.primary_monitor:
-            print(f"Error: No primary monitor available.")
-            return
-        
-        if manager.ensure_workspace_on_correct_monitor(target_workspace, manager.primary_monitor):
-            print(f"Detected '{window.window_class}' -> '{target_workspace}' on {manager.primary_monitor} (normal mode or gaming workspace).")
+        # Not in gaming mode.
+        # Check if the target workspace already exists on any monitor.
+        # If it does, and it's not the focused one, we assume we want the window to appear there.
+        workspaces = i3.get_workspaces()
+        existing_ws_on_output = next((ws for ws in workspaces if ws.name == target_workspace and ws.output == manager.primary_monitor), None)
+        existing_ws_anywhere = next((ws for ws in workspaces if ws.name == target_workspace), None)
+
+        if existing_ws_on_output:
+            # Workspace exists on the primary monitor, move window there
+            print(f"Detected '{window_class}' -> '{target_workspace}' (already on focused monitor). Moving window.")
+            window.command(f'move container to workspace "{target_workspace}"')
+        elif existing_ws_anywhere:
+            # Workspace exists but on a different monitor. We *don't* want to move the workspace.
+            # Instead, we just move the window to that existing workspace without changing its monitor.
+            print(f"Detected '{window_class}' -> '{target_workspace}' (exists on a different monitor: {existing_ws_anywhere.output}). Moving window to existing workspace.")
             window.command(f'move container to workspace "{target_workspace}"')
         else:
-            print(f"Failed to ensure workspace '{target_workspace}' on {manager.primary_monitor} for window '{window.window_class}'.")
+            # Workspace doesn't exist, create it on the current primary monitor
+            if manager.primary_monitor and manager.ensure_workspace_on_correct_monitor(target_workspace, manager.primary_monitor):
+                print(f"Detected '{window_class}' -> '{target_workspace}' (new, creating on {manager.primary_monitor}).")
+                window.command(f'move container to workspace "{target_workspace}"')
+            else:
+                print(f"Failed to ensure workspace '{target_workspace}' on {manager.primary_monitor} for window '{window_class}'. Letting i3 place it.")
 
 
 def on_window_move(i3, e, manager):
+    # This event fires after a window has already moved, so it's good for correction
     if e.change == "move":
-        window = i3.get_tree().find_focused()
+        manager.update_monitor_info() # Re-evaluate monitor states
+        window = i3.get_tree().find_by_id(e.container.id) # Get the window object again after move
         if window:
             manager.bounce_window_if_needed(window)
 
