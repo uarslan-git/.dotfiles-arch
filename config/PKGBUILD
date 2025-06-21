@@ -147,6 +147,8 @@ depends=(
     notion-app-electron
     notion-calendar-electron
     npm
+    ntfs-3g
+    nvim-lazy
     nvtop
     obsidian
     obs-studio

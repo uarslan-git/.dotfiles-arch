@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 0.1.0-1
 pkgdesc = linux config
 url = https://github.com/uarslan-git/linux-config
-builddate = 1750541645
+builddate = 1750542632
 packager = Unknown Packager
 size = 32698
 arch = x86_64
@@ -137,6 +137,8 @@ depend = nodejs-lts-jod
 depend = notion-app-electron
 depend = notion-calendar-electron
 depend = npm
+depend = ntfs-3g
+depend = nvim-lazy
 depend = nvtop
 depend = obsidian
 depend = obs-studio
