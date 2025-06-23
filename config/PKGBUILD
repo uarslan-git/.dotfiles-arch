@@ -110,6 +110,8 @@ depends=(
     jdownloader2
     jetbrains-toolbox
     k9s
+    kanagawa-gtk-theme-git
+    kanagawa-icon-theme-git
     kdeconnect
     kdenlive
     keepassxc
@@ -190,7 +192,9 @@ depends=(
     sdl2-compat
     slurp
     smartmontools
+    sox
     sql-language-server
+    stable-diffusion-webui
     steam
     swaybg
     swaylock-effects
@@ -236,6 +240,7 @@ depends=(
     vesktop-bin
     vi
     vim
+    vimix-kanagawa-cursors
     visual-studio-code-bin
     vlc
     volumeicon
