@@ -194,7 +194,6 @@ depends=(
     smartmontools
     sox
     sql-language-server
-    stable-diffusion-webui
     steam
     swaybg
     swaylock-effects
@@ -285,6 +284,7 @@ if [[ "$(hostname)" == "pc" ]]; then depends+=(
     nvidia-settings
     upscayl-bin
     opencl-nvidia
+    stable-diffusion-webui
     zerotier-one
     ); fi
 
