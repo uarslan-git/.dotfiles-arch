@@ -12,7 +12,7 @@ return {
             log_level = 'info',
 
             system_prompt = 'COPILOT_INSTRUCTIONS',
-            model = 'ollama/llama3', -- Set your default model to llama3
+            model = 'claude-3.5-sonnet', -- Set your default model to llama3
             agent = 'copilot',
             context = nil,
             sticky = nil,
