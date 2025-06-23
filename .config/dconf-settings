@@ -1,8 +1,8 @@
 [com/usebottles/bottles]
 show-sandbox-warning=false
 startup-view='page_list'
-window-height=1171
-window-width=1908
+window-height=1181
+window-width=1920
 
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
@@ -21,10 +21,10 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=182
+sidebar-width=240
 sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(2280, 160)
+window-position=(2278, 157)
 window-size=(1203, 902)
