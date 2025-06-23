@@ -26,28 +26,28 @@ i3lock_options=(
 kill_and_unpause_notifications() {
     pkill -xu $EUID i3lock
     pkill -xu $EUID -USR2 dunst
-    playerctl pause
+    [ "$playerctl_status" = "Playing" ] && playerctl play
 }
 
 if [[ -e /dev/fd/${XSS_SLEEP_LOCK_FD:--1} ]]; then
     trap kill_and_unpause_notifications TERM INT
 
-  # Pause notifications and media
-  pkill -xu $EUID -USR1 dunst
-  playerctl pause
-  # Prevent i3lock from inheriting a copy of the lock fd
+    # Pause notifications and media
+    pkill -xu $EUID -USR1 dunst
+    playerctl_status=$(playerctl status 2>/dev/null)
+    playerctl pause
+    # Prevent i3lock from inheriting a copy of the lock fd
     i3lock "${i3lock_options[@]}" {XSS_SLEEP_LOCK_FD}<&- &
 
+    # Close the fd to indicate we're ready to sleep
+    exec {XSS_SLEEP_LOCK_FD}<&-
 
-  # Close the fd to indicate we're ready to sleep
-  exec {XSS_SLEEP_LOCK_FD}<&-
-
-  # Unpause notifications
-  pkill -xu $EUID -USR2 dunst
-  playerctl play
+    # Wait for i3lock to exit
+    wait
 else
     trap kill_and_unpause_notifications TERM INT
     pkill -xu $EUID -USR1 dunst
+    playerctl_status=$(playerctl status 2>/dev/null)
     playerctl pause
     i3lock "${i3lock_options[@]}" &
     wait
