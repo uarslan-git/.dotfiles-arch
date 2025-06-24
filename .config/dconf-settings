@@ -26,5 +26,5 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(360, 160)
+window-position=(2280, 160)
 window-size=(1203, 902)

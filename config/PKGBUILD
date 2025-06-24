@@ -45,6 +45,7 @@ depends=(
     ccls
     cheat-engine-zh
     copyq
+    csharp-ls
     cups
     cups-pdf
     curl
@@ -119,6 +120,7 @@ depends=(
     krita
     lib32-sdl_image
     libpulse
+    libreoffice-fresh
     lightdm
     lightdm-gtk-greeter
     linux
@@ -257,6 +259,7 @@ depends=(
     wireplumber
     wofi
     wpaperd
+    xarchiver
     xclip
     xdg-desktop-portal-gtk
     xdg-utils
