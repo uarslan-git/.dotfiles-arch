@@ -39,9 +39,9 @@ return {
       require('lspconfig').ccls.setup({})
       require('lspconfig').clangd.setup({})
       require('lspconfig').csharp_ls.setup({
-        cmd = { vim.fn.expand("~/.dotnet/tools/csharp-ls") },
-        filetypes = { "cs", "csharp" },
-        root_dir = require('lspconfig.util').root_pattern("*.sln", "*.csproj", ".git"),
+--        cmd = { vim.fn.expand("~/.dotnet/tools/csharp-ls") },
+--        filetypes = { "cs", "csharp" },
+--        root_dir = require('lspconfig.util').root_pattern("*.sln", "*.csproj", ".git"),
       })
       require('lspconfig').cssls.setup({})
       require('lspconfig').denols.setup({})

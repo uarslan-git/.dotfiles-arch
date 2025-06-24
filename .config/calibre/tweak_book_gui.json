@@ -113,48 +113,48 @@
     "frame_geometry": {
       "height": 191,
       "width": 570,
-      "x": 570,
-      "y": 387
+      "x": 680,
+      "y": 509
     },
     "full_screened": false,
     "geometry": {
       "height": 189,
       "width": 568,
-      "x": 571,
-      "y": 388
+      "x": 681,
+      "y": 510
     },
     "maximized": false,
     "normal_geometry": {
       "height": 189,
       "width": 568,
-      "x": 571,
-      "y": 388
+      "x": 681,
+      "y": 510
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAI6AAABgwAABHMAAAJBAAACOwAAAYQAAARyAAACQAAAAAEAAAAABqsAAAI7AAABhAAABHIAAAJA"
+      "__value__": "AdnQywADAAAAAAKoAAAB/QAABOEAAAK7AAACqQAAAf4AAATgAAACugAAAAEAAAAAB4AAAAKpAAAB/gAABOAAAAK6"
     },
     "screen": {
       "depth": 24,
-      "device_pixel_ratio": 1.5,
+      "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 960,
-        "width": 1707,
+        "height": 1200,
+        "width": 1920,
         "x": 0,
         "y": 0
       },
       "index_in_screens_list": 1,
       "manufacturer": "Dell Inc.",
-      "model": "DELL UP2716D",
-      "name": "HDMI-0",
-      "serial": "KRXTR92K654L",
+      "model": "DELL U2410",
+      "name": "DP-1",
+      "serial": "F525M0CA6D2L",
       "size_in_logical_pixels": {
-        "height": 960,
-        "width": 1707
+        "height": 1200,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 972,
-        "width": 4288,
+        "height": 1200,
+        "width": 3840,
         "x": 0,
         "y": 0
       }
@@ -162,50 +162,50 @@
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 900,
-      "width": 828,
-      "x": 858,
-      "y": 40
+      "height": 584,
+      "width": 953,
+      "x": 962,
+      "y": 611
     },
     "full_screened": false,
     "geometry": {
-      "height": 898,
-      "width": 826,
-      "x": 859,
-      "y": 41
+      "height": 582,
+      "width": 951,
+      "x": 963,
+      "y": 612
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 898,
-      "width": 826,
-      "x": 859,
-      "y": 41
+      "height": 582,
+      "width": 951,
+      "x": 963,
+      "y": 612
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAANaAAAAKAAABpUAAAOrAAADWwAAACkAAAaUAAADqgAAAAEAAAAABqsAAANbAAAAKQAABpQAAAOq"
+      "__value__": "AdnQywADAAAAAAPCAAACYwAAB3oAAASqAAADwwAAAmQAAAd5AAAEqQAAAAEAAAAAB4AAAAPDAAACZAAAB3kAAASp"
     },
     "screen": {
       "depth": 24,
-      "device_pixel_ratio": 1.5,
+      "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 960,
-        "width": 1707,
+        "height": 1200,
+        "width": 1920,
         "x": 0,
         "y": 0
       },
       "index_in_screens_list": 1,
       "manufacturer": "Dell Inc.",
-      "model": "DELL UP2716D",
-      "name": "HDMI-0",
-      "serial": "KRXTR92K654L",
+      "model": "DELL U2410",
+      "name": "DP-1",
+      "serial": "F525M0CA6D2L",
       "size_in_logical_pixels": {
-        "height": 960,
-        "width": 1707
+        "height": 1200,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 972,
-        "width": 4288,
+        "height": 1200,
+        "width": 3840,
         "x": 0,
         "y": 0
       }
@@ -213,7 +213,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAABGAAADLfwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAD4AAAMtAAAAWgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFoA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAIAA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAhUA////AAAAAQAAADUAAAMt/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPgAAAy0AAABTAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABaAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA1AP///wAAArMAAAMtAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAABGAAAB9PwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAADwAAAH0AAAAWAD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFgA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHUA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIgA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfcA////AAAAAQAAADUAAAH0/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPAAAAfQAAABPAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABYAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAAzAP///wAAAzAAAAH0AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "recent-books": [
     "/home/user/Calibre Library/Sam Feuerbach/Der Totengrabersohn_ Buch 1 (German Edition) (32)/Der Totengrabersohn_ Buch 1 (German Editio - Sam Feuerbach.epub",
