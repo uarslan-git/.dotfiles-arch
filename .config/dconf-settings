@@ -9,6 +9,10 @@ color-scheme='prefer-dark'
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/nm-applet/eap/85c04c14-0406-401e-a8fa-294b1976e5ef]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/nm-applet/eap/a95b5395-ca3d-4886-adf8-2d6f016f45fd]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
