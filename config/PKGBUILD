@@ -65,6 +65,7 @@ depends=(
     element-desktop
     fcitx5
     fcitx5-configtool
+    fcitx5-gtk
     fcitx5-mozc
     fd
     feh
@@ -126,7 +127,6 @@ depends=(
     linux
     linux-firmware
     linux-lts-headers
-    linux-zen
     localsend-bin
     lua-language-server
     lxappearance
