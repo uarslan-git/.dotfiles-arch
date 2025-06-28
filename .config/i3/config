@@ -56,7 +56,7 @@ exec_always --no-startup-id autotiling.py & disown
 exec_always --no-startup-id picom
 exec_always --no-startup-id systemctl --user restart session.target
 exec_always --no-startup-id feh --bg-fill ~/.config/bg.jpg
-#exec_always --no-startup-id workspace.py & disown
+exec_always --no-startup-id workspace.py
 exec_always --no-startup-id autorandr -l $(autorandr)
 exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 exec --no-startup-id fcitx5
