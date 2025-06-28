@@ -349,6 +349,8 @@ alias n="nvim"
 alias t="tmux"
 alias zsh="vim ~/.zshrc"
 alias a="ani-cli"
+alias ceserver="/opt/ceserver/ceserver"
+alias cengine="/opt/cheat-engine-zh/Cheat\ Engine.exe"
 
 
 pokemon-colorscripts -r
