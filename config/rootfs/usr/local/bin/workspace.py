@@ -79,13 +79,12 @@ class MonitorManager:
         if self.is_gaming_workspace_active():
             workspaces = self.i3.get_workspaces()
             game_ws = next((ws for ws in workspaces if ws.name == workspace_vars['ws10']), None)
-            
             if game_ws:
+                # Always set gaming monitor to the monitor where workspace 10 is
                 self.gaming_mode = True
                 self.gaming_monitor = game_ws.output
-                # The primary monitor will be the one *not* used for gaming
                 self.primary_monitor = next((o.name for o in active_outputs if o.name != self.gaming_monitor), None)
-                self.secondary_monitor = self.gaming_monitor # Keep for clarity, though not directly used for non-gaming apps
+                self.secondary_monitor = self.gaming_monitor
                 print(f"Gaming mode active - Game on {self.gaming_monitor}, non-gaming apps to {self.primary_monitor}")
                 self.evacuate_windows_from_gaming_monitor()
                 return True
@@ -139,6 +138,9 @@ class MonitorManager:
             return False # Only bounce if on ws10
 
         window_class = window.window_class
+        if window_class is None:
+            print("Skipping bounce: window_class is None.")
+            return False
         if self.is_game_window(window_class):
             return False # Don't bounce game windows
 
@@ -149,7 +151,7 @@ class MonitorManager:
             print(f"Failed to ensure workspace {target_workspace} on {self.primary_monitor}.")
             return False
 
-        print(f"Bouncing non-game window '{window.window_class}' from workspace 10 to {target_workspace} on {self.primary_monitor}")
+        print(f"Bouncing non-game window '{window_class}' from workspace 10 to {target_workspace} on {self.primary_monitor}")
         window.command(f'move container to workspace "{target_workspace}"')
         return True
 
@@ -234,17 +236,30 @@ def on_window_new(i3, e, manager):
     # Special handling for game windows
     if manager.is_game_window(window_class) and target_workspace == workspace_vars['ws10']:
         print(f"Detected game window '{window_class}'. Attempting to move to {workspace_vars['ws10']}.")
-        if manager.gaming_mode and manager.gaming_monitor:
-            # If in gaming mode, ensure game workspace is on the gaming monitor
-            if manager.ensure_workspace_on_correct_monitor(workspace_vars['ws10'], manager.gaming_monitor, force_move=True):
+        # Get the currently focused monitor
+        focused_ws = next((ws for ws in i3.get_workspaces() if ws.focused), None)
+        outputs = [o for o in i3.get_outputs() if o.active]
+        if focused_ws:
+            current_monitor = focused_ws.output
+            other_monitor = next((o.name for o in outputs if o.name != current_monitor), None)
+            manager.gaming_mode = True
+            manager.gaming_monitor = current_monitor
+            manager.primary_monitor = other_monitor
+            manager.secondary_monitor = current_monitor
+            # Move workspace 10 to the gaming monitor
+            if manager.ensure_workspace_on_correct_monitor(workspace_vars['ws10'], current_monitor, force_move=True):
                 window.command(f'move container to workspace "{workspace_vars["ws10"]}"')
-                return
-        else:
-            # If not in gaming mode, just ensure it goes to ws10 on the current monitor
-            # or wherever ws10 already exists
-            print(f"Not in gaming mode, moving game window to {workspace_vars['ws10']} on current monitor.")
-            window.command(f'move container to workspace "{workspace_vars["ws10"]}"')
+            # Move all other workspaces to the non-gaming monitor
+            for ws in i3.get_workspaces():
+                if ws.name != workspace_vars['ws10'] and ws.output != other_monitor:
+                    i3.command(f'workspace "{ws.name}"')
+                    i3.command(f'move workspace to output "{other_monitor}"')
+            manager.evacuate_windows_from_gaming_monitor()
+            print(f"Gaming mode active - Game on {current_monitor}, non-gaming apps to {other_monitor}")
             return
+        # fallback: just move to ws10
+        window.command(f'move container to workspace "{workspace_vars['ws10']}"')
+        return
 
 
     # For non-game windows
