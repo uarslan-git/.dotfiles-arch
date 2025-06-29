@@ -324,7 +324,7 @@ alias gb="git branch -a"
 alias gc="git commit -m"
 alias gcd="git commit -m '$(date)'"
 alias gco="git checkout"
-alias gl="git log --graph --pretty=oneline --abbrev-commit"
+alias gl="git log --graph --pretty=format:'%C(auto)%h %d %s %C(blue)(%cr) %C(green)<%an>' --abbrev-commit --all --decorate"
 alias gls="git ls-files" # git list files
 alias glu="git ls-files --others --exclude-standard" git lists untracked files
 alias glsf="git ls-files | awk -F'/' '{print \$1}' | sort | uniq" 
