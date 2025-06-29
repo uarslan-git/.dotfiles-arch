@@ -2,7 +2,7 @@ tar -h --exclude=.idea -cf rootfs.tar -C rootfs .
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=3
+pkgrel=4
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -10,7 +10,7 @@ arch=('x86_64')
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=3
+pkgrel=4
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -255,6 +255,7 @@ depends=(
     vulkan-radeon
     vulkan-tools
     waybar
+    wayvr-dashboard
     wget
     which
     winetricks
@@ -262,6 +263,7 @@ depends=(
     wireplumber
     wivrn-dashboard
     wivrn-server
+    wlx-overlay-s-git
     wofi
     wpaperd
     xarchiver
