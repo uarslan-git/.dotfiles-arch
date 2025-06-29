@@ -44,6 +44,7 @@ depends=(
     cargo
     carla
     ccls
+    ceserver
     cheat-engine-zh
     copyq
     csharp-ls
@@ -64,6 +65,7 @@ depends=(
     dunst
     efibootmgr
     element-desktop
+    espeak-ng
     fcitx5
     fcitx5-configtool
     fcitx5-gtk
@@ -97,7 +99,6 @@ depends=(
     gvfs
     gxplugins-lv2-git
     gzip
-    haskell-language-server
     i3blocks
     i3lock-color
     i3status
