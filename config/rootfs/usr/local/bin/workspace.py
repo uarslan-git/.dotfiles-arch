@@ -108,12 +108,16 @@ class MonitorManager:
 
 
     def get_workspace_for_window(self, window_class):
+        if not window_class:
+            return None
         for cls, workspace in WINDOW_WORKSPACE_MAP.items():
             if cls.lower() in window_class.lower():
                 return workspace
         return None
 
     def is_game_window(self, window_class):
+        if not window_class:
+            return False
         return any(game_class.lower() in window_class.lower() for game_class in GAME_CLASSES)
 
     def is_gaming_workspace_active(self):
