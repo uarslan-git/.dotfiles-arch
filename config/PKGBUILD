@@ -233,6 +233,7 @@ depends=(
     torbrowser-launcher
     trayer
     tree
+    ttf-nerd-fonts-symbols
     typescript-language-server
     ufw
     unityhub
