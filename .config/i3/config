@@ -51,7 +51,7 @@ bindsym Control+Shift+colon exec --no-startup-id move_workspace.py right
 
 
 # Auto start
-exec_always --no-startup-id git pull
+exec_always --no-startup-id pushd ~/; gpr; popd
 exec_always --no-startup-id autotiling.py & disown
 exec_always --no-startup-id picom
 exec_always --no-startup-id systemctl --user restart session.target
