@@ -139,7 +139,6 @@ depends=(
     mesa-utils
     miniforge
     mongodb-bin
-    mongodb-compass-bin
     mongosh-bin
     mov-cli
     nano
@@ -296,7 +295,6 @@ if [[ "$(hostname)" == "pc" ]]; then depends+=(
     nvidia-settings
     upscayl-bin
     opencl-nvidia
-    stable-diffusion-webui
     zerotier-one
     ); fi
 
