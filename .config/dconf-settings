@@ -1,34 +1,30 @@
 [com/usebottles/bottles]
 show-sandbox-warning=false
 startup-view='page_list'
-window-height=1060
+window-height=1181
 window-width=1920
 
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
 
-[org/gnome/nm-applet/eap/7c96a37d-bab3-44b3-b3f4-a0a412a9f550]
-ignore-ca-cert=false
+[org/gnome/nm-applet/eap/6256bcde-8731-4ef9-bf18-80c5459d2cfd]
+ignore-ca-cert=true
 ignore-phase2-ca-cert=false
 
-[org/gnome/nm-applet/eap/85c04c14-0406-401e-a8fa-294b1976e5ef]
-ignore-ca-cert=false
-ignore-phase2-ca-cert=false
-
-[org/gnome/nm-applet/eap/a95b5395-ca3d-4886-adf8-2d6f016f45fd]
-ignore-ca-cert=false
+[org/gnome/nm-applet/eap/6700c27a-29b5-356f-ad4c-74cff77da1e5]
+ignore-ca-cert=true
 ignore-phase2-ca-cert=false
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=181
-sort-column='name'
+sidebar-width=240
+sort-column='modified'
 sort-directories-first=false
-sort-order='ascending'
+sort-order='descending'
 type-format='category'
-window-position=(680, 269)
-window-size=(1203, 925)
+window-position=(360, 160)
+window-size=(1203, 902)
