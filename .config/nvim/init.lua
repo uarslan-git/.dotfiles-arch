@@ -7,4 +7,4 @@ require('lazy_setup')
 require('remap') -- Custom key mappings (optional)
 require('set') -- Custom key mappings (optional)
 
-require('snippets').setup() -- Load snippets (optional)
+require("snippets").setup_mappings()
