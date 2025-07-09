@@ -13,11 +13,14 @@ class ${1:TestClass}(unittest.TestCase):
         ${3:pass}
 
     def test_${4:feature}(self):
-        ${5:assert ...}
+        self.${5:assertEqual}(${6:actual}, ${7:expected})
+
+if __name__ == '__main__':
+    unittest.main()
 ]],
     testfunc = [[
 def test_${1:function_name}(self):
-    ${2:assert ...}
+    self.${2:assertEqual}(${3:actual}, ${4:expected})
 ]]
 }
 
@@ -37,21 +40,26 @@ function M.setup_mappings()
     vim.keymap.set("i", "<leader>tc", function() M.expand_snippet("testclass") end, { desc = "Insert Python test class snippet" })
     vim.keymap.set("i", "<leader>tf", function() M.expand_snippet("testfunc") end, { desc = "Insert Python test function snippet" })
 
-    vim.keymap.set({ 'i', 's' }, '<Tab>', function()
+    vim.keymap.set("i", "<C-k>", function()
         if vim.snippet.active({ direction = 1 }) then
-            return '<Cmd>lua vim.snippet.jump(1)<CR>'
+            vim.snippet.jump(1)
         else
-            return '<Tab>'
+            vim.cmd("normal! <C-k>")
         end
-    end, { desc = '...', expr = true, silent = true })
+    end, { silent = true })
 
-    vim.keymap.set({ 'i', 's' }, '<S-Tab>', function()
+    vim.keymap.set("i", "<C-l>", function()
         if vim.snippet.active({ direction = -1 }) then
-            return '<Cmd>lua vim.snippet.jump(-1)<CR>'
+            vim.snippet.jump(-1)
         else
-            return '<S-Tab>'
+            vim.cmd("normal! <C-l>")
         end
-    end, { desc = 'Jump to previous snippet placeholder', expr = true, silent = true })
+    end, { silent = true })
+
+    vim.keymap.set("n", "<CR>", function()
+        vim.snippet.stop(1)
+        return "\n"
+    end, { expr = true, silent = true })
 
 end
 

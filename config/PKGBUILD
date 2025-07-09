@@ -66,6 +66,7 @@ depends=(
     efibootmgr
     element-desktop
     espeak-ng
+    evince
     fcitx5
     fcitx5-configtool
     fcitx5-gtk
