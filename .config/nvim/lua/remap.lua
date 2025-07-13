@@ -4,14 +4,48 @@ vim.g.mapleader = " "
 -- Open netrw file explorer with <leader>pv
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- Insert mode mappings for auto-pairs and new lines
-vim.api.nvim_set_keymap('i', '"', '""<left>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', "'", "''<left>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '(', '()<left>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '[', '[]<left>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '{', '{}<left>', { noremap = true, silent = true })
+-- Auto-pair insert
+local autopairs = {
+  ["("] = ")",
+  ["["] = "]",
+  ["{"] = "}",
+  ['"'] = '"',
+  ["'"] = "'",
+  ["`"] = "`"
+}
+
+-- Insert pair and move cursor inside
+for open, close in pairs(autopairs) do
+  vim.keymap.set("i", open, function()
+    local col = vim.fn.col('.')
+    local line = vim.fn.getline('.')
+    local next_char = line:sub(col, col)
+
+    if next_char == close or next_char:match("[%w]") then
+      return open
+    end
+
+    return open .. close .. "<Left>"
+  end, { expr = true, noremap = true })
+end
+
+-- Skip over closing if already present
+for _, close in pairs(autopairs) do
+  vim.keymap.set("i", close, function()
+    local col = vim.fn.col('.')
+    local line = vim.fn.getline('.')
+    if line:sub(col, col) == close then
+      return "<Right>"
+    else
+      return close
+    end
+  end, { expr = true, noremap = true })
+end
+
+-- Smart enter: when pressing Enter between { }, ( ), or [ ]
 vim.api.nvim_set_keymap('i', '{<CR>', '{<CR>}<ESC>O', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '(<CR>', '(<CR>)<ESC>O', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '[<CR>', '[<CR>]<ESC>O', { noremap = true, silent = true })
 
 -- Move visual selected lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
