@@ -4,7 +4,6 @@ vim.g.mapleader = " "
 -- Open netrw file explorer with <leader>pv
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- Auto-pair insert
 local autopairs = {
   ["("] = ")",
   ["["] = "]",
@@ -14,7 +13,7 @@ local autopairs = {
   ["`"] = "`"
 }
 
--- Insert pair and move cursor inside
+-- Auto-pair on insert and place cursor inside
 for open, close in pairs(autopairs) do
   vim.keymap.set("i", open, function()
     local col = vim.fn.col('.')
@@ -29,7 +28,7 @@ for open, close in pairs(autopairs) do
   end, { expr = true, noremap = true })
 end
 
--- Skip over closing if already present
+-- Skip over closing char if already there
 for _, close in pairs(autopairs) do
   vim.keymap.set("i", close, function()
     local col = vim.fn.col('.')
@@ -42,10 +41,13 @@ for _, close in pairs(autopairs) do
   end, { expr = true, noremap = true })
 end
 
--- Smart enter: when pressing Enter between { }, ( ), or [ ]
+-- Smart <CR>: expand to multiline inside paired characters
 vim.api.nvim_set_keymap('i', '{<CR>', '{<CR>}<ESC>O', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '(<CR>', '(<CR>)<ESC>O', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '[<CR>', '[<CR>]<ESC>O', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '"<CR>', '"<CR>"<ESC>O', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', "'<CR>", "'<CR>'<ESC>O", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '`<CR>', '`<CR>`<ESC>O', { noremap = true, silent = true })
 
 -- Move visual selected lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
