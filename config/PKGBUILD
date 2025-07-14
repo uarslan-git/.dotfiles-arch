@@ -24,7 +24,6 @@ depends=(
     7zip
     adobe-source-han-sans-jp-fonts
     adwaita-dark
-    alvr-bin
     amd-ucode
     ani-cli
     anki-bin
@@ -268,9 +267,6 @@ depends=(
     winetricks
     wireless_tools
     wireplumber
-    wivrn-dashboard
-    wivrn-server
-    wlx-overlay-s-git
     wofi
     wpaperd
     xarchiver
