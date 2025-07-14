@@ -2,7 +2,7 @@ tar -h --exclude=.idea -cf rootfs.tar -C rootfs .
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=6
+pkgrel=7
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -10,7 +10,7 @@ arch=('x86_64')
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=6
+pkgrel=7
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -25,6 +25,7 @@ depends=(
     adobe-source-han-sans-jp-fonts
     adwaita-dark
     amd-ucode
+    angular-cli
     ani-cli
     anki-bin
     arandr
@@ -45,6 +46,7 @@ depends=(
     ccls
     ceserver
     cheat-engine-zh
+    clipse-bin
     copyq
     csharp-ls
     cups
@@ -267,6 +269,7 @@ depends=(
     winetricks
     wireless_tools
     wireplumber
+    wl-clipboard
     wofi
     wpaperd
     xarchiver
