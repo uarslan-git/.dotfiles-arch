@@ -2,7 +2,7 @@ tar -h --exclude=.idea -cf rootfs.tar -C rootfs .
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=5
+pkgrel=6
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -10,7 +10,7 @@ arch=('x86_64')
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=5
+pkgrel=6
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -100,6 +100,9 @@ depends=(
     gvfs
     gxplugins-lv2-git
     gzip
+    hypridle
+    hyprland
+    hyprpicker
     i3blocks
     i3lock-color
     i3status
@@ -134,6 +137,7 @@ depends=(
     lua-language-server
     lxappearance
     man-db
+    mangohud
     man-pages
     matcha-gtk-theme
     maven
@@ -156,6 +160,7 @@ depends=(
     ntfs-3g
     nvim-lazy
     nvtop
+    nwg-look
     obsidian
     obs-studio
     oh-my-zsh-git
