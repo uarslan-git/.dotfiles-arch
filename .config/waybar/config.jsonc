@@ -1,0 +1,102 @@
+{
+    "layer": "top",
+    // Using margin-bottom with a negative value in order to reduce the space between Hyprland window and waybar
+    "margin-bottom": -10,
+    "margin-top": 10,
+    "modules-left": ["custom/launcher", "cpu","memory", "network","custom/spotify", "tray"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["backlight","pulseaudio","clock", "battery", "custom/power"],
+
+    "pulseaudio": {
+        "tooltip": false,
+        "scroll-step": 2,
+        "format": "{icon} {volume}%",
+        "format-muted": "{icon} {volume}%",
+        //"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click":"pavucontrol",
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "",
+        "format-ethernet": "",
+        "tooltip-format": "{essid} ({signalStrength}%)",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "backlight": {
+        "tooltip": false,
+        "format": " {}%",
+        "interval":1,
+        "on-scroll-up": "light -A 5",
+        "on-scroll-down": "light -U 5"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "tray":{
+        "icon-size":18,
+        "spacing": 10
+    },
+    "clock": {
+   //     "format": " {:%I:%M %p   %d/%m/%Y}"
+   "format": " {:%Y年 %m月 %d日 (%a) 第%V周 %H:%M %p}"
+    },
+    "cpu": {
+        "interval": 15,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "custom/spotify": {
+        "interval": 1,
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "escape": true
+
+    },
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "wofi -show drun",
+        "on-click-right": "killall wofi"
+    },
+    "custom/power":{
+        "format": " ",
+        "on-click": "bash ~/.config/rofi/leave/leave.sh"
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十"
+        }
+    }
+}
