@@ -1,0 +1,10 @@
+[Unit]
+Description=Kanshi
+Requires=session.target
+After=session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/kanshi -c ${HOME}/.config/kanshi/config.d/%H
+Restart=on-failure
+RestartSec=1

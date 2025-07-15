@@ -1,0 +1,4 @@
+profile "PC-Work" {
+    output "DP-4" enable scale 1.0 position 0,0
+    output "DP-5" enable scale 1.0 position 1920,0
+}
