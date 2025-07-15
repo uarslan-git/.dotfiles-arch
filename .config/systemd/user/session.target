@@ -7,3 +7,4 @@ Wants=youtube-music-player.service
 Wants=fcitx5.service
 Wants=xss-lock.service
 Wants=kanshi.service
+Wants=swww.service
