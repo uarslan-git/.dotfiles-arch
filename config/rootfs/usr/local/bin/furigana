@@ -1,0 +1,29 @@
+#!/bin/bash
+
+previous_content=""
+
+while true; do
+    current_content=$(wl-paste --primary 2>/dev/null || wl-paste 2>/dev/null)
+
+    if [ -n "$current_content" ] && [ "$current_content" != "$previous_content" ]; then
+
+        # Extract only Japanese characters: Hiragana, Katakana, Kanji
+        japanese_only=$(echo "$current_content" | grep -oP '[\p{Hiragana}\p{Katakana}\p{Han}]+' | tr -d '\n')
+
+        if [ -n "$japanese_only" ]; then
+            # Convert Japanese-only string to Hiragana
+            hiragana=$(echo "$japanese_only" | kakasi -JH)
+
+            echo -en "\r\e[K"
+            echo "$hiragana"
+
+            echo -n "$hiragana" | wl-copy
+            notify-send -t 15000 --hint=int:transient:1 "ひらがな変換" "$hiragana" &
+        fi
+
+        previous_content="$current_content"
+    fi
+
+    sleep 0.3
+done
+
