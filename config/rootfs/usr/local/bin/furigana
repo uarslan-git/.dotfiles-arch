@@ -3,31 +3,42 @@
 previous_content=""
 
 while true; do
-    current_content=$(wl-paste --primary 2>/dev/null || wl-paste 2>/dev/null)
+  current_content=$(wl-paste --primary 2>/dev/null || wl-paste 2>/dev/null)
 
-    if [ -n "$current_content" ] && [ "$current_content" != "$previous_content" ]; then
+  if [ -n "$current_content" ] && [ "$current_content" != "$previous_content" ]; then
+    japanese_only=$(echo "$current_content" \
+      | grep -oP '[\p{Hiragana}\p{Katakana}\p{Han}]+' \
+      | tr -d '\n')
 
-        japanese_only=$(echo "$current_content" | grep -oP '[\p{Hiragana}\p{Katakana}\p{Han}]+' | tr -d '\n')
+    if [ -n "$japanese_only" ]; then
+      hiragana=$(echo "$japanese_only" | kakasi -JH)
 
-        if [ -n "$japanese_only" ]; then
-            hiragana=$(echo "$japanese_only" | kakasi -JH)
+      echo -en "\r\e[K"
+      echo "$hiragana"
+      echo -n "$hiragana" | wl-copy
+      notify-send -t 15000 --hint=int:transient:1 "ひらがな変換" "$hiragana" &
 
-            echo -en "\r\e[K"
-            echo "$hiragana"
+      # get cursor pos
+      read mouse_x mouse_y < <(hyprctl cursorpos | awk -F, '{print $1, $2}')
 
-            echo -n "$hiragana" | wl-copy
+      offset_x=$((mouse_x - 150))
+      offset_y=$((mouse_y - 60))
 
-            # Notify via both notify-send and floating tooltip window (yad)
-            notify-send -t 15000 --hint=int:transient:1 "ひらがな変換" "$hiragana" &
+      # launch yad under XWayland
+      yad \
+        --text="$hiragana" \
+        --no-buttons --timeout=3 \
+        --undecorated --skip-taskbar \
+        --width=300 --height=50 --on-top \
+        --fontname="Noto Sans JP 16" &
 
-            # Show tooltip using yad (disappears after 3 seconds)
-            yad --text="$hiragana" --no-buttons --timeout=3 --undecorated --skip-taskbar \
-                --posx=1000 --posy=100 --width=300 --height=50 --on-top --center --fontname="Noto Sans JP 16" &
-        fi
-
-        previous_content="$current_content"
+      sleep 0.1
+      hyprctl dispatch movewindowpixel exact "$offset_x $offset_y"
     fi
 
-    sleep 0.3
+    previous_content="$current_content"
+  fi
+
+  sleep 0.3
 done
 

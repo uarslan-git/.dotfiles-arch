@@ -302,7 +302,7 @@ depends=(
   )
   #endPackages
 
-if [[ lspci | grep -i 'GeForce' ]]; then depends+=(
+if lspci | grep -i 'GeForce'; then depends+=(
     mangohud
     nvidia
     nvidia-settings
