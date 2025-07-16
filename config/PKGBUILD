@@ -2,7 +2,7 @@ tar -h --exclude=.idea -cf rootfs.tar -C rootfs .
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=7
+pkgrel=8
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -10,7 +10,7 @@ arch=('x86_64')
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=7
+pkgrel=8
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -30,6 +30,7 @@ depends=(
     anki-bin
     arandr
     ardour
+    audacity
     autokey-gtk
     autorandr
     base
@@ -114,6 +115,7 @@ depends=(
     imhex-bin
     inetutils
     inkscape
+    insomnia-bin
     intel-compute-runtime
     intel-media-driver
     intel-ucode
