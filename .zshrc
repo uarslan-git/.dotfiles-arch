@@ -366,3 +366,7 @@ fi
 export MAMBA_EXE='/opt/miniforge/bin/mamba';
 export MAMBA_ROOT_PREFIX='/opt/miniforge';
 alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
