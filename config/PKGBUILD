@@ -2,7 +2,7 @@ tar -h --exclude=.idea -cf rootfs.tar -C rootfs .
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=8
+pkgrel=9
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -10,7 +10,7 @@ arch=('x86_64')
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=8
+pkgrel=9
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -150,6 +150,7 @@ depends=(
     mesa-utils
     miniforge
     mongodb-bin
+    mongodb-compass-bin
     mongosh-bin
     mov-cli
     nano
