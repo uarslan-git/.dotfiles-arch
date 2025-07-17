@@ -332,6 +332,10 @@ function lsg() {
   done
 }
 
+function wlcp(){
+    cat $1 | wl-copy
+}
+
 
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^b "books\n"
@@ -381,7 +385,6 @@ alias vim="nvim"
 alias nc="--noconfirm"
 alias zshrc="vim ~/.zshrc"
 alias rs="systemctl --user restart i3-session.target"
-alias xclip="xclip -sel c"
 alias n="nvim"
 alias t="tmux"
 alias zsh="vim ~/.zshrc"
