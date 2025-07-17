@@ -297,6 +297,25 @@ function convertAudio(){
 function extractAudio(){
 }
 
+function gls() {
+  local tracked untracked f
+
+  # Use your aliases and capture the output into arrays
+  tracked=($(glsf))
+  untracked=($(gluf))
+
+  for f in *; do
+    if [[ " ${tracked[@]} " =~ " $f " ]]; then
+      echo -e "\e[32m$f\e[0m"  # Green: tracked
+    elif [[ " ${untracked[@]} " =~ " $f " ]]; then
+      echo -e "\e[31m$f\e[0m"  # Red: untracked
+    else
+      echo "$f"
+    fi
+  done
+}
+
+
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^b "books\n"
 bindkey -s ^t "tmux kill-server\n"
@@ -326,7 +345,7 @@ alias gcd="git commit -m '$(date)'"
 alias gco="git checkout"
 alias gl="git log --graph --pretty=format:'%C(auto)%h %d %s %C(blue)(%cr) %C(green)<%an>' --abbrev-commit --all --decorate"
 alias gls="git ls-files" # git list files
-alias glu="git ls-files --others --exclude-standard" git lists untracked files
+alias glu="git ls-files --others --exclude-standard" #git lists untracked files
 alias glsf="git ls-files | awk -F'/' '{print \$1}' | sort | uniq" 
 alias gluf="git ls-files --others --exclude-standard | awk -F'/' '{print \$1}' | sort | uniq"
 alias gp="git push"
