@@ -297,7 +297,7 @@ function convertAudio(){
 function extractAudio(){
 }
 
-function gls() {
+function lsg() {
   local tracked untracked f
 
   # Use your aliases and capture the output into arrays
