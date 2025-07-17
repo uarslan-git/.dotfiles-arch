@@ -2,7 +2,7 @@ tar -h --exclude=.idea -cf rootfs.tar -C rootfs .
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=9
+pkgrel=10
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -10,7 +10,7 @@ arch=('x86_64')
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=9
+pkgrel=10
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -37,6 +37,7 @@ depends=(
     base-devel
     bash-language-server
     blender
+    blueman
     bluez
     bluez-utils
     bottles
@@ -167,6 +168,7 @@ depends=(
     ntfs-3g
     nvim-lazy
     nvtop
+    nwg-displays
     nwg-look
     obsidian
     obs-studio
