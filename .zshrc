@@ -298,19 +298,36 @@ function extractAudio(){
 }
 
 function lsg() {
-  local tracked untracked f
+  local tracked untracked item
 
-  # Use your aliases and capture the output into arrays
-  tracked=($(glsf))
-  untracked=($(gluf))
+  local tracked_top=($(glsf))
+  local untracked_top=($(gluf))
 
-  for f in *; do
-    if [[ " ${tracked[@]} " =~ " $f " ]]; then
-      echo -e "\e[32m$f\e[0m"  # Green: tracked
-    elif [[ " ${untracked[@]} " =~ " $f " ]]; then
-      echo -e "\e[31m$f\e[0m"  # Red: untracked
+  local tracked_all=($(gls))
+  local untracked_all=($(glu))
+
+  for item in *; do
+    if [[ -d "$item" ]]; then
+      local has_untracked=false
+      for u in "${untracked_all[@]}"; do
+        [[ "$u" == "$item/"* ]] && has_untracked=true && break
+      done
+      if $has_untracked; then
+        echo -e "\e[31m$item/\e[0m"  # Rot: Ordner enthält untracked Dateien
+      elif [[ " ${tracked_top[@]} " =~ " $item " ]]; then
+        echo -e "\e[32m$item/\e[0m"  # Grün: Ordner ist getrackt
+      else
+        echo "$item/"
+      fi
     else
-      echo "$f"
+      # Datei ist einzeln untracked oder tracked
+      if [[ " ${untracked_all[@]} " =~ " $item" ]]; then
+        echo -e "\e[31m$item\e[0m"  # Rot: untracked Datei
+      elif [[ " ${tracked_all[@]} " =~ " $item" ]]; then
+        echo -e "\e[32m$item\e[0m"  # Grün: tracked Datei
+      else
+        echo "$item"
+      fi
     fi
   done
 }

@@ -1,0 +1,10 @@
+[Unit]
+Description=Swww
+Requires=session.target
+After=session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/swww img ${HOME}/.config/bg.jpg
+Restart=on-failure
+RestartSec=1
