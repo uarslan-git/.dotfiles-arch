@@ -392,7 +392,7 @@ alias ps2pdf="ps2pdf -dPDFSETTINGS=/ebook"
 alias a="ani-cli"
 alias ceserver="/opt/ceserver/ceserver"
 alias cengine="/opt/cheat-engine-zh/Cheat\ Engine.exe"
-
+alias py=python
 
 pokemon-colorscripts -r
 
