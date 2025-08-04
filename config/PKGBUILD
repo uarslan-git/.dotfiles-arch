@@ -98,7 +98,7 @@ depends=(
     gpick
     graphql-lsp
     grim
-    grive
+    #grive
     gst-plugin-pipewire
     guitarix
     gvfs
