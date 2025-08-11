@@ -274,7 +274,6 @@ depends=(
     vulkan-radeon
     vulkan-tools
     waybar
-    wayvr-dashboard
     wget
     which
     winetricks

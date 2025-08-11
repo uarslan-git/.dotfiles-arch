@@ -111,109 +111,109 @@
   },
   "geometry-of-import-foreign-geometry": {
     "frame_geometry": {
-      "height": 526,
-      "width": 498,
+      "height": 492,
+      "width": 451,
       "x": 0,
-      "y": 0
+      "y": -1080
     },
     "full_screened": false,
     "geometry": {
-      "height": 526,
-      "width": 498,
+      "height": 492,
+      "width": 451,
       "x": 0,
-      "y": 0
+      "y": -1080
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 526,
-      "width": 498,
+      "height": 492,
+      "width": 451,
       "x": 0,
-      "y": 0
+      "y": -1080
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAfEAAAINAAAAAAAAAAAAAAHxAAACDQAAAAACAAAACAAAAAAAAAAAAAAAAfEAAAIN"
+      "__value__": "AdnQywADAAAAAAAA///7yAAAAcL///2zAAAAAP//+8gAAAHC///9swAAAAECAAAAB4AAAAAA///7yAAAAcL///2z"
     },
     "screen": {
       "depth": 32,
-      "device_pixel_ratio": 2.0,
+      "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 1152,
-        "width": 2048,
+        "height": 1080,
+        "width": 1920,
         "x": 0,
-        "y": 0
+        "y": -1080
       },
-      "index_in_screens_list": 0,
-      "manufacturer": "AU Optronics",
-      "model": "0x1536",
-      "name": "eDP-1",
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL U2422HE",
+      "name": "DP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1152,
-        "width": 2048
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 1152,
+        "height": 2232,
         "width": 2048,
         "x": 0,
-        "y": 0
+        "y": -1080
       }
     }
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 526,
-      "width": 995,
-      "x": 558,
-      "y": 18
+      "height": 492,
+      "width": 931,
+      "x": 0,
+      "y": -1080
     },
     "full_screened": false,
     "geometry": {
-      "height": 526,
-      "width": 995,
-      "x": 558,
-      "y": 18
+      "height": 492,
+      "width": 931,
+      "x": 0,
+      "y": -1080
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 526,
-      "width": 483,
-      "x": 558,
-      "y": 18
+      "height": 492,
+      "width": 466,
+      "x": 0,
+      "y": -1080
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAIuAAAAEgAABhAAAAIfAAACLgAAABIAAAQQAAACHwAAAAACAAAACAAAAAIuAAAAEgAABhAAAAIf"
+      "__value__": "AdnQywADAAAAAAAA///7yAAAA6L///2zAAAAAP//+8gAAAHR///9swAAAAECAAAAB4AAAAAA///7yAAAA6L///2z"
     },
     "screen": {
       "depth": 32,
-      "device_pixel_ratio": 2.0,
+      "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 1152,
-        "width": 2048,
+        "height": 1080,
+        "width": 1920,
         "x": 0,
-        "y": 0
+        "y": -1080
       },
-      "index_in_screens_list": 0,
-      "manufacturer": "AU Optronics",
-      "model": "0x1536",
-      "name": "eDP-1",
+      "index_in_screens_list": 1,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL U2422HE",
+      "name": "DP-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1152,
-        "width": 2048
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 1152,
+        "height": 2232,
         "width": 2048,
         "x": 0,
-        "y": 0
+        "y": -1080
       }
     }
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAABGAAABufwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAD4AAAG5AAAAWgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFoA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAH0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAhUA////AAAAAQAAADUAAAG5/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPgAAAbkAAABTAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABaAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA1AP///wAAA1wAAAG5AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAABGAAABl/wCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAD4AAAGXAAAAWgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFoA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAH0A////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAhUA////AAAAAQAAADUAAAGX/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPgAAAZcAAABTAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABaAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA1AP///wAAAxwAAAGXAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "recent-books": [
     "/home/user/Calibre Library/Sam Feuerbach/Der Totengrabersohn_ Buch 1 (German Edition) (32)/Der Totengrabersohn_ Buch 1 (German Editio - Sam Feuerbach.epub",
