@@ -5,11 +5,6 @@ profile docking-lab {
 }
 
 
-profile monitor-library{
-    output eDP-1 disable
-    output DP-1 scale 1.0 position 0,1080
-}
-
 profile built-in {
     output eDP-1 enable
 }
