@@ -1,6 +1,5 @@
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
-export GEMINI_API_KEY=AIzaSyAUiYhSZKkKoto9svoBHkfGWSwv5pRGJXM
-#export GEMINI_API_KEY=AIzaSyB1fIuHqOWh8LPGGcM4BNf4TEmJBJFkric
+export $(grep -v '^#' ~/.env | xargs)
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
