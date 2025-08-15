@@ -2,7 +2,7 @@ tar -h --exclude=.idea -cf rootfs.tar -C rootfs .
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=10
+pkgrel=11
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -10,7 +10,7 @@ arch=('x86_64')
 
 pkgname=linux-config
 pkgver=0.1.0
-pkgrel=10
+pkgrel=11
 pkgdesc='linux config'
 url="https://github.com/uarslan-git/linux-config"
 license=('GPL3')
@@ -98,7 +98,6 @@ depends=(
     gpick
     graphql-lsp
     grim
-    #grive
     gst-plugin-pipewire
     guitarix
     gvfs
@@ -126,7 +125,6 @@ depends=(
     k9s
     kanagawa-gtk-theme-git
     kanagawa-icon-theme-git
-    kanshi
     kdeconnect
     kdenlive
     keepassxc
@@ -189,7 +187,6 @@ depends=(
     pipewire-docs
     pipewire-jack
     pipewire-pulse
-    #playerctl
     pokemon-colorscripts-git
     proton-ge-custom-bin
     pyright
@@ -286,6 +283,7 @@ depends=(
     xarchiver
     xclip
     xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
     xdg-utils
     xdotool
     xf86-video-amdgpu
