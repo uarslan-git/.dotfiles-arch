@@ -293,10 +293,12 @@ depends=(
     yad
     yarn
     ytmdesktop-git
+    zeal
     zip
     zoom
     zotero-bin
     zsh
+    kanshi
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
