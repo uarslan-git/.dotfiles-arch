@@ -126,6 +126,7 @@ depends=(
     k9s
     kanagawa-gtk-theme-git
     kanagawa-icon-theme-git
+    kanshi
     kdeconnect
     kdenlive
     keepassxc
@@ -298,7 +299,6 @@ depends=(
     zoom
     zotero-bin
     zsh
-    kanshi
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
