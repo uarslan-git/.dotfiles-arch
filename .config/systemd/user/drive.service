@@ -3,4 +3,4 @@ Description=Run Rclone Service
 
 [Service]
 Type=simple
-ExecStart=/bin/bash -c 'rclone bisync $HOME/Drive drive: --create-empty-src-dirs --compare size,modtime,checksum --slow-hash-sync-only --resilient -MvP --drive-skip-gdocs --fix-case' 
+ExecStart=/bin/rclone bisync $HOME/Drive drive: --create-empty-src-dirs --compare size,modtime,checksum --slow-hash-sync-only --resilient -MvP --drive-skip-gdocs --fix-case
