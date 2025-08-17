@@ -1,5 +1,8 @@
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
-export $(grep -v '^#' ~/.env | xargs)
+
+set -a
+source ~/.env
+set +a
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
