@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Documents ~/Drive/Drive1/Books -mindepth 1 -maxdepth 6 -type f -iname '*.pdf' \
+    selected=$(find ~/Documents ~/Drive/Books -mindepth 1 -maxdepth 6 -type f -iname '*.pdf' \
         | awk '{ print $0 "\t" gensub(".*/", "", "g", $0) }' \
         | fzf --with-nth=2 --delimiter='\t' --preview='echo {}' \
         | cut -f1)
