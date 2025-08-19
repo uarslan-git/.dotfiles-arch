@@ -28,7 +28,7 @@ return {
                 vim.keymap.set('n', 'gW', vim.lsp.buf.workspace_symbol, opts) -- extra
 
                 -- Diagnostics
-                vim.keymap.set('n', 'ge', vim.diagnostic.open_float, opts)   -- fixed from gE → ge
+                vim.keymap.set('n', 'gE', vim.diagnostic.open_float, opts)   -- fixed from gE → ge
                 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
                 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 
