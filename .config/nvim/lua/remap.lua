@@ -4,42 +4,20 @@ vim.g.mapleader = " "
 -- Open netrw file explorer with <leader>pv
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-local autopairs = {
-  ["("] = ")",
-  ["["] = "]",
-  ["{"] = "}",
-  ['"'] = '"',
-  ["'"] = "'",
-  ["`"] = "`"
-}
+-- Smart <CR>: expand to multiline inside paired characters
+vim.api.nvim_set_keymap('i', '{<CR>', '{<CR>}<ESC>O', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '(<CR>', '(<CR>)<ESC>O', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '[<CR>', '[<CR>]<ESC>O', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '"<CR>', '"<CR>"<ESC>O', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', "'<CR>", "'<CR>'<ESC>O", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '`<CR>', '`<CR>`<ESC>O', { noremap = true, silent = true })
 
--- Auto-pair on insert and place cursor inside
-for open, close in pairs(autopairs) do
-  vim.keymap.set("i", open, function()
-    local col = vim.fn.col('.')
-    local line = vim.fn.getline('.')
-    local next_char = line:sub(col, col)
 
-    if next_char == close or next_char:match("[%w]") then
-      return open
-    end
+-- Set leader key to space
+vim.g.mapleader = " "
 
-    return open .. close .. "<Left>"
-  end, { expr = true, noremap = true })
-end
-
--- Skip over closing char if already there
-for _, close in pairs(autopairs) do
-  vim.keymap.set("i", close, function()
-    local col = vim.fn.col('.')
-    local line = vim.fn.getline('.')
-    if line:sub(col, col) == close then
-      return "<Right>"
-    else
-      return close
-    end
-  end, { expr = true, noremap = true })
-end
+-- Open netrw file explorer with <leader>pv
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Smart <CR>: expand to multiline inside paired characters
 vim.api.nvim_set_keymap('i', '{<CR>', '{<CR>}<ESC>O', { noremap = true, silent = true })
