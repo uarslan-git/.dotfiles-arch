@@ -272,7 +272,7 @@ depends=(
     vulkan-intel
     vulkan-radeon
     vulkan-tools
-    waybar
+    #waybar
     wget
     which
     winetricks
