@@ -217,7 +217,7 @@ depends=(
     steam
     swaybg
     swayimg
-    #swaylock-effects
+    swaylock-effects
     swww
     systemd
     teamspeak
@@ -272,7 +272,7 @@ depends=(
     vulkan-intel
     vulkan-radeon
     vulkan-tools
-    #waybar
+    waybar
     wget
     which
     winetricks
