@@ -104,7 +104,7 @@ depends=(
     gvfs
     gxplugins-lv2-git
     gzip
-    hypridle
+    #hypridle
     hyprland
     hyprpicker
     hyprshot
@@ -217,7 +217,7 @@ depends=(
     steam
     swaybg
     swayimg
-    swaylock-effects
+    #swaylock-effects
     swww
     systemd
     teamspeak
