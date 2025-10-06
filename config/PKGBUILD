@@ -104,7 +104,6 @@ depends=(
     gvfs
     gxplugins-lv2-git
     gzip
-    #hypridle
     hyprland
     hyprpicker
     hyprshot
